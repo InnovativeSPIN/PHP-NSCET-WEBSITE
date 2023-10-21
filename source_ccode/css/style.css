@@ -199,7 +199,7 @@ ul {
 .site-logo {
 	display: inline-block;
 	margin-right: 50px;
-	padding-top: 20px;
+	/* padding-top: 20px; */
 }
 
 .header-info {
@@ -260,7 +260,7 @@ ul {
 }
 
 .nav-section {
-	background: #020031;
+	background: #104565;
 }
 
 .nav-section .nav-right {
@@ -288,7 +288,7 @@ ul {
 	font-size: 13px;
 	text-transform: uppercase;
 	font-weight: 500;
-	padding: 25px 20px;
+	padding: 8px 20px;
 	margin-right: -5px;
 	-webkit-transition: all 0.4s ease 0s;
 	-o-transition: all 0.4s ease 0s;
