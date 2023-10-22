@@ -11,6 +11,7 @@
 
 html,
 body {
+  overflow-x: hidden;
   height: 100%;
   font-family: "Rubik", sans-serif;
 }
@@ -168,19 +169,19 @@ ul {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
-    border: 4px solid #f44336;
+    border: 4px solid #2398e0;
     border-left-color: transparent;
   }
   50% {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
-    border: 4px solid #673ab7;
+    border: 4px solid #196ea3;
     border-left-color: transparent;
   }
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
-    border: 4px solid #f44336;
+    border: 4px solid #0d344d;
     border-left-color: transparent;
   }
 }
@@ -3088,4 +3089,43 @@ h3,
 .marquee__content {
   color: #fff;
   /* font-size: clamp(40px, 4.375vw, 70px); */
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.marquee {
+/*   overflow: hidden; */
+}
+
+.marquee-content{
+  display: flex;
+  animation: scrolling 20s linear infinite;
+  
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  flex: 0 0 16vw;
+  margin: 0 1vw;
+/*   flex: 0 0 20vw; */
+/*   margin: 0 2vw; */
+}
+
+.marquee-item img {
+  display: block;
+  width: 100%;
+/*   padding: 0 20px; */
+}
+
+@keyframes scrolling {
+  0% { transform: translateX(0); }
+  100% { transform: translatex(-144vw); }
 }
