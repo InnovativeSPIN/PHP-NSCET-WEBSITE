@@ -3064,3 +3064,28 @@ h3,
     stroke-dashoffset: -136px;
   }
 }
+
+.marquee {
+  padding: 2px;
+  white-space: nowrap;
+}
+  
+.marquee:first-child {
+  background-color: #ee6c52;
+  /* transform: rotateZ(-2deg); */
+}
+
+.marquee:last-child {
+  background-color: #1f1f1f;
+  /* transform: rotateZ(-1deg); */
+}
+
+.marquee__inner {
+  display: flex;
+  gap: 20px;
+}
+
+.marquee__content {
+  color: #fff;
+  /* font-size: clamp(40px, 4.375vw, 70px); */
+}
