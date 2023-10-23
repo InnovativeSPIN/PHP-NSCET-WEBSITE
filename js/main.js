@@ -9,6 +9,7 @@
 
 'use strict';
 
+// document.addEventListener('contextmenu', event => event.preventDefault());
 
 var window_w = $(window).innerWidth();
 
