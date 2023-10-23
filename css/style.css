@@ -3733,7 +3733,7 @@ body.modal-active {
   color: black;
 }
 
-.container .row{
+.course-div .row{
   display: flex;
   justify-content: center;
 }
