@@ -3732,3 +3732,8 @@ body.modal-active {
 .dropdown-item{
   color: black;
 }
+
+.container .row{
+  display: flex;
+  justify-content: center;
+}
