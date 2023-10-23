@@ -19,7 +19,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/themify-icons.css" />
     <link rel="stylesheet" href="css/magnific-popup.css" />
@@ -184,11 +186,26 @@
           <li><a href="about.html">Administartion</a></li>
           <li><a href="#">Admission</a></li>
           <li><a href="course.html">Acadamic</a></li>
-          <li><a href="blog.html">Departemnets</a></li>
+          <li>
+            <div class="dropdown custome-dropdowm">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Department
+              </button>
+              <div class="dropdown-menu custome-dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Computer Science Engineering</a>
+                <a class="dropdown-item" href="#">Civil Engineering</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+          </li>
           <li><a href="contact.html">Hostel</a></li>
           <li><a href="course.html">Library</a></li>
           <li><a href="blog.html">MOOC</a></li>
           <li><a href="contact.html">Placeent</a></li>
+
+          <li class="active">
+            <a href><i class="fa fa-user"> Login </i></a>
+          </li>
         </ul>
         <ul class="main-menu" style="padding-bottom: 12px">
           <li><a href="index.html">Conference</a></li>
@@ -202,9 +219,7 @@
           <li><a href="contact.html">IQAS</a></li>
           <li><a href="contact.html">Research</a></li>
 
-          <!-- <li class="active">
-            <a href><i class="fa fa-user"> Login </i></a>
-          </li> -->
+          
         </ul>
       </div>
     </nav>
@@ -1336,6 +1351,9 @@
       integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
       crossorigin="anonymous"
     ></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <script src="./js/marquee.js"></script>
     <script src="./js/popup.js"></script>
