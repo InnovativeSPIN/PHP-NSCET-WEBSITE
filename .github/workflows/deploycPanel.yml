@@ -2,7 +2,7 @@ name: Publish Website to CPanel
 on:
   push:
     branches:
-      - main
+      - MADHAVAN5-patch-1
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
