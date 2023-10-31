@@ -203,6 +203,11 @@
     </div>
   </section>
   <section class="counter-section">
+  <?php 
+        $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='timerSection'"));
+        $jsonData = json_decode($data['content'], true);
+        foreach($jsonData as $data) {
+      ?>
     <div class="container">
       <div class="row">
         <div class="col-lg-7 col-md-6">
@@ -210,8 +215,8 @@
             <i class="fa fa-graduation-cap"></i>
           </div>
           <div class="counter-content">
-            <h2>NEXT COUSRE: Sales & Marketing Alignment</h2>
-            <p><i class="fa fa-calendar-o"></i>07:00 PM - 09:00 PM</p>
+            <h2><?php echo $data['title']?></h2>
+            <p><i class="fa fa-calendar-o"></i><?php echo $data['time']?></p>
           </div>
         </div>
         <div class="col-lg-5 col-md-6">
@@ -236,6 +241,9 @@
         </div>
       </div>
     </div>
+    <?php 
+      }
+      ?>
   </section>
   <div class="news-updates">
     <div class="container">
