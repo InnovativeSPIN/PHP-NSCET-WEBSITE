@@ -1,7 +1,9 @@
 <nav class="nav-section">
     <div class="container">
+
         <ul class="main-menu">
-            <a href="index.html" class="site-logo"><img width="125px" src="https://nscet.org/Home_Assets/img/nscet/College%20logo.png" alt /></a>
+        <a href="index.html" class="site-logo"><img width="150px" src="/assets/logos/clgLogo.png" alt /></a>
+
             <li class="active"><a href="index.html">Home</a></li>
             <li><a href="about.html">Administartion</a></li>
             <li><a href="#">Admission</a></li>
@@ -40,6 +42,7 @@
         <ul class="main-menu" style="padding-bottom: 12px">
             <li>
                 <div class="dropdown custome-dropdowm">
+                    
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Conference
                     </button>

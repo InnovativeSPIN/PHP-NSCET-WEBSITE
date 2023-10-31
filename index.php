@@ -140,7 +140,7 @@
   <?php require_once("./resources/header.php")?>
   <section>
     <?php
-    $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='marquee'"));
+    $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `homepage` WHERE `sectionName`='marquee'"));
     $jsonData = json_decode($data['content'], true);
     ?>
     <div class="marquee" data-marquee-duration="20">
@@ -154,7 +154,7 @@
   <section class="hero-section">
     <div class="hero-slider owl-carousel">
       <?php 
-        $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='heroSection'"));
+        $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `homepage` WHERE `sectionName`='heroSection'"));
         $jsonData = json_decode($data['content'], true);
         foreach($jsonData as $data) {
       ?>
