@@ -1,5 +1,5 @@
 <?php
-$data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `homepage` WHERE `sectionName`='modelSection'"));
+$data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='modelSection'"));
 $jsonData = json_decode($data['content'], true);
 ?>
 

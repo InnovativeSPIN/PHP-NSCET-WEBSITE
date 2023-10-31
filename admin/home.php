@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php require_once("../resources/connection.php")?>
 <?php require_once('./resources/header_link.php'); ?>
 
 <body>
@@ -29,26 +29,62 @@
               <h5 class="card-title">Home Page Elements</h5>
 
               <!-- General Form Elements -->
-              <form>
+
+              <!-- Marquee Section -->
+              <?php 
+              $marqueeSection = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='marquee'"));
+              $marqueeData = json_decode($marqueeSection['content'], true);
+              ?>
+              <form method="post" action="./routes/homePageHandler.php">
                 <div class="row mb-3">
                   <label for="inputPassword" class="col-sm-2 col-form-label">Marquee Section</label>
                   <div class="col-sm-10">
-                    <textarea class="form-control" style="height: 100px" name="marquee" required></textarea>
+                    <textarea class="form-control" style="height: 100px" name="marquee" required><?php echo $marqueeData['content']?></textarea>
+                  </div>
+                  <div class="col-sm-10">
+                    <br>
+                    <button type="submit" class="btn btn-primary" name="marqueeButton">Add</button>
+                    <button type="submit" class="btn btn-danger" name="marqueeButton">Delete</button>
                   </div>
                 </div>
+              </form>
+
+              <!-- Hero Section -->
+              <form method="post" action="./routes/homePageHandler.php">
                 <div class="row mb-3">
-                  <label for="inputPassword" class="col-sm-2 col-form-label">Marquee Section</label>
+                  <label for="inputPassword" class="col-sm-2 col-form-label">Hero Section</label>
                   <div class="col-sm-10 col-lg-3">
                     <input class="form-control" name="subHeading" placeholder="subHeading" required/>
+                    <br>
                   </div>
                   <div class="col-sm-10 col-lg-3">
                     <input class="form-control" name="heading" placeholder="heading" required/>
+                    <br>
                   </div>
                   <div class="col-sm-10 col-lg-4">
-                    <textarea class="form-control" style="height: 100px" name="paragraph" required></textarea>
+                    <textarea class="form-control" style="height: 100px" name="paragraph" required>Hero Section Paragraph</textarea>
+                    <br>
                   </div>
-                  
+                  <div class="col-sm-10 col-lg-3">
+                    <input class="form-control" name="url" placeholder="Url" required/>
+                    <br>
+                  </div>
+                  <div class="col-sm-10 col-lg-3">
+                    <input class="form-control" name="btn" placeholder="Button Name" required/>
+                    <br>
+                  </div>
+                  <div class="row mb-3">
+                  <label for="inputNumber" class="col-sm-2 col-form-label">Image Upload</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="file" id="formFile">
+                    <br>
+                  </div>
                 </div>
+                  <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary" name="marqueeButton">Update</button>
+                  </div>
+                </div>
+              </form>
 
                 <div class="row mb-3">
                   <label for="inputPassword" class="col-sm-2 col-form-label">Marquee Section</label>

@@ -24,20 +24,20 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `homepage`
+-- Table structure for table `home_page`
 --
 
-CREATE TABLE `homepage` (
+CREATE TABLE `home_page` (
   `id` int(11) NOT NULL,
   `sectionName` varchar(255) NOT NULL,
   `content` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`content`))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `homepage`
+-- Dumping data for table `home_page`
 --
 
-INSERT INTO `homepage` (`id`, `sectionName`, `content`) VALUES
+INSERT INTO `home_page` (`id`, `sectionName`, `content`) VALUES
 (1, 'marquee', '{\"content\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\"}'),
 (2, 'heroSection', '[{\"subHeading\":\"AWARD WINNING UNIVERSITY\",\"heading\":\"AN INVESTMENT IN KNOWLEDGE PAYS THE BEST INTEREST.\",\"paragraph\":\"Education is not just about going to school and getting a degree. It\'s about widening your knowledge and absorbing the truth about life. Knowledge is power.\",\"btn\":\"GET STARTED\"},{\"subHeading\":\"AWARD WINNING UNIVERSITY\",\"heading\":\"AN INVESTMENT IN KNOWLEDGE PAYS THE BEST INTEREST.\",\"paragraph\":\"Education is not just about going to school and getting a degree. It\'s about widening your knowledge and absorbing the truth about life. Knowledge is power.\",\"btn\":\"GET STARTED\"}]'),
 (3, 'timerSection', '{\"title\":\"NEXT COUSRE: SALES & MARKETING ALIGNMENT\",\"time\":\"07:00 PM - 09:00 PM\",\"countdown\":\"2023/11/23\"}'),
@@ -56,9 +56,9 @@ INSERT INTO `homepage` (`id`, `sectionName`, `content`) VALUES
 --
 
 --
--- Indexes for table `homepage`
+-- Indexes for table `home_page`
 --
-ALTER TABLE `homepage`
+ALTER TABLE `home_page`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -66,9 +66,9 @@ ALTER TABLE `homepage`
 --
 
 --
--- AUTO_INCREMENT for table `homepage`
+-- AUTO_INCREMENT for table `home_page`
 --
-ALTER TABLE `homepage`
+ALTER TABLE `home_page`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
