@@ -203,12 +203,12 @@
     </div>
   </section>
   <section class="counter-section">
-  <?php 
+    <div class="container">
+    <?php 
         $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='timerSection'"));
         $jsonData = json_decode($data['content'], true);
         foreach($jsonData as $data) {
       ?>
-    <div class="container">
       <div class="row">
         <div class="col-lg-7 col-md-6">
           <div class="big-icon">
@@ -240,94 +240,106 @@
           </div>
         </div>
       </div>
-    </div>
-    <?php 
+      <?php 
       }
       ?>
+    </div>
   </section>
   <div class="news-updates">
     <div class="container">
+      <?php 
+        $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='newsSection'"));
+        $jsonData = json_decode($data['content'], true);
+        foreach($jsonData as $data) {
+      ?>
       <div class="row">
         <div class="col-lg-9">
           <div class="section-heading">
             <h2 class="text-black">News &amp; Updates</h2>
-            <a href="#">Read All News</a>
+            <a href="<?php echo $data['url']?>">Read All News</a>
           </div>
           <div class="row">
             <div class="col-lg-6">
               <div class="post-entry-big">
-                <a href="news-single.html" class="img-link"><img src="https://picsum.photos/400/250" alt="Image"
+                <a href="news-single.html" class="img-link"><img src="<?php echo $data['imgUrl']?>" alt="Image"
                     class="img-fluid" /></a>
                 <div class="post-content">
                   <div class="post-meta">
-                    <a href="#">June 6, 2019</a>
+                    <a href="#"><?php echo $data['date']?></a>
                     <span class="mx-1">/</span>
-                    <a href="#">Admission</a>, <a href="#">Updates</a>
+                    <a href="#"><?php echo $data['tags'][0]?></a>, <a href="#"><?php echo $data['tags'][1]?></a>
                   </div>
                   <h3 class="post-heading">
-                    <a href="news-single.html">Campus Camping and Learning Session</a>
+                    <a href="news-single.html"><?php echo $data['title']?></a>
                   </h3>
                 </div>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="post-entry-big horizontal d-flex mb-4" style="display: flex">
-                <a href="news-single.html" class="img-link mr-4"><img src="https://picsum.photos/82/82" alt="Image"
+                <a href="news-single.html" class="img-link mr-4"><img src="<?php echo $data['imgUrl']?>" alt="Image"
                     class="img-fluid" /></a>
                 <div class="post-content">
                   <div class="post-meta">
-                    <a href="#">June 6, 2019</a>
+                    <a href="#"><?php echo $data['date']?></a>
                     <span class="mx-1">/</span>
-                    <a href="#">Admission</a>, <a href="#">Updates</a>
+                    <a href="#"><?php echo $data['tags'][0]?></a>, <a href="#"><?php echo $data['tags'][1]?></a>
                   </div>
                   <h3 class="post-heading">
-                    <a href="news-single.html">Campus Camping and Learning Session</a>
+                    <a href="news-single.html"><?php echo $data['title']?></a>
                   </h3>
                 </div>
               </div>
               <div class="post-entry-big horizontal d-flex mb-4" style="display: flex">
-                <a href="news-single.html" class="img-link mr-4"><img src="https://picsum.photos/82/82" alt="Image"
+                <a href="news-single.html" class="img-link mr-4"><img src="<?php echo $data['imgUrl']?>" alt="Image"
                     class="img-fluid" /></a>
                 <div class="post-content">
                   <div class="post-meta">
-                    <a href="#">June 6, 2019</a>
+                    <a href="#"><?php echo $data['date']?></a>
                     <span class="mx-1">/</span>
-                    <a href="#">Admission</a>, <a href="#">Updates</a>
+                    <a href="#"><?php echo $data['tags'][0]?></a>, <a href="#"><?php echo $data['tags'][1]?></a>
                   </div>
                   <h3 class="post-heading">
-                    <a href="news-single.html">Campus Camping and Learning Session</a>
+                    <a href="news-single.html"><?php echo $data['title']?></a>
                   </h3>
                 </div>
               </div>
               <div class="post-entry-big horizontal d-flex mb-4" style="display: flex">
-                <a href="news-single.html" class="img-link mr-4"><img src="https://picsum.photos/82/82" alt="Image"
+                <a href="news-single.html" class="img-link mr-4"><img src="<?php echo $data['imgUrl']?>" alt="Image"
                     class="img-fluid" /></a>
                 <div class="post-content">
                   <div class="post-meta">
-                    <a href="#">June 6, 2019</a>
+                    <a href="#"><?php echo $data['date']?></a>
                     <span class="mx-1">/</span>
-                    <a href="#">Admission</a>, <a href="#">Updates</a>
+                    <a href="#"><?php echo $data['tags'][0]?></a>, <a href="#"><?php echo $data['tags'][1]?></a>
                   </div>
                   <h3 class="post-heading">
-                    <a href="news-single.html">Campus Camping and Learning Session</a>
+                    <a href="news-single.html"><?php echo $data['title']?></a>
                   </h3>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+          <?php 
+    }
+    ?>
+    </div>
+    <?php 
+        $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='videoSection'"));
+        $jsonData = json_decode($data['content'], true);
+      ?>
         <div class="col-lg-3">
           <div class="section-heading">
             <h2 class="text-black">Campus Videos</h2>
             <a href="#">View All Videos</a>
           </div>
-          <a href="https://youtu.be/EngW7tLk6R8?si=i8tOs0WFo7qPdkZE" class="video-1 mb-4" data-fancybox data-ratio="2">
+          <a href="<?php echo $data[0]?>" class="video-1 mb-4" data-fancybox data-ratio="2">
             <span class="play">
               <span class="icon-play"></span>
             </span>
             <img src="https://i.blogs.es/9b19ad/youtube/450_1000.webp" alt="Image" class="img-fluid" />
           </a>
-          <a href="https://youtu.be/EngW7tLk6R8?si=i8tOs0WFo7qPdkZE" class="video-1 mb-4" data-fancybox data-ratio="2">
+          <a href="<?php echo $data[1]?>" class="video-1 mb-4" data-fancybox data-ratio="2">
             <span class="play">
               <span class="icon-play"></span>
             </span>
@@ -336,70 +348,75 @@
         </div>
       </div>
     </div>
+    
   </div>
   <div class="marquee">
     <div class="marquee-content">
+    <?php 
+        $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='imgSection'"));
+        $jsonData = json_decode($data['content'], true);
+      ?>
       <div class="marquee-item">
-        <img src="https://picsum.photos/280/256" alt="" />
+        <img src="<?php echo $data[0]?>" alt="" />
       </div>
 
       <div class="marquee-item">
-        <img src="https://picsum.photos/380/480?random=1" alt="" />
+        <img src="<?php echo $data[1]?>" alt="" />
       </div>
 
       <div class="marquee-item">
-        <img src="https://picsum.photos/380/480?random=03" alt="" />
+        <img src="<?php echo $data[0]?>" alt="" />
       </div>
 
       <div class="marquee-item">
-        <img src="https://picsum.photos/380/480?random=1" alt="" />
+        <img src="<?php echo $data[1]?>" alt="" />
       </div>
 
       <div class="marquee-item">
-        <img src="https://picsum.photos/380/480?random=1" alt="" />
+        <img src="<?php echo $data[1]?>" alt="" />
       </div>
 
       <div class="marquee-item">
-        <img src="https://picsum.photos/380/480?random=06" alt="" />
+        <img src="<?php echo $data[0]?>" alt="" />
       </div>
 
       <div class="marquee-item">
-        <img src="https://picsum.photos/380/480?random=07" alt="" />
+        <img src="<?php echo $data[1]?>" alt="" />
       </div>
 
       <div class="marquee-item">
-        <img src="https://picsum.photos/380/480?random=09" alt="" />
+        <img src="<?php echo $data[0]?>" alt="" />
       </div>
       <div class="marquee-item">
-        <img src="https://picsum.photos/380/480?random=01" alt="" />
-      </div>
-
-      <div class="marquee-item">
-        <img src="https://picsum.photos/380/480?random=02" alt="" />
+        <img src="<?php echo $data[1]?>" alt="" />
       </div>
 
       <div class="marquee-item">
-        <img src="https://picsum.photos/380/480?random=03" alt="" />
+        <img src="<?php echo $data[0]?>" alt="" />
       </div>
 
       <div class="marquee-item">
-        <img src="https://picsum.photos/380/480?random=04" alt="" />
+        <img src="<?php echo $data[1]?>" alt="" />
       </div>
 
       <div class="marquee-item">
-        <img src="https://picsum.photos/380/480?random=05" alt="" />
+        <img src="<?php echo $data[0]?>" alt="" />
       </div>
 
       <div class="marquee-item">
-        <img src="https://picsum.photos/380/480?random=06" alt="" />
+        <img src="<?php echo $data[1]?>" alt="" />
       </div>
 
       <div class="marquee-item">
-        <img src="https://picsum.photos/380/480?random=07" alt="" />
+        <img src="<?php echo $data[0]?>" alt="" />
       </div>
 
       <div class="marquee-item">
-        <img src="https://picsum.photos/380/480?random=08" alt="" />
+        <img src="<?php echo $data[1]?>" alt="" />
+      </div>
+
+      <div class="marquee-item">
+        <img src="<?php echo $data[0]?>" alt="" />
       </div>
     </div>
   </div>
@@ -776,7 +793,7 @@
           </div>
 
           <div class="marquee-item">
-            <img src="https://picsum.photos/380/480?random=1" alt="" />
+            <img src="<?php echo $data[1]?>" alt="" />
           </div>
 
           <div class="marquee-item">
@@ -784,11 +801,11 @@
           </div>
 
           <div class="marquee-item">
-            <img src="https://picsum.photos/380/480?random=1" alt="" />
+            <img src="<?php echo $data[1]?>" alt="" />
           </div>
 
           <div class="marquee-item">
-            <img src="https://picsum.photos/380/480?random=1" alt="" />
+            <img src="<?php echo $data[1]?>" alt="" />
           </div>
 
           <div class="marquee-item">
