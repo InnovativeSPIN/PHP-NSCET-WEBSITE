@@ -326,7 +326,6 @@
     </div>
     <?php 
         $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='videoSection'"));
-        $jsonData = json_decode($data['content'], true);
       ?>
         <div class="col-lg-3">
           <div class="section-heading">
@@ -354,7 +353,6 @@
     <div class="marquee-content">
     <?php 
         $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='imgSection'"));
-        $jsonData = json_decode($data['content'], true);
       ?>
       <div class="marquee-item">
         <img src="<?php echo $data[0]?>" alt="" />
