@@ -26,9 +26,7 @@
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Home Page Elements</h5>
-
-              <!-- General Form Elements -->
+              <h5 class="card-title">1. Marquee Section</h5> 
 
               <!-- Marquee Section -->
               <?php 
@@ -39,84 +37,75 @@
                 <div class="row mb-3">
                   <label for="inputPassword" class="col-sm-2 col-form-label">Marquee Section</label>
                   <div class="col-sm-10">
-                    <textarea class="form-control" style="height: 100px" name="marquee" required><?php echo $marqueeData['content']?></textarea>
+                    <textarea class="form-control" style="height: 100px" name="content" required><?php 
+                    if(isset($marqueeData['content'])){
+                    echo $marqueeData['content'];
+                    }
+                    else{
+                      echo "";
+                    }
+                    ?></textarea>
                   </div>
                   <div class="col-sm-10">
                     <br>
-                    <button type="submit" class="btn btn-primary" name="marqueeButton">Add</button>
-                    <button type="submit" class="btn btn-danger" name="marqueeButton">Delete</button>
+                    <button type="submit" class="btn btn-primary" name="marqueeButton">Update</button>
                   </div>
                 </div>
               </form>
+              <form method="get" action="./routes/homePageHandler.php">
+                  <input type="text" name="name" value="marquee" hidden>
+                  <button type="submit" class="btn btn-danger" name="marqueeDeleteButton">&nbsp;Delete&nbsp;</button></a>
+              </form>
 
-              <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Table with hoverable rows</h5>
+              <!-- Hero Section -->
+              <h5 class="card-title"> 2. Hero Section</h5>    <!-- Table with hoverable rows -->
 
-              <!-- Table with hoverable rows -->
               <table class="table table-hover">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Position</th>
-                    <th scope="col">Age</th>
-                    <th scope="col">Start Date</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">subHeading</th>
+                    <th scope="col">Paragraph</th>
+                    <th scope="col">Button Name</th>
+                    <th scope="col">Url</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Action</th>
                   </tr>
                 </thead>
                 <tbody>
+                <?php 
+                  $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='heroSection'"));
+                  $jsonData = json_decode($data['content'], true);
+                  foreach($jsonData as $key => $data) { 
+                ?>
                   <tr>
-                    <th scope="row">1</th>
-                    <td>Brandon Jacob</td>
-                    <td>Designer</td>
-                    <td>28</td>
-                    <td>2016-05-25</td>
+                    <td><?php echo $data['heading']?></td>
+                    <td><?php echo $data['subHeading']?></td>
+                    <td><?php echo $data['paragraph']?></td>
+                    <td><?php echo $data['btn']?></td>
+                    <td><?php echo $data['url']?></td>
+                    <td><img src="<?php echo $data['image']?>" width="75px" height="75px" alt="Image"></td>
+                    <td>
+                      <form method="get" action="./routes/homePageHandler.php">
+                      <input type="text" name="key" value="<?php echo $key ?>" hidden>
+                      <button type="submit" class="btn btn-danger" name="heroDeleteButton">&nbsp;Delete&nbsp;</button></a>
+                      </form>
+                    </td>
                   </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Bridie Kessler</td>
-                    <td>Developer</td>
-                    <td>35</td>
-                    <td>2014-12-05</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Ashleigh Langosh</td>
-                    <td>Finance</td>
-                    <td>45</td>
-                    <td>2011-08-12</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">4</th>
-                    <td>Angus Grady</td>
-                    <td>HR</td>
-                    <td>34</td>
-                    <td>2012-06-11</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">5</th>
-                    <td>Raheem Lehner</td>
-                    <td>Dynamic Division Officer</td>
-                    <td>47</td>
-                    <td>2011-04-19</td>
-                  </tr>
+                  <?php } ?>
                 </tbody>
-              </table>
-              <!-- End Table with hoverable rows -->
+              </table> <!-- End Table with hoverable rows -->
 
-            </div>
-          </div>
-          
-              <!-- Hero Section -->
-              <form method="post" action="./routes/homePageHandler.php">
+              <h5 class="card-title" style="color: blue;">Add Hero Section</h5> 
+              <form method="post" action="./routes/homePageHandler.php" enctype="multipart/form-data">
                 <div class="row mb-3">
                   <label for="inputPassword" class="col-sm-2 col-form-label">Hero Section</label>
                   <div class="col-sm-10 col-lg-3">
-                    <input class="form-control" name="subHeading" placeholder="subHeading" required/>
+                    <input class="form-control" name="heading" placeholder="Heading" required/>
                     <br>
                   </div>
                   <div class="col-sm-10 col-lg-3">
-                    <input class="form-control" name="heading" placeholder="heading" required/>
+                    <input class="form-control" name="subHeading" placeholder="Sub-heading" required/>
                     <br>
                   </div>
                   <div class="col-sm-10 col-lg-4">
@@ -134,50 +123,491 @@
                   <div class="row mb-3">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Image Upload</label>
                   <div class="col-sm-10">
-                    <input class="form-control" type="file" id="formFile">
+                    <input class="form-control" type="file" id="formFile" name="image" accept="image/*">
                     <br>
                   </div>
                 </div>
                   <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary" name="marqueeButton">Update</button>
+                    <button type="submit" class="btn btn-primary" name="heroButton">Add</button>
                   </div>
                 </div>
               </form>
 
+          <!-- Timmer Section -->
+          <h5 class="card-title">3. Timmer Section</h5>
+
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Countdown</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                <?php 
+                $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='timerSection'"));
+                $jsonData = json_decode($data['content'], true);
+                foreach($jsonData as $key => $data) {
+                ?>
+                  <tr>
+                    <td><?php echo $data['title']?></td>
+                    <td><?php echo $data['time']?></td>
+                    <td><?php echo $data['countdown']?></td>
+                    <td>
+                      <form method="get" action="./routes/homePageHandler.php">
+                      <input type="text" name="key" value="<?php echo $key?>" hidden>
+                      <button type="submit" class="btn btn-danger">&nbsp;Delete&nbsp;</button></a>
+                      </form>
+                    </td>
+                  </tr>
+                <?php 
+                }
+                ?>
+                </tbody>
+              </table> <!-- End Table with hoverable rows -->
+
+              <h5 class="card-title" style="color: blue;">Add Timmer Section</h5> 
+              <form method="post" action="./routes/homePageHandler.php">
                 <div class="row mb-3">
-                  <label for="inputPassword" class="col-sm-2 col-form-label">Marquee Section</label>
+                  <label for="inputPassword" class="col-sm-2 col-form-label">Timmer Section</label>
                   <div class="col-sm-10 col-lg-3">
                     <input class="form-control" name="title" placeholder="title" required/>
+                    <br>
                   </div>
                   <div class="col-sm-10 col-lg-3">
                     <input class="form-control" name="time" placeholder="time" required/>
+                    <br>
                   </div>
                   <div class="col-sm-10 col-lg-4">
                     <input class="form-control" name="countdown" placeholder="countdown" required/>
+                    <br>
                   </div>
-                </div>
-
-                <div class="row mb-3">
-                  <label for="inputNumber" class="col-sm-2 col-form-label">File Upload</label>
                   <div class="col-sm-10">
-                    <input class="form-control" type="file" id="formFile">
+                    <button type="submit" class="btn btn-primary">Add</button>
                   </div>
                 </div>
-                <div class="row mb-3">
-                  <label for="inputPassword" class="col-sm-2 col-form-label">Textarea</label>
-                  <div class="col-sm-10">
-                    <textarea class="form-control" style="height: 100px"></textarea>
-                  </div>
-                </div>
+              </form>
 
+
+            <!-- News Section -->
+
+            <h5 class="card-title">4. News Section</h5>
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">News Url</th>
+                    <th scope="col">Image Url</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Tags</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                <?php 
+                $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='newsSection'"));
+                $jsonData = json_decode($data['content'], true);
+                foreach($jsonData as $key => $data) {
+                ?>
+                  <tr>
+                    <td><?php echo $data['title']?></td>
+                    <td><?php echo $data['url']?></td>
+                    <td><img src="<?php echo $data['imgUrl']?>" width="75px" height="75px" alt="Image"></td>
+                    <td><?php echo $data['date']?></td>
+                    <td><?php echo $data['tags']?></td>
+                    <td>
+                      <form method="get" action="./routes/homePageHandler.php">
+                      <input type="text" name="key" value="<?php echo $key?>" hidden>
+                      <button type="submit" class="btn btn-danger">&nbsp;Delete&nbsp;</button></a>
+                      </form>
+                    </td>
+                  </tr>
+                <?php } ?>
+                </tbody>
+              </table> <!-- End Table with hoverable rows -->
+
+              <h5 class="card-title" style="color: blue;">Add News Section</h5> 
+              <form method="post" action="./routes/homePageHandler.php">
                 <div class="row mb-3">
-                  <label class="col-sm-2 col-form-label">Submit Button</label>
+                  <label for="inputPassword" class="col-sm-2 col-form-label">News Section</label>
+                  <div class="col-sm-10 col-lg-3">
+                    <input class="form-control" name="title" placeholder="Title" required/>
+                    <br>
+                  </div>
+                  <div class="col-sm-10 col-lg-3">
+                    <input class="form-control" name="url" placeholder="News URL" required/>
+                    <br>
+                  </div>
+                  <div class="col-sm-10 col-lg-3">
+                    <input class="form-control" name="tags" placeholder="Tags" required/>
+                    <br>
+                  </div>
+                  <div class="row mb-3">
+                  <label for="inputNumber" class="col-sm-2 col-form-label">Image Upload</label>
                   <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary">Submit Form</button>
+                    <input class="form-control" type="file" id="formFile" name="imgUrl" accept="image/*">
+                    <br>
+                  </div>
+                  <div class="col-sm-10 col-lg-3">
+                    <input class="form-control" type="date" name="date" placeholder="Date" required/>
+                    <br>
+                  </div>
+                  <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Add</button>
                   </div>
                 </div>
+              </form>
 
-              </form><!-- End General Form Elements -->
+          <!-- Video Section -->
+          <h5 class="card-title">5. Video Section</h5>
+
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Video Link</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                <?php 
+                $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='VideoSection'"));
+                $jsonData = json_decode($data['content'], true);
+                foreach($jsonData as $key => $data) {
+                ?>
+                  <tr>
+                    <td><?php echo $data ?></td>
+                    <td>
+                      <form method="get" action="./routes/homePageHandler.php">
+                      <input type="text" name="key" value="<?php echo $key?>" hidden>
+                      <button type="submit" class="btn btn-danger">&nbsp;Delete&nbsp;</button></a>
+                      </form>
+                    </td>
+                  </tr>
+                  <?php } ?>
+                </tbody>
+              </table> <!-- End Table with hoverable rows -->
+
+              <h5 class="card-title" style="color: blue;">Add Video Section</h5> 
+              <form method="post" action="./routes/homePageHandler.php">
+                <div class="row mb-3">
+                  <label for="inputPassword" class="col-sm-2 col-form-label">Video Section</label>
+                  <div class="col-sm-10 col-lg-3">
+                    <input class="form-control" type="url" name="url" placeholder="Url" required/>
+                    <br>
+                  </div>
+                  <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary" >Add</button>
+                  </div>
+                </div>
+              </form>
+
+          <!-- Image Section -->
+          <h5 class="card-title">6. Image Section</h5>
+          
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Image</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                <?php 
+                $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='imgSection'"));
+                $jsonData = json_decode($data['content'], true);
+                foreach($jsonData as $key => $data) {
+                ?>
+                  <tr>
+                    <td><img src="<?php echo $data ?>" width="75px" height="75px" alt="Image"></td>
+                    <td>
+                      <form method="get" action="./routes/homePageHandler.php">
+                      <input type="text" name="key" value="<?php echo $key?>" hidden>
+                      <button type="submit" class="btn btn-danger">&nbsp;Delete&nbsp;</button></a>
+                      </form>
+                    </td>
+                  </tr>
+                  <?php } ?>
+                </tbody>
+              </table> <!-- End Table with hoverable rows -->
+
+              <h5 class="card-title" style="color: blue;">Add Image Section</h5>
+              <form method="post" action="./routes/homePageHandler.php">
+              <div class="row mb-3">
+                  <label for="inputNumber" class="col-sm-2 col-form-label">Image Upload</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="file" id="formFile" accept="image/*">
+                    <br>
+                </div>
+                  <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary" >Add</button>
+                  </div>
+                </div>
+              </form>
+
+            <!--  Principal Section -->
+
+            <h5 class="card-title">7. Principal Section</h5>
+            <?php 
+                $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='principalDesk'"));
+                $jsonData = json_decode($data['content'], true);
+                ?>
+            <form method="post" action="./routes/homePageHandler.php">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Profile</th>
+                    <th scope="col">Background Image</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="file" name="image" accept="image/*"><img src="<?php echo $jsonData['image']?>" width="75px" height="75px" alt="Image"></td>
+                    <td><input type="file" name="bgUrl" accept="image/*"><img src="<?php echo $jsonData['bgUrl']?>" width="75px" height="75px" alt="Image"></td>
+                  </tr>
+                </tbody>
+              </table> <!-- End Table with hoverable rows -->
+
+              <div class="row mb-3">
+                  <label for="inputPassword" class="col-sm-2 col-form-label">Name</label>
+                  <div class="col-sm-10 col-lg-3">
+                    <input class="form-control" name="name" placeholder="Name" value="<?php echo $jsonData['name']?>" required/>
+                    <br>
+                  </div>
+                  <div class="row mb-3">
+                  <label for="inputPassword" class="col-sm-2 col-form-label">Content</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control" style="height: 100px" name="content"><?php echo $jsonData['content']?></textarea>
+                  </div>
+                </div>
+                  <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Update</button>
+                  </div>
+                </div>
+              </form>
+
+
+            <!-- UG Course Section -->
+
+            <h5 class="card-title">8. UG Course Section</h5>
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Sub-Heading</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                <?php 
+                $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='ugCourses'"));
+                $jsonData = json_decode($data['content'], true);
+                foreach($jsonData as $key => $data) {
+                ?>
+                  <tr>
+                    <td><?php echo $data['name']?></td>
+                    <td><?php echo $data['subHeading']?></td>
+                    <td><?php echo $data['date']?></td>
+                    <td><img src="<?php echo $data['imgUrl']?>" width="75px" height="75px" alt="Image"></td>
+                    <td>
+                      <form method="get" action="./routes/homePageHandler.php">
+                      <input type="text" name="key" value="<?php echo $key?>" hidden>
+                      <button type="submit" class="btn btn-danger">&nbsp;Delete&nbsp;</button></a>
+                      </form>
+                    </td>
+                  </tr>
+                <?php } ?>
+                </tbody>
+              </table> <!-- End Table with hoverable rows -->
+
+              <h5 class="card-title" style="color: blue;">Add UG Course Section</h5> 
+              <form method="post" action="./routes/homePageHandler.php">
+                <div class="row mb-3">
+                  <label for="inputPassword" class="col-sm-2 col-form-label">UG Course :</label>
+                  <div class="col-sm-10 col-lg-3">
+                    <input class="form-control" name="name" placeholder="Name" required/>
+                    <br>
+                  </div>
+                  <div class="col-sm-10 col-lg-3">
+                    <input class="form-control" name="subHeading" placeholder="Sub-heading" required/>
+                    <br>
+                  </div>
+                  <div class="col-sm-10 col-lg-3">
+                    <input class="form-control" type="date" name="date" placeholder="Date" required/>
+                    <br>
+                  </div>
+                  <div class="row mb-3">
+                  <label for="inputNumber" class="col-sm-2 col-form-label">Image Upload</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="file" id="formFile" name="imgUrl" accept="image/*">
+                    <br>
+                  </div>
+                  <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                  </div>
+                </div>
+              </form>
+
+
+            <!-- PG Course Section -->
+
+            <h5 class="card-title">9. PG Course Section</h5>
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Sub-Heading</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                <?php 
+                $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='pgCourses'"));
+                $jsonData = json_decode($data['content'], true);
+                foreach($jsonData as $key => $data) {
+                ?>
+                  <tr>
+                    <td><?php echo $data['name']?></td>
+                    <td><?php echo $data['subHeading']?></td>
+                    <td><?php echo $data['date']?></td>
+                    <td><img src="<?php echo $data['imgUrl']?>" width="75px" height="75px" alt="Image"></td>
+                    <td>
+                      <form method="get" action="./routes/homePageHandler.php">
+                      <input type="text" name="key" value="<?php echo $key?>" hidden>
+                      <button type="submit" class="btn btn-danger">&nbsp;Delete&nbsp;</button></a>
+                      </form>
+                    </td>
+                  </tr>
+                <?php } ?>
+                </tbody>
+              </table> <!-- End Table with hoverable rows -->
+
+              <h5 class="card-title" style="color: blue;">Add PG Course Section</h5> 
+              <form method="post" action="./routes/homePageHandler.php">
+                <div class="row mb-3">
+                  <label for="inputPassword" class="col-sm-2 col-form-label">PG Course :</label>
+                  <div class="col-sm-10 col-lg-3">
+                    <input class="form-control" name="name" placeholder="Name" required/>
+                    <br>
+                  </div>
+                  <div class="col-sm-10 col-lg-3">
+                    <input class="form-control" name="subHeading" placeholder="Sub-heading" required/>
+                    <br>
+                  </div>
+                  <div class="col-sm-10 col-lg-3">
+                    <input class="form-control" type="date" name="date" placeholder="Date" required/>
+                    <br>
+                  </div>
+                  <div class="row mb-3">
+                  <label for="inputNumber" class="col-sm-2 col-form-label">Image Upload</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="file" id="formFile" name="imgUrl" accept="image/*">
+                    <br>
+                  </div>
+                  <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                  </div>
+                </div>
+              </form>
+           
+
+          <!--Counter Section -->
+
+          <h5 class="card-title">10. Counter Section</h5>
+
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Count</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                <?php 
+                $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='counterSection'"));
+                $jsonData = json_decode($data['content'], true);
+                foreach($jsonData as $key => $data) {
+                ?>
+                  <tr>
+                    <td><?php echo $data['name']?></td>
+                    <td><?php echo $data['count']?></td>
+                    <td>
+                      <form method="get" action="./routes/homePageHandler.php">
+                      <input type="text" name="key" value="<?php echo $key?>" hidden>
+                      <button type="submit" class="btn btn-danger">&nbsp;Delete&nbsp;</button></a>
+                      </form>
+                    </td>
+                  </tr>
+                <?php } ?>
+                </tbody>
+              </table> <!-- End Table with hoverable rows -->
+
+              <h5 class="card-title" style="color: blue;">Add Counter Section</h5> 
+              <form method="post" action="./routes/homePageHandler.php">
+                <div class="row mb-3">
+                  <label for="inputPassword" class="col-sm-2 col-form-label">Counter Section</label>
+                  <div class="col-sm-10 col-lg-3">
+                    <input class="form-control" name="name" placeholder="Name" required/>
+                    <br>
+                  </div>
+                  <div class="col-sm-10 col-lg-3">
+                    <input class="form-control" name="count" type="number" placeholder="Count" required/>
+                    <br>
+                  </div>
+                  <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                  </div>
+                </div>
+              </form>
+
+          <!-- Recruter Section -->
+          <h5 class="card-title">11. Recruter Section</h5>
+          
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Image</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                <?php 
+                $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='requiterSection'"));
+                $jsonData = json_decode($data['content'], true);
+                foreach($jsonData as $key => $data) {
+                ?>
+                  <tr>
+                  <td><img src="<?php echo $data?>" width="75px" height="75px" alt="Image"></td>
+                  <td>
+                      <form method="get" action="./routes/homePageHandler.php">
+                      <input type="text" name="key" value="<?php echo $key?>" hidden>
+                      <button type="submit" class="btn btn-danger">&nbsp;Delete&nbsp;</button></a>
+                      </form>
+                    </td>
+                  </tr>
+                <?php } ?>
+                </tbody>
+              </table> <!-- End Table with hoverable rows -->
+
+              <h5 class="card-title" style="color: blue;">Add Recruter Section</h5>
+              <form method="post" action="./routes/homePageHandler.php">
+              <div class="row mb-3">
+                  <label for="inputNumber" class="col-sm-2 col-form-label">Image Upload</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="file" id="formFile" name="url" accept="image/*">
+                    <br>
+                </div>
+                  <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary" >Add</button>
+                  </div>
+                </div>
+              </form>     <!-- End General Form Elements -->          
 
             </div>
           </div>
