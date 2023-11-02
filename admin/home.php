@@ -109,7 +109,7 @@
                     <br>
                   </div>
                   <div class="col-sm-10 col-lg-4">
-                    <textarea class="form-control" style="height: 100px" name="paragraph" required>Hero Section Paragraph</textarea>
+                    <textarea class="form-control" style="height: 100px" name="paragraph" placeholder="Hero Section Paragraph" required></textarea>
                     <br>
                   </div>
                   <div class="col-sm-10 col-lg-3">
@@ -158,7 +158,7 @@
                     <td>
                       <form method="get" action="./routes/homePageHandler.php">
                       <input type="text" name="key" value="<?php echo $key?>" hidden>
-                      <button type="submit" class="btn btn-danger">&nbsp;Delete&nbsp;</button></a>
+                      <button type="submit" class="btn btn-danger" name="timmerDeleteButton">&nbsp;Delete&nbsp;</button></a>
                       </form>
                     </td>
                   </tr>
@@ -181,11 +181,11 @@
                     <br>
                   </div>
                   <div class="col-sm-10 col-lg-4">
-                    <input class="form-control" name="countdown" placeholder="countdown" required/>
+                    <input class="form-control" name="countdown" type="date" placeholder="countdown" required/>
                     <br>
                   </div>
                   <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary">Add</button>
+                    <button type="submit" class="btn btn-primary" name="timmerButton">Add</button>
                   </div>
                 </div>
               </form>
@@ -220,7 +220,7 @@
                     <td>
                       <form method="get" action="./routes/homePageHandler.php">
                       <input type="text" name="key" value="<?php echo $key?>" hidden>
-                      <button type="submit" class="btn btn-danger">&nbsp;Delete&nbsp;</button></a>
+                      <button type="submit" class="btn btn-danger" name="newsDeleteButton">&nbsp;Delete&nbsp;</button></a>
                       </form>
                     </td>
                   </tr>
@@ -229,7 +229,7 @@
               </table> <!-- End Table with hoverable rows -->
 
               <h5 class="card-title" style="color: blue;">Add News Section</h5> 
-              <form method="post" action="./routes/homePageHandler.php">
+              <form method="post" action="./routes/homePageHandler.php" enctype="multipart/form-data">
                 <div class="row mb-3">
                   <label for="inputPassword" class="col-sm-2 col-form-label">News Section</label>
                   <div class="col-sm-10 col-lg-3">
@@ -255,7 +255,7 @@
                     <br>
                   </div>
                   <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary">Add</button>
+                    <button type="submit" class="btn btn-primary" name="newsButton">Add</button>
                   </div>
                 </div>
               </form>
@@ -281,7 +281,7 @@
                     <td>
                       <form method="get" action="./routes/homePageHandler.php">
                       <input type="text" name="key" value="<?php echo $key?>" hidden>
-                      <button type="submit" class="btn btn-danger">&nbsp;Delete&nbsp;</button></a>
+                      <button type="submit" class="btn btn-danger" name="videoDeleteButton">&nbsp;Delete&nbsp;</button></a>
                       </form>
                     </td>
                   </tr>
@@ -298,7 +298,7 @@
                     <br>
                   </div>
                   <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary" >Add</button>
+                    <button type="submit" class="btn btn-primary" name="videoButton">Add</button>
                   </div>
                 </div>
               </form>
@@ -324,7 +324,7 @@
                     <td>
                       <form method="get" action="./routes/homePageHandler.php">
                       <input type="text" name="key" value="<?php echo $key?>" hidden>
-                      <button type="submit" class="btn btn-danger">&nbsp;Delete&nbsp;</button></a>
+                      <button type="submit" class="btn btn-danger" name="imageDeleteButton">&nbsp;Delete&nbsp;</button></a>
                       </form>
                     </td>
                   </tr>
@@ -333,15 +333,15 @@
               </table> <!-- End Table with hoverable rows -->
 
               <h5 class="card-title" style="color: blue;">Add Image Section</h5>
-              <form method="post" action="./routes/homePageHandler.php">
+              <form method="post" action="./routes/homePageHandler.php" enctype="multipart/form-data">
               <div class="row mb-3">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Image Upload</label>
                   <div class="col-sm-10">
-                    <input class="form-control" type="file" id="formFile" accept="image/*">
+                    <input class="form-control" type="file" id="formFile" name="image" accept="image/*">
                     <br>
                 </div>
                   <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary" >Add</button>
+                    <button type="submit" class="btn btn-primary" name ="imageButton" >Add</button>
                   </div>
                 </div>
               </form>
@@ -353,7 +353,7 @@
                 $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='principalDesk'"));
                 $jsonData = json_decode($data['content'], true);
                 ?>
-            <form method="post" action="./routes/homePageHandler.php">
+            <form method="post" action="./routes/homePageHandler.php" enctype="multipart/form-data">
               <table class="table table-hover">
                 <thead>
                   <tr>
@@ -382,7 +382,7 @@
                   </div>
                 </div>
                   <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary">Update</button>
+                    <button type="submit" class="btn btn-primary" name="principalButton">Update</button>
                   </div>
                 </div>
               </form>
@@ -415,7 +415,7 @@
                     <td>
                       <form method="get" action="./routes/homePageHandler.php">
                       <input type="text" name="key" value="<?php echo $key?>" hidden>
-                      <button type="submit" class="btn btn-danger">&nbsp;Delete&nbsp;</button></a>
+                      <button type="submit" class="btn btn-danger" name="ugDeleteButton">&nbsp;Delete&nbsp;</button></a>
                       </form>
                     </td>
                   </tr>
@@ -424,7 +424,7 @@
               </table> <!-- End Table with hoverable rows -->
 
               <h5 class="card-title" style="color: blue;">Add UG Course Section</h5> 
-              <form method="post" action="./routes/homePageHandler.php">
+              <form method="post" action="./routes/homePageHandler.php" enctype="multipart/form-data">
                 <div class="row mb-3">
                   <label for="inputPassword" class="col-sm-2 col-form-label">UG Course :</label>
                   <div class="col-sm-10 col-lg-3">
@@ -446,7 +446,7 @@
                     <br>
                   </div>
                   <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary">Add</button>
+                    <button type="submit" class="btn btn-primary" name="ugButton">Add</button>
                   </div>
                 </div>
               </form>
@@ -479,7 +479,7 @@
                     <td>
                       <form method="get" action="./routes/homePageHandler.php">
                       <input type="text" name="key" value="<?php echo $key?>" hidden>
-                      <button type="submit" class="btn btn-danger">&nbsp;Delete&nbsp;</button></a>
+                      <button type="submit" class="btn btn-danger" name="pgDeleteButton">&nbsp;Delete&nbsp;</button></a>
                       </form>
                     </td>
                   </tr>
@@ -488,7 +488,7 @@
               </table> <!-- End Table with hoverable rows -->
 
               <h5 class="card-title" style="color: blue;">Add PG Course Section</h5> 
-              <form method="post" action="./routes/homePageHandler.php">
+              <form method="post" action="./routes/homePageHandler.php" enctype="multipart/form-data">
                 <div class="row mb-3">
                   <label for="inputPassword" class="col-sm-2 col-form-label">PG Course :</label>
                   <div class="col-sm-10 col-lg-3">
@@ -510,7 +510,7 @@
                     <br>
                   </div>
                   <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary">Add</button>
+                    <button type="submit" class="btn btn-primary" name="pgButton">Add</button>
                   </div>
                 </div>
               </form>
@@ -540,7 +540,7 @@
                     <td>
                       <form method="get" action="./routes/homePageHandler.php">
                       <input type="text" name="key" value="<?php echo $key?>" hidden>
-                      <button type="submit" class="btn btn-danger">&nbsp;Delete&nbsp;</button></a>
+                      <button type="submit" class="btn btn-danger" name="counterDeleteButton">&nbsp;Delete&nbsp;</button></a>
                       </form>
                     </td>
                   </tr>
@@ -561,13 +561,13 @@
                     <br>
                   </div>
                   <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary">Add</button>
+                    <button type="submit" class="btn btn-primary" name="counterButton">Add</button>
                   </div>
                 </div>
               </form>
 
-          <!-- Recruter Section -->
-          <h5 class="card-title">11. Recruter Section</h5>
+          <!-- Recruiter Section -->
+          <h5 class="card-title">11. Recruiter Section</h5>
           
               <table class="table table-hover">
                 <thead>
@@ -578,7 +578,7 @@
                 </thead>
                 <tbody>
                 <?php 
-                $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='requiterSection'"));
+                $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='recruiterSection'"));
                 $jsonData = json_decode($data['content'], true);
                 foreach($jsonData as $key => $data) {
                 ?>
@@ -587,7 +587,7 @@
                   <td>
                       <form method="get" action="./routes/homePageHandler.php">
                       <input type="text" name="key" value="<?php echo $key?>" hidden>
-                      <button type="submit" class="btn btn-danger">&nbsp;Delete&nbsp;</button></a>
+                      <button type="submit" class="btn btn-danger" name="recruiterDeleteButton">&nbsp;Delete&nbsp;</button></a>
                       </form>
                     </td>
                   </tr>
@@ -595,16 +595,16 @@
                 </tbody>
               </table> <!-- End Table with hoverable rows -->
 
-              <h5 class="card-title" style="color: blue;">Add Recruter Section</h5>
-              <form method="post" action="./routes/homePageHandler.php">
+              <h5 class="card-title" style="color: blue;">Add Recruiter Section</h5>
+              <form method="post" action="./routes/homePageHandler.php" enctype="multipart/form-data">
               <div class="row mb-3">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Image Upload</label>
                   <div class="col-sm-10">
-                    <input class="form-control" type="file" id="formFile" name="url" accept="image/*">
+                    <input class="form-control" type="file" id="formFile" name="image" accept="image/*">
                     <br>
                 </div>
                   <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary" >Add</button>
+                    <button type="submit" class="btn btn-primary" name="recruiterButton">Add</button>
                   </div>
                 </div>
               </form>     <!-- End General Form Elements -->          
