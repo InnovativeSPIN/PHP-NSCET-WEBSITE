@@ -578,7 +578,7 @@
                 </thead>
                 <tbody>
                 <?php 
-                $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='recruiterSection'"));
+                $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='requiterSection'"));
                 $jsonData = json_decode($data['content'], true);
                 foreach($jsonData as $key => $data) {
                 ?>

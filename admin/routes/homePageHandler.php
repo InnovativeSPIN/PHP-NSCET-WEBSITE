@@ -617,7 +617,7 @@ if (isset($_POST['recruiterButton'])) {
     if ($_FILES["image"]) {
 
         $path = dirname(__DIR__);
-        $targetDirectory = $path. "\\media\\recruiterSection\\";
+        $targetDirectory = $path. "\\media\\requiterSection\\";
     
         if (!is_dir($targetDirectory)) {
             mkdir($targetDirectory, 0755, true);
@@ -635,9 +635,9 @@ if (isset($_POST['recruiterButton'])) {
         }
         }
     
-        $image = "./media/recruiterSection/".basename($file["name"]);
+        $image = "./media/requiterSection/".basename($file["name"]);
     
-    $jsondata = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='recruiterSection'"));
+    $jsondata = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='requiterSection'"));
     $originaldata = json_decode($jsondata['content'],true);
 
     array_push($originaldata, $image);
@@ -673,7 +673,7 @@ if (isset($_POST['recruiterButton'])) {
 
 if(isset($_GET["recruiterDeleteButton"])){
 
-    $jsondata = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='recruiterSection'"));
+    $jsondata = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='requiterSection'"));
     $originaldata = json_decode($jsondata['content'],true);
 
     $key = (int)$_GET["key"];

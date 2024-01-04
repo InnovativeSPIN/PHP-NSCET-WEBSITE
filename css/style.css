@@ -604,6 +604,7 @@ ul {
 }
 
 .course-item .course-thumb img {
+  height: 35vh;
   min-width: 100%;
 }
 
@@ -3113,7 +3114,21 @@ body {
   animation: scrolling 20s linear infinite;
 }
 
+.marquee-content-news {
+  display: flex;
+  animation: scrollingNews 25s linear infinite;
+}
+
+.news-img{
+  width: 60vw;
+  height: 35vh;
+}
+
 .marquee-content:hover {
+  animation-play-state: paused;
+}
+
+.marquee-content-news:hover {
   animation-play-state: paused;
 }
 
@@ -3128,6 +3143,15 @@ body {
   display: block;
   width: 100%;
   /*   padding: 0 20px; */
+}
+
+@keyframes scrollingNews {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translatex(-144vw);
+  }
 }
 
 @keyframes scrolling {

@@ -252,24 +252,23 @@
       <?php 
         $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='newsSection'"));
         $jsonData = json_decode($data['content'], true);
-        foreach($jsonData as $data) {
       ?>
       <div class="row">
-        <div class="col-lg-9">
-          <div class="section-heading">
+        <div class="col-lg-9" style="overflow:hidden;">
+          <div class="section-heading" style="padding:12px;">
             <h2 class="text-black">News &amp; Updates</h2>
-            <a href="<?php echo $data['url']?>">Read All News</a>
           </div>
-          <div class="row">
-            <div class="col-lg-6">
+          <div class="marquee-content-news">
+            <?php foreach($jsonData as $data) {?>
+            <div class='col-md-6' style="margin:6px;">
               <div class="post-entry-big">
-                <a href="news-single.html" class="img-link"><img src="<?php echo $data['imgUrl']?>" alt="Image"
+                <a href="news-single.html" class="img-link"><img class='news-img' src="./admin/<?php echo $data['imgUrl']?>" alt="Image"
                     class="img-fluid" /></a>
                 <div class="post-content">
                   <div class="post-meta">
                     <a href="#"><?php echo $data['date']?></a>
                     <span class="mx-1">/</span>
-                    <a href="#"><?php echo $data['tags'][0]?></a>, <a href="#"><?php echo $data['tags'][1]?></a>
+                    <a href="#"><?php echo $data['tags']?></a>
                   </div>
                   <h3 class="post-heading">
                     <a href="news-single.html"><?php echo $data['title']?></a>
@@ -277,54 +276,11 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="post-entry-big horizontal d-flex mb-4" style="display: flex">
-                <a href="news-single.html" class="img-link mr-4"><img src="<?php echo $data['imgUrl']?>" alt="Image"
-                    class="img-fluid" /></a>
-                <div class="post-content">
-                  <div class="post-meta">
-                    <a href="#"><?php echo $data['date']?></a>
-                    <span class="mx-1">/</span>
-                    <a href="#"><?php echo $data['tags'][0]?></a>, <a href="#"><?php echo $data['tags'][1]?></a>
-                  </div>
-                  <h3 class="post-heading">
-                    <a href="news-single.html"><?php echo $data['title']?></a>
-                  </h3>
-                </div>
-              </div>
-              <div class="post-entry-big horizontal d-flex mb-4" style="display: flex">
-                <a href="news-single.html" class="img-link mr-4"><img src="<?php echo $data['imgUrl']?>" alt="Image"
-                    class="img-fluid" /></a>
-                <div class="post-content">
-                  <div class="post-meta">
-                    <a href="#"><?php echo $data['date']?></a>
-                    <span class="mx-1">/</span>
-                    <a href="#"><?php echo $data['tags'][0]?></a>, <a href="#"><?php echo $data['tags'][1]?></a>
-                  </div>
-                  <h3 class="post-heading">
-                    <a href="news-single.html"><?php echo $data['title']?></a>
-                  </h3>
-                </div>
-              </div>
-              <div class="post-entry-big horizontal d-flex mb-4" style="display: flex">
-                <a href="news-single.html" class="img-link mr-4"><img src="<?php echo $data['imgUrl']?>" alt="Image"
-                    class="img-fluid" /></a>
-                <div class="post-content">
-                  <div class="post-meta">
-                    <a href="#"><?php echo $data['date']?></a>
-                    <span class="mx-1">/</span>
-                    <a href="#"><?php echo $data['tags'][0]?></a>, <a href="#"><?php echo $data['tags'][1]?></a>
-                  </div>
-                  <h3 class="post-heading">
-                    <a href="news-single.html"><?php echo $data['title']?></a>
-                  </h3>
-                </div>
-              </div>
-            </div>
+            <?php 
+              }
+              ?>
           </div>
-          <?php 
-    }
-    ?>
+          
     </div>
     <?php 
         $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='videoSection'"));
@@ -400,11 +356,11 @@
     </div>
   </div>
 
-  <!-- <section class="service-section spad">
+  <section class="service-section spad">
       <div class="container services">
         <div class="section-title text-center">
-          <h3>OUR SERVICES</h3>
-          <p>We provides the opportunity to prepare for life</p>
+          <h3>OUR FACILITIES</h3>
+          <p>We provides the amazing facilities and oppturnity to prepare for life</p>
         </div>
         <div class="row">
           <div class="col-lg-4 col-sm-6 service-item">
@@ -481,7 +437,7 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
   <!-- <section class="enroll-section spad set-bg" data-setbg="img/enroll-bg.jpg">
       <div class="container">
@@ -525,159 +481,58 @@
       </div>
     </section> -->
 
+    <?php 
+        $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='ugCourses'"));
+        $jsonData = json_decode($data['content'], true);
+      ?>
+
   <section class="courses-section spad">
     <div class="container course-div">
       <div class="section-title text-center">
         <h3>UG COURSES</h3>
-        <p>Building a better world, one course at a time</p>
+        <!-- <p>Building a better world, one course at a time</p> -->
       </div>
       <div class="row">
-        <div class="col-lg-4 col-md-6 course-item">
-          <div class="course-thumb">
-            <img src="https://picsum.photos/280/256" alt />
-            <div class="course-cat">
-              <span>BUSINESS</span>
-            </div>
-          </div>
-          <div class="course-info">
-            <div class="date"><i class="fa fa-clock-o"></i> 22 Mar 2018</div>
-            <h4>Certificate Course in Writing<br />for a Global Market</h4>
-            <h4 class="cource-price">$100<span>/month</span></h4>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 course-item">
-          <div class="course-thumb">
-            <img src="https://picsum.photos/280/256" alt />
-            <div class="course-cat">
-              <span>Marketing</span>
-            </div>
-          </div>
-          <div class="course-info">
-            <div class="date"><i class="fa fa-clock-o"></i> 22 Mar 2018</div>
-            <h4>
-              Google AdWords: Get More<br />
-              Customers with Search Marketing
-            </h4>
-            <h4 class="cource-price">$150<span>/month</span></h4>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 course-item">
-          <div class="course-thumb">
-            <img src="https://picsum.photos/280/256" alt />
-            <div class="course-cat">
-              <span>DESIGN</span>
-            </div>
-          </div>
-          <div class="course-info">
-            <div class="date"><i class="fa fa-clock-o"></i> 22 Mar 2018</div>
-            <h4>
-              The Ultimate Drawing Course<br />
-              Beginner to Advanced
-            </h4>
-            <h4 class="cource-price">$180<span>/month</span></h4>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 course-item">
-          <div class="course-thumb">
-            <img src="https://picsum.photos/280/256" alt />
-            <div class="course-cat">
-              <span>DATABASE</span>
-            </div>
-          </div>
-          <div class="course-info">
-            <div class="date"><i class="fa fa-clock-o"></i> 22 Mar 2018</div>
-            <h4>Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert</h4>
-            <h4 class="cource-price">$150<span>/month</span></h4>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 course-item">
-          <div class="course-thumb">
-            <img src="https://picsum.photos/280/256" alt />
-            <div class="course-cat">
-              <span>PROGRAM</span>
-            </div>
-          </div>
-          <div class="course-info">
-            <div class="date"><i class="fa fa-clock-o"></i> 22 Mar 2018</div>
-            <h4>Web Developer Bootcamp<br />Make web applications</h4>
-            <h4 class="cource-price">$250<span>/month</span></h4>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 course-item">
-          <div class="course-thumb">
-            <img src="https://picsum.photos/280/256" alt />
-            <div class="course-cat">
-              <span>BUSINESS</span>
-            </div>
-          </div>
-          <div class="course-info">
-            <div class="date"><i class="fa fa-clock-o"></i> 22 Mar 2018</div>
-            <h4>How to Start an Amazon<br />FBA Store on a Tight Budget</h4>
-            <h4 class="cource-price">$150<span>/month</span></h4>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 course-item">
-          <div class="course-thumb">
-            <img src="https://picsum.photos/280/256" alt />
-            <div class="course-cat">
-              <span>BUSINESS</span>
-            </div>
-          </div>
-          <div class="course-info">
-            <div class="date"><i class="fa fa-clock-o"></i> 22 Mar 2018</div>
-            <h4>How to Start an Amazon<br />FBA Store on a Tight Budget</h4>
-            <h4 class="cource-price">$150<span>/month</span></h4>
-          </div>
-        </div>
+          <?php
+          foreach ($jsonData as $data) {
+            echo '<div class="col-lg-4 col-md-6 course-item">';
+            echo '<div class="course-thumb">';
+            echo '  <img src=./admin/'.$data['imgUrl'].' alt />';
+            echo '<div class="course-cat">';
+            echo "<span>".$data['name']."</span>";
+            echo "</div>";
+            echo "</div>";
+            echo "</div>";
+          }
+          ?>
       </div>
     </div>
   </section>
+
+  <?php 
+        $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='pgCourses'"));
+        $jsonData = json_decode($data['content'], true);
+      ?>
 
   <section class="courses-section spad">
     <div class="container course-div">
       <div class="section-title text-center">
         <h3>PG COURSES</h3>
-        <p>Building a better world, one course at a time</p>
+        <!-- <p>Building a better world, one course at a time</p> -->
       </div>
       <div class="row">
-        <div class="col-lg-4 col-md-6 course-item">
-          <div class="course-thumb">
-            <img src="https://picsum.photos/280/256" alt />
-            <div class="course-cat">
-              <span>BUSINESS</span>
-            </div>
-          </div>
-          <div class="course-info">
-            <div class="date"><i class="fa fa-clock-o"></i> 22 Mar 2018</div>
-            <h4>Certificate Course in Writing<br />for a Global Market</h4>
-            <h4 class="cource-price">$100<span>/month</span></h4>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 course-item">
-          <div class="course-thumb">
-            <img src="https://picsum.photos/280/256" alt />
-            <div class="course-cat">
-              <span>Marketing</span>
-            </div>
-          </div>
-          <div class="course-info">
-            <div class="date"><i class="fa fa-clock-o"></i> 22 Mar 2018</div>
-            <h4>
-              Google AdWords: Get More<br />
-              Customers with Search Marketing
-            </h4>
-            <h4 class="cource-price">$150<span>/month</span></h4>
-          </div>
-        </div>
-
-
+          <?php
+          foreach ($jsonData as $data) {
+            echo '<div class="col-lg-4 col-md-6 course-item">';
+            echo '<div class="course-thumb">';
+            echo '  <img src=./admin/'.$data['imgUrl'].' alt />';
+            echo '<div class="course-cat">';
+            echo "<span>".$data['name']."</span>";
+            echo "</div>";
+            echo "</div>";
+            echo "</div>";
+          }
+          ?>
       </div>
     </div>
   </section>
@@ -690,7 +545,7 @@
             <i class="ti-crown"></i>
           </div>
           <div class="fact-text">
-            <h2>50</h2>
+            <h2>14</h2>
             <p>YEARS</p>
           </div>
         </div>
@@ -699,7 +554,7 @@
             <i class="ti-briefcase"></i>
           </div>
           <div class="fact-text">
-            <h2>80</h2>
+            <h2>87+</h2>
             <p>TEACHERS</p>
           </div>
         </div>
@@ -708,7 +563,7 @@
             <i class="ti-user"></i>
           </div>
           <div class="fact-text">
-            <h2>500</h2>
+            <h2>1000+</h2>
             <p>STUDENTS</p>
           </div>
         </div>
@@ -717,84 +572,44 @@
             <i class="ti-pencil-alt"></i>
           </div>
           <div class="fact-text">
-            <h2>800+</h2>
-            <p>LESSONS</p>
+            <h2>15+</h2>
+            <p>MOU'S</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <?php 
+        $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='requiterSection'"));
+        $jsonString = str_replace('\/', '/', $data['content']);
+        $urlArray = json_decode($jsonString, true);
+      ?>
   <section class="event-section spad">
     <div class="container">
       <div class="section-title text-center">
         <h3>Our Top Recruiters</h3>
-        <p>Our department initiated a series of events</p>
+        <!-- <p>Our department initiated a series of events</p> -->
       </div>
       <div class="marquee">
+        
         <div class="marquee-content">
-          <div class="marquee-item">
-            <img src="https://picsum.photos/280/256" alt="" />
-          </div>
+          <?php
+          foreach ($urlArray as $img) {
+            echo '<div class="marquee-item">';
+            echo '  <img src="./admin/' . $img . '" alt="" />';
+            echo '</div>';
+            echo "\n";
+          }
 
-          <div class="marquee-item">
-            <img src="<?php echo $data[1]?>" alt="" />
-          </div>
+          foreach ($urlArray as $img) {
+            echo '<div class="marquee-item">';
+            echo '  <img src="./admin/' . $img . '" alt="" />';
+            echo '</div>';
+            echo "\n";
+          }
+          ?>
 
-          <div class="marquee-item">
-            <img src="https://picsum.photos/380/480?random=03" alt="" />
-          </div>
-
-          <div class="marquee-item">
-            <img src="<?php echo $data[1]?>" alt="" />
-          </div>
-
-          <div class="marquee-item">
-            <img src="<?php echo $data[1]?>" alt="" />
-          </div>
-
-          <div class="marquee-item">
-            <img src="https://picsum.photos/380/480?random=06" alt="" />
-          </div>
-
-          <div class="marquee-item">
-            <img src="https://picsum.photos/380/480?random=07" alt="" />
-          </div>
-
-          <div class="marquee-item">
-            <img src="https://picsum.photos/380/480?random=09" alt="" />
-          </div>
-          <div class="marquee-item">
-            <img src="https://picsum.photos/380/480?random=01" alt="" />
-          </div>
-
-          <div class="marquee-item">
-            <img src="https://picsum.photos/380/480?random=02" alt="" />
-          </div>
-
-          <div class="marquee-item">
-            <img src="https://picsum.photos/380/480?random=03" alt="" />
-          </div>
-
-          <div class="marquee-item">
-            <img src="https://picsum.photos/380/480?random=04" alt="" />
-          </div>
-
-          <div class="marquee-item">
-            <img src="https://picsum.photos/380/480?random=05" alt="" />
-          </div>
-
-          <div class="marquee-item">
-            <img src="https://picsum.photos/380/480?random=06" alt="" />
-          </div>
-
-          <div class="marquee-item">
-            <img src="https://picsum.photos/380/480?random=07" alt="" />
-          </div>
-
-          <div class="marquee-item">
-            <img src="https://picsum.photos/380/480?random=08" alt="" />
-          </div>
         </div>
       </div>
   </section>
