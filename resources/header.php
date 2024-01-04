@@ -2,7 +2,7 @@
     <div class="container">
 
         <ul class="main-menu">
-        <a href="index.html" class="site-logo"><img width="150px" src="/assets/logos/clgLogo.png" alt /></a>
+        <a href="index.html" class="site-logo"><img width="150px" src="./assets/logos/clgLogo.png" alt /></a>
 
             <li class="active"><a href="index.html">Home</a></li>
             <li><a href="about.html">Administartion</a></li>
