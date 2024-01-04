@@ -1015,7 +1015,13 @@ ul {
 }
 
 .footer-widget .recent-post li {
-  margin-bottom: 25px;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.footer-widget .recent-post li a{
+  text-decoration: none;
+  color: #b7b7b7;
 }
 
 .footer-widget .recent-post p {

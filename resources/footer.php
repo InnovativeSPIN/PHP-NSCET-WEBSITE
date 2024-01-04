@@ -1,3 +1,4 @@
+
 <footer class="footer-section">
     <div class="container footer-top">
         <div class="row">
@@ -5,8 +6,7 @@
                 <div class="about-widget">
                     <img src="img/logo-light.png" alt />
                     <p>
-                        orem ipsum dolor sit amet, consecter adipiscing elite. Donec
-                        minos varius, viverra justo ut, aliquet nisl.
+                    NSCET is a vibrant institution located in Theni, known for its commitment to academic excellence, diverse student body, and a thriving campus culture. With state-of-the-art facilities and a dedicated faculty, it provides a conducive environment for holistic learning and personal growth.
                     </p>
                     <div class="social pt-1">
                         <a href><i class="fa fa-twitter-square"></i></a>
@@ -39,22 +39,16 @@
             </div>
 
             <div class="col-sm-6 col-lg-3 footer-widget">
-                <h6 class="fw-title">RECENT POST</h6>
+                <h6 class="fw-title">DISCLOSURE</h6>
                 <ul class="recent-post">
-                    <li>
-                        <p>
-                            Snackable study:How to break <br />
-                            up your master's degree
-                        </p>
-                        <span><i class="fa fa-clock-o"></i>24 Mar 2018</span>
-                    </li>
-                    <li>
-                        <p>
-                            Open University plans major <br />
-                            cuts to number of staff
-                        </p>
-                        <span><i class="fa fa-clock-o"></i>24 Mar 2018</span>
-                    </li>
+                    <li><a href="#">Mandatory Disclosure</a></li>
+                    <li><a href="#">Minimum Disclosure</a></li>
+                    <li><a href="#">Student Facilitation services</a></li>
+                    <li><a href="#">AICTE Approval Handbook</a></li>
+                    <li><a href="#">AICTE Approval</a></li>
+                    <li><a href="#">AU Affiliation</a></li>
+                    <li><a href="#">NIRF 2023</a></li>
+
                 </ul>
             </div>
 
@@ -63,24 +57,17 @@
                 <ul class="contact">
                     <li>
                         <p>
-                            <i class="fa fa-map-marker"></i> 40 Baria Street 133/2,
-                            NewYork City,US
+                            <i class="fa fa-map-marker"></i> NSCET, PostboxNo:60, Annanji(P.O), Vadapudupatti, Theni-625531
                         </p>
                     </li>
                     <li>
-                        <p><i class="fa fa-phone"></i> (+88) 111 555 666</p>
+                        <p><i class="fa fa-phone"></i> 04546-263900, 901, 902 </p>
                     </li>
                     <li>
                         <p>
                             <i class="fa fa-envelope"></i>
-                            <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
-                                data-cfemail="335a5d555c5756564150415652475a455673545e525a5f1d505c5e">[email&#160;protected]</a>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <i class="fa fa-clock-o"></i> Monday - Friday, 08:00AM - 06:00
-                            PM
+                            <a href="#" class="__cf_email__"
+                                data-cfemail="335a5d555c5756564150415652475a455673545e525a5f1d505c5e">principal@nscet.org</a>
                         </p>
                     </li>
                 </ul>

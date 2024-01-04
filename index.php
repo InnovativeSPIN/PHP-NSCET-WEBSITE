@@ -114,9 +114,9 @@
       <a href="#" class="fixed-gplus" target="_blank"><i class="fa fa-instagram"></i> <span>Instagram+</span></a>
     </div>
   </div>
-  <div id="preloder">
+  <!-- <div id="preloder">
     <div class="loader"></div>
-  </div>
+  </div> -->
   <div class="nav-switch" style="z-index: 100">
     <i class="fa fa-bars"></i>
   </div>
@@ -158,7 +158,7 @@
         $jsonData = json_decode($data['content'], true);
         foreach($jsonData as $data) {
       ?>
-      <div class="hs-item set-bg" data-setbg="https://nscet.org/Home_Assets/img/dummy1/image.jpg">
+      <div class="hs-item set-bg" data-setbg=./admin/<?php echo $data['image']?>>
         <div class="hs-text">
           <div class="container">
             <div class="row">
@@ -170,7 +170,7 @@
                 <p class="hs-des">
                   <?php echo $data['paragraph']?>
                 </p>
-                <div class="site-btn"><?php echo $data['btn']?></div>
+                <!-- <div class="site-btn"><?php echo $data['btn']?></div> -->
               </div>
             </div>
           </div>
@@ -209,6 +209,8 @@
         $jsonData = json_decode($data['content'], true);
         foreach($jsonData as $data) {
       ?>
+      <p style="display: none" id='countdown-date'><?php echo $data['countdown']?></p>
+
       <div class="row">
         <div class="col-lg-7 col-md-6">
           <div class="big-icon">
@@ -216,7 +218,7 @@
           </div>
           <div class="counter-content">
             <h2><?php echo $data['title']?></h2>
-            <p><i class="fa fa-calendar-o"></i><?php echo $data['time']?></p>
+            <p><i class="fa fa-calendar-o"></i><?php echo $data['countdown']?> | <?php echo $data['time']?></p>
           </div>
         </div>
         <div class="col-lg-5 col-md-6">
@@ -326,128 +328,73 @@
     </div>
     <?php 
         $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='videoSection'"));
+        $jsonString = str_replace('\/', '/', $data['content']);
+        $urlArray = json_decode($jsonString, true);
+        // print_r($urlArray);
       ?>
         <div class="col-lg-3">
           <div class="section-heading">
             <h2 class="text-black">Campus Videos</h2>
             <a href="#">View All Videos</a>
           </div>
-          <a href="<?php echo $data[0]?>" class="video-1 mb-4" data-fancybox data-ratio="2">
-            <span class="play">
-              <span class="icon-play"></span>
-            </span>
-            <img src="https://i.blogs.es/9b19ad/youtube/450_1000.webp" alt="Image" class="img-fluid" />
-          </a>
-          <a href="<?php echo $data[1]?>" class="video-1 mb-4" data-fancybox data-ratio="2">
-            <span class="play">
-              <span class="icon-play"></span>
-            </span>
-            <img src="https://i.blogs.es/9b19ad/youtube/450_1000.webp" alt="Image" class="img-fluid" />
-          </a>
+          <iframe width="280" height="180" src=<?php echo $urlArray[0]?> title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe width="280" height="180" src=<?php echo $urlArray[1]?> title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
     </div>
     
   </div>
   <div class="marquee">
+  <h3 class="text-black container">SMART INDIA HACKATHON ' 23 - Achievements</h3>
+
     <div class="marquee-content">
     <?php 
         $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='imgSection'"));
+        $jsonString = str_replace('\/', '/', $data['content']);
+        $urlArray = json_decode($jsonString, true);
+
+        foreach ($urlArray as $img) {
+          echo '<div class="marquee-item">';
+          echo '  <img src="./admin/' . $img . '" alt="" />';
+          echo '</div>';
+          echo "\n";
+        }
+
+        foreach ($urlArray as $img) {
+          echo '<div class="marquee-item">';
+          echo '  <img src="./admin/' . $img . '" alt="" />';
+          echo '</div>';
+          echo "\n";
+        }
+
       ?>
-      <div class="marquee-item">
-        <img src="<?php echo $data[0]?>" alt="" />
-      </div>
 
-      <div class="marquee-item">
-        <img src="<?php echo $data[1]?>" alt="" />
-      </div>
-
-      <div class="marquee-item">
-        <img src="<?php echo $data[0]?>" alt="" />
-      </div>
-
-      <div class="marquee-item">
-        <img src="<?php echo $data[1]?>" alt="" />
-      </div>
-
-      <div class="marquee-item">
-        <img src="<?php echo $data[1]?>" alt="" />
-      </div>
-
-      <div class="marquee-item">
-        <img src="<?php echo $data[0]?>" alt="" />
-      </div>
-
-      <div class="marquee-item">
-        <img src="<?php echo $data[1]?>" alt="" />
-      </div>
-
-      <div class="marquee-item">
-        <img src="<?php echo $data[0]?>" alt="" />
-      </div>
-      <div class="marquee-item">
-        <img src="<?php echo $data[1]?>" alt="" />
-      </div>
-
-      <div class="marquee-item">
-        <img src="<?php echo $data[0]?>" alt="" />
-      </div>
-
-      <div class="marquee-item">
-        <img src="<?php echo $data[1]?>" alt="" />
-      </div>
-
-      <div class="marquee-item">
-        <img src="<?php echo $data[0]?>" alt="" />
-      </div>
-
-      <div class="marquee-item">
-        <img src="<?php echo $data[1]?>" alt="" />
-      </div>
-
-      <div class="marquee-item">
-        <img src="<?php echo $data[0]?>" alt="" />
-      </div>
-
-      <div class="marquee-item">
-        <img src="<?php echo $data[1]?>" alt="" />
-      </div>
-
-      <div class="marquee-item">
-        <img src="<?php echo $data[0]?>" alt="" />
-      </div>
     </div>
   </div>
 
+
+  <?php 
+        $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='principalDesk'"));
+        $jsonData = json_decode($data['content'], true);
+      ?>
   <div class="section-bg style-1" style="
         color: white;
         margin-top: 32px;
-        background-image: url('https://nscet.org/Home_Assets/img/dummy/about-us.jpg');
+        background-image: url(<?php echo $jsonData['bgUrl'] ?>);
       ">
     <div class="container">
       <div class="row">
         <div class="col-lg-4">
           <h2 class="section-title-underline style-2">
             <span>Principal Desk</span>
-            <img style="margin-top: 24px" src="https://picsum.photos/280/256" alt="" />
+            <img style="margin-top: 24px" src=./admin/<?php echo $jsonData['image'] ?> alt="" />
           </h2>
         </div>
         <div class="col-lg-8" style="align-self: center;margin-top: 24px;">
           <p class="lead">
-            As a 21st century organization, NSCET desires to set an approach
-            to learning that incorporates inquiry, research, analytical
-            thinking and an ethical approach that becomes a lifetime habit. I
-            strongly believe that education is a collaborative effort that
-            involves professional administrators, committed teachers and
-            motivated students. We dedicate ourselves as professional
-            administrators in creating a dynamic education programme
-            empowering the students in a global perspective. We are a group of
-            diverse experiences and outlooks, committed to excellence in
-            preparing learners for enriched opportunities worldwide. In short,
-            learning at NSCET is a wholesome package of attitude, challenge
-            and opportunity.
+          <?php echo $jsonData['content'] ?>
           </p>
-          <p style="text-align: right;">Dr.C.Mathalai Sundaram M.E.,MBA.,Ph.D., Principal, NSCET</p>
+          <p style="text-align: right;"><?php echo $jsonData['name'] ?></p>
         </div>
       </div>
     </div>
