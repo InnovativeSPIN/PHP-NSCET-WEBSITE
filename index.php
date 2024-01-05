@@ -1,4 +1,4 @@
-<?php require_once("./resources/connection.php")?>
+<?php require_once("./resources/connection.php") ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -98,20 +98,20 @@
 </head>
 
 <body>
-  <?php require_once("./resources/model.php")?>
+  <?php require_once("./resources/model.php") ?>
 
   <div id="fixed-social" style="z-index: 10">
     <div>
       <a href="#" class="fixed-facebook" target="_blank"><i class="fa fa-facebook"></i> <span>Facebook</span></a>
     </div>
     <div>
-      <a href="#" class="fixed-twitter" target="_blank"><i class="fa fa-linkedin"></i> <span>Twitter</span></a>
+      <a href="#" class="fixed-linkedin" target="_blank"><i class="fa fa-linkedin"></i> <span>Linkedin</span></a>
     </div>
     <div>
-      <a href="#" class="fixed-gplus" target="_blank"><i class="fa fa-youtube"></i> <span>Google+</span></a>
+      <a href="https://www.youtube.com/@NSCETeConnect" class="fixed-instagrem" target="_blank"><i class="fa fa-youtube"></i> <span>Youtube</span></a>
     </div>
     <div>
-      <a href="#" class="fixed-gplus" target="_blank"><i class="fa fa-instagram"></i> <span>Instagram+</span></a>
+      <a href="#" class="fixed-twitter" target="_blank"><i class="fa fa-instagram"></i> <span>Instagram</span></a>
     </div>
   </div>
   <!-- <div id="preloder">
@@ -137,7 +137,7 @@
       </div>
     </header> -->
 
-  <?php require_once("./resources/header.php")?>
+  <?php require_once("./resources/header.php") ?>
   <section>
     <?php
     $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='marquee'"));
@@ -146,37 +146,39 @@
     <div class="marquee" data-marquee-duration="20">
       <div class="marquee__inner">
         <div class="marquee__content">
-          <?php echo $jsonData['content']?>
+          <?php echo $jsonData['content'] ?>
         </div>
       </div>
     </div>
   </section>
   <section class="hero-section">
     <div class="hero-slider owl-carousel">
-      <?php 
-        $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='heroSection'"));
-        $jsonData = json_decode($data['content'], true);
-        foreach($jsonData as $data) {
-      ?>
-      <div class="hs-item set-bg" data-setbg=./admin/<?php echo $data['image']?>>
-        <div class="hs-text">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8">
-                <div class="hs-subtitle"><?php echo $data['subHeading']?></div>
-                <h2 class="hs-title">
-                  <?php echo $data['heading']?>
-                </h2>
-                <p class="hs-des">
-                  <?php echo $data['paragraph']?>
-                </p>
-                <!-- <div class="site-btn"><?php echo $data['btn']?></div> -->
+      <?php
+      $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='heroSection'"));
+      $jsonData = json_decode($data['content'], true);
+      foreach ($jsonData as $data) {
+        ?>
+        <div class="hs-item set-bg" data-setbg=./admin/<?php echo $data['image'] ?>>
+          <div class="hs-text">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="hs-subtitle">
+                    <?php echo $data['subHeading'] ?>
+                  </div>
+                  <h2 class="hs-title">
+                    <?php echo $data['heading'] ?>
+                  </h2>
+                  <p class="hs-des">
+                    <?php echo $data['paragraph'] ?>
+                  </p>
+                  <!-- <div class="site-btn"><?php echo $data['btn'] ?></div> -->
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <?php 
+        <?php
       }
       ?>
       <!-- <div class="hs-item set-bg" data-setbg="https://nscet.org/Home_Assets/img/dummy1/image.jpg">
@@ -204,54 +206,62 @@
   </section>
   <section class="counter-section">
     <div class="container">
-    <?php 
-        $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='timerSection'"));
-        $jsonData = json_decode($data['content'], true);
-        foreach($jsonData as $data) {
-      ?>
-      <p style="display: none" id='countdown-date'><?php echo $data['countdown']?></p>
+      <?php
+      $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='timerSection'"));
+      $jsonData = json_decode($data['content'], true);
+      foreach ($jsonData as $data) {
+        ?>
+        <p style="display: none" id='countdown-date'>
+          <?php echo $data['countdown'] ?>
+        </p>
 
-      <div class="row">
-        <div class="col-lg-7 col-md-6">
-          <div class="big-icon">
-            <i class="fa fa-graduation-cap"></i>
+        <div class="row">
+          <div class="col-lg-7 col-md-6">
+            <div class="big-icon">
+              <i class="fa fa-graduation-cap"></i>
+            </div>
+            <div class="counter-content">
+              <h2>
+                <?php echo $data['title'] ?>
+              </h2>
+              <p><i class="fa fa-calendar-o"></i>
+                <?php echo $data['countdown'] ?> |
+                <?php echo $data['time'] ?>
+              </p>
+            </div>
           </div>
-          <div class="counter-content">
-            <h2><?php echo $data['title']?></h2>
-            <p><i class="fa fa-calendar-o"></i><?php echo $data['countdown']?> | <?php echo $data['time']?></p>
+          <div class="col-lg-5 col-md-6">
+            <div class="counter">
+              <div class="counter-item">
+                <h4>0</h4>
+                Days
+              </div>
+              <div class="counter-item">
+                <h4>0</h4>
+                Hrs
+              </div>
+              <div class="counter-item">
+                <h4>0</h4>
+                Mins
+              </div>
+              <div class="counter-item">
+                <h4>0</h4>
+                secs
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-lg-5 col-md-6">
-          <div class="counter">
-            <div class="counter-item">
-              <h4>0</h4>
-              Days
-            </div>
-            <div class="counter-item">
-              <h4>0</h4>
-              Hrs
-            </div>
-            <div class="counter-item">
-              <h4>0</h4>
-              Mins
-            </div>
-            <div class="counter-item">
-              <h4>0</h4>
-              secs
-            </div>
-          </div>
-        </div>
-      </div>
-      <?php 
+        <?php
       }
       ?>
     </div>
   </section>
   <div class="news-updates">
     <div class="container">
-      <?php 
-        $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='newsSection'"));
-        $jsonData = json_decode($data['content'], true);
+      <?php
+      $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='newsSection'"));
+      $jsonData = json_decode($data['content'], true);
+      $jsonData = array_reverse($jsonData);
       ?>
       <div class="row">
         <div class="col-lg-9" style="overflow:hidden;">
@@ -259,69 +269,79 @@
             <h2 class="text-black">News &amp; Updates</h2>
           </div>
           <div class="marquee-content-news">
-            <?php foreach($jsonData as $data) {?>
-            <div class='col-md-6' style="margin:6px;">
-              <div class="post-entry-big">
-                <a href="news-single.html" class="img-link"><img class='news-img' src="./admin/<?php echo $data['imgUrl']?>" alt="Image"
-                    class="img-fluid" /></a>
-                <div class="post-content">
-                  <div class="post-meta">
-                    <a href="#"><?php echo $data['date']?></a>
-                    <span class="mx-1">/</span>
-                    <a href="#"><?php echo $data['tags']?></a>
+            <?php foreach ($jsonData as $data) { ?>
+              <div class='col-md-6' style="margin:6px;">
+                <div class="post-entry-big">
+                  <a href="news-single.html" class="img-link"><img class='news-img'
+                      src="./admin/<?php echo $data['imgUrl'] ?>" alt="Image" class="img-fluid" /></a>
+                  <div class="post-content">
+                    <div class="post-meta">
+                      <a href="#">
+                        <?php echo $data['date'] ?>
+                      </a>
+                      <span class="mx-1">/</span>
+                      <a href="#">
+                        <?php echo $data['tags'] ?>
+                      </a>
+                    </div>
+                    <h3 class="post-heading">
+                      <a href="news-single.html">
+                        <?php echo $data['title'] ?>
+                      </a>
+                    </h3>
                   </div>
-                  <h3 class="post-heading">
-                    <a href="news-single.html"><?php echo $data['title']?></a>
-                  </h3>
                 </div>
               </div>
-            </div>
-            <?php 
-              }
-              ?>
+              <?php
+            }
+            ?>
           </div>
-          
-    </div>
-    <?php 
+
+        </div>
+        <?php
         $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='videoSection'"));
         $jsonString = str_replace('\/', '/', $data['content']);
         $urlArray = json_decode($jsonString, true);
         // print_r($urlArray);
-      ?>
+        ?>
         <div class="col-lg-3">
           <div class="section-heading">
             <h2 class="text-black">Campus Videos</h2>
             <a href="#">View All Videos</a>
           </div>
-          <iframe width="280" height="180" src=<?php echo $urlArray[0]?> title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          <iframe width="280" height="180" src=<?php echo $urlArray[1]?> title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe width="280" height="180" src=<?php echo $urlArray[0] ?> title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+          <iframe width="280" height="180" src=<?php echo $urlArray[1] ?> title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
         </div>
       </div>
     </div>
-    
+
   </div>
   <div class="marquee">
-  <h3 class="text-black container">SMART INDIA HACKATHON ' 23 - Achievements</h3>
+    <h3 class="text-black container">SMART INDIA HACKATHON ' 23 - Achievements</h3>
 
     <div class="marquee-content">
-    <?php 
-        $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='imgSection'"));
-        $jsonString = str_replace('\/', '/', $data['content']);
-        $urlArray = json_decode($jsonString, true);
+      <?php
+      $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='imgSection'"));
+      $jsonString = str_replace('\/', '/', $data['content']);
+      $urlArray = json_decode($jsonString, true);
 
-        foreach ($urlArray as $img) {
-          echo '<div class="marquee-item">';
-          echo '  <img src="./admin/' . $img . '" alt="" />';
-          echo '</div>';
-          echo "\n";
-        }
+      foreach ($urlArray as $img) {
+        echo '<div class="marquee-item">';
+        echo '  <img src="./admin/' . $img . '" alt="" />';
+        echo '</div>';
+        echo "\n";
+      }
 
-        foreach ($urlArray as $img) {
-          echo '<div class="marquee-item">';
-          echo '  <img src="./admin/' . $img . '" alt="" />';
-          echo '</div>';
-          echo "\n";
-        }
+      foreach ($urlArray as $img) {
+        echo '<div class="marquee-item">';
+        echo '  <img src="./admin/' . $img . '" alt="" />';
+        echo '</div>';
+        echo "\n";
+      }
 
       ?>
 
@@ -329,10 +349,10 @@
   </div>
 
 
-  <?php 
-        $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='principalDesk'"));
-        $jsonData = json_decode($data['content'], true);
-      ?>
+  <?php
+  $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='principalDesk'"));
+  $jsonData = json_decode($data['content'], true);
+  ?>
   <div class="section-bg style-1" style="
         color: white;
         margin-top: 32px;
@@ -348,96 +368,98 @@
         </div>
         <div class="col-lg-8" style="align-self: center;margin-top: 24px;">
           <p class="lead">
-          <?php echo $jsonData['content'] ?>
+            <?php echo $jsonData['content'] ?>
           </p>
-          <p style="text-align: right;"><?php echo $jsonData['name'] ?></p>
+          <p style="text-align: right;">
+            <?php echo $jsonData['name'] ?>
+          </p>
         </div>
       </div>
     </div>
   </div>
 
   <section class="service-section spad">
-      <div class="container services">
-        <div class="section-title text-center">
-          <h3>OUR FACILITIES</h3>
-          <p>We provides the amazing facilities and oppturnity to prepare for life</p>
+    <div class="container services">
+      <div class="section-title text-center">
+        <h3>OUR FACILITIES</h3>
+        <p>We provides the amazing facilities and oppturnity to prepare for life</p>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-sm-6 service-item">
+          <div class="service-icon">
+            <img src="https://picsum.photos/280/256" alt="1" />
+          </div>
+          <div class="service-content">
+            <h4>Art Studio</h4>
+            <p>
+              Lorem ipsum dolor sitdo amet, consectetur dont adipis elit.
+              Vivamus interdum ultrices augue. Aenean dos cursus lania.
+            </p>
+          </div>
         </div>
-        <div class="row">
-          <div class="col-lg-4 col-sm-6 service-item">
-            <div class="service-icon">
-              <img src="https://picsum.photos/280/256" alt="1" />
-            </div>
-            <div class="service-content">
-              <h4>Art Studio</h4>
-              <p>
-                Lorem ipsum dolor sitdo amet, consectetur dont adipis elit.
-                Vivamus interdum ultrices augue. Aenean dos cursus lania.
-              </p>
-            </div>
+        <div class="col-lg-4 col-sm-6 service-item">
+          <div class="service-icon">
+            <img src="https://picsum.photos/280/256" alt="1" />
           </div>
-          <div class="col-lg-4 col-sm-6 service-item">
-            <div class="service-icon">
-              <img src="https://picsum.photos/280/256" alt="1" />
-            </div>
-            <div class="service-content">
-              <h4>Great Facility</h4>
-              <p>
-                Lorem ipsum dolor sitdo amet, consectetur dont adipis elit.
-                Vivamus interdum ultrices augue. Aenean dos cursus lania.
-              </p>
-            </div>
+          <div class="service-content">
+            <h4>Great Facility</h4>
+            <p>
+              Lorem ipsum dolor sitdo amet, consectetur dont adipis elit.
+              Vivamus interdum ultrices augue. Aenean dos cursus lania.
+            </p>
           </div>
-          <div class="col-lg-4 col-sm-6 service-item">
-            <div class="service-icon">
-              <img src="https://picsum.photos/280/256" alt="1" />
-            </div>
-            <div class="service-content">
-              <h4>Activity Hub</h4>
-              <p>
-                Lorem ipsum dolor sitdo amet, consectetur dont adipis elit.
-                Vivamus interdum ultrices augue. Aenean dos cursus lania.
-              </p>
-            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 service-item">
+          <div class="service-icon">
+            <img src="https://picsum.photos/280/256" alt="1" />
           </div>
-          <div class="col-lg-4 col-sm-6 service-item">
-            <div class="service-icon">
-              <img src="https://picsum.photos/280/256" alt="1" />
-            </div>
-            <div class="service-content">
-              <h4>Fully Qualified</h4>
-              <p>
-                Lorem ipsum dolor sitdo amet, consectetur dont adipis elit.
-                Vivamus interdum ultrices augue. Aenean dos cursus lania.
-              </p>
-            </div>
+          <div class="service-content">
+            <h4>Activity Hub</h4>
+            <p>
+              Lorem ipsum dolor sitdo amet, consectetur dont adipis elit.
+              Vivamus interdum ultrices augue. Aenean dos cursus lania.
+            </p>
           </div>
-          <div class="col-lg-4 col-sm-6 service-item">
-            <div class="service-icon">
-              <img src="https://picsum.photos/280/256" alt="1" />
-            </div>
-            <div class="service-content">
-              <h4>Flexible Schedule</h4>
-              <p>
-                Lorem ipsum dolor sitdo amet, consectetur dont adipis elit.
-                Vivamus interdum ultrices augue. Aenean dos cursus lania.
-              </p>
-            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 service-item">
+          <div class="service-icon">
+            <img src="https://picsum.photos/280/256" alt="1" />
           </div>
-          <div class="col-lg-4 col-sm-6 service-item">
-            <div class="service-icon">
-              <img src="https://picsum.photos/280/256" alt="1" />
-            </div>
-            <div class="service-content">
-              <h4>Chemistry Lab</h4>
-              <p>
-                Lorem ipsum dolor sitdo amet, consectetur dont adipis elit.
-                Vivamus interdum ultrices augue. Aenean dos cursus lania.
-              </p>
-            </div>
+          <div class="service-content">
+            <h4>Fully Qualified</h4>
+            <p>
+              Lorem ipsum dolor sitdo amet, consectetur dont adipis elit.
+              Vivamus interdum ultrices augue. Aenean dos cursus lania.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 service-item">
+          <div class="service-icon">
+            <img src="https://picsum.photos/280/256" alt="1" />
+          </div>
+          <div class="service-content">
+            <h4>Flexible Schedule</h4>
+            <p>
+              Lorem ipsum dolor sitdo amet, consectetur dont adipis elit.
+              Vivamus interdum ultrices augue. Aenean dos cursus lania.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 service-item">
+          <div class="service-icon">
+            <img src="https://picsum.photos/280/256" alt="1" />
+          </div>
+          <div class="service-content">
+            <h4>Chemistry Lab</h4>
+            <p>
+              Lorem ipsum dolor sitdo amet, consectetur dont adipis elit.
+              Vivamus interdum ultrices augue. Aenean dos cursus lania.
+            </p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
   <!-- <section class="enroll-section spad set-bg" data-setbg="img/enroll-bg.jpg">
       <div class="container">
@@ -481,10 +503,10 @@
       </div>
     </section> -->
 
-    <?php 
-        $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='ugCourses'"));
-        $jsonData = json_decode($data['content'], true);
-      ?>
+  <?php
+  $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='ugCourses'"));
+  $jsonData = json_decode($data['content'], true);
+  ?>
 
   <section class="courses-section spad">
     <div class="container course-div">
@@ -493,26 +515,26 @@
         <!-- <p>Building a better world, one course at a time</p> -->
       </div>
       <div class="row">
-          <?php
-          foreach ($jsonData as $data) {
-            echo '<div class="col-lg-4 col-md-6 course-item">';
-            echo '<div class="course-thumb">';
-            echo '  <img src=./admin/'.$data['imgUrl'].' alt />';
-            echo '<div class="course-cat">';
-            echo "<span>".$data['name']."</span>";
-            echo "</div>";
-            echo "</div>";
-            echo "</div>";
-          }
-          ?>
+        <?php
+        foreach ($jsonData as $data) {
+          echo '<div class="col-lg-4 col-md-6 course-item">';
+          echo '<div class="course-thumb">';
+          echo '  <img src=./admin/' . $data['imgUrl'] . ' alt />';
+          echo '<div class="course-cat">';
+          echo "<span>" . $data['name'] . "</span>";
+          echo "</div>";
+          echo "</div>";
+          echo "</div>";
+        }
+        ?>
       </div>
     </div>
   </section>
 
-  <?php 
-        $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='pgCourses'"));
-        $jsonData = json_decode($data['content'], true);
-      ?>
+  <?php
+  $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='pgCourses'"));
+  $jsonData = json_decode($data['content'], true);
+  ?>
 
   <section class="courses-section spad">
     <div class="container course-div">
@@ -521,18 +543,18 @@
         <!-- <p>Building a better world, one course at a time</p> -->
       </div>
       <div class="row">
-          <?php
-          foreach ($jsonData as $data) {
-            echo '<div class="col-lg-4 col-md-6 course-item">';
-            echo '<div class="course-thumb">';
-            echo '  <img src=./admin/'.$data['imgUrl'].' alt />';
-            echo '<div class="course-cat">';
-            echo "<span>".$data['name']."</span>";
-            echo "</div>";
-            echo "</div>";
-            echo "</div>";
-          }
-          ?>
+        <?php
+        foreach ($jsonData as $data) {
+          echo '<div class="col-lg-4 col-md-6 course-item">';
+          echo '<div class="course-thumb">';
+          echo '  <img src=./admin/' . $data['imgUrl'] . ' alt />';
+          echo '<div class="course-cat">';
+          echo "<span>" . $data['name'] . "</span>";
+          echo "</div>";
+          echo "</div>";
+          echo "</div>";
+        }
+        ?>
       </div>
     </div>
   </section>
@@ -580,11 +602,11 @@
     </div>
   </section>
 
-  <?php 
-        $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='requiterSection'"));
-        $jsonString = str_replace('\/', '/', $data['content']);
-        $urlArray = json_decode($jsonString, true);
-      ?>
+  <?php
+  $data = mysqli_fetch_array(mysqli_query($conn, "SELECT `content` FROM `home_page` WHERE `sectionName`='requiterSection'"));
+  $jsonString = str_replace('\/', '/', $data['content']);
+  $urlArray = json_decode($jsonString, true);
+  ?>
   <section class="event-section spad">
     <div class="container">
       <div class="section-title text-center">
@@ -592,7 +614,7 @@
         <!-- <p>Our department initiated a series of events</p> -->
       </div>
       <div class="marquee">
-        
+
         <div class="marquee-content">
           <?php
           foreach ($urlArray as $img) {
@@ -614,7 +636,7 @@
       </div>
   </section>
 
-  <div class="gallery-section">
+  <!-- <div class="gallery-section">
     <div class="gallery">
       <div class="grid-sizer"></div>
       <div class="gallery-item gi-big set-bg" data-setbg="https://picsum.photos/280/256">
@@ -642,7 +664,7 @@
         <a class="img-popup" href="img/gallery/7.jpg"><i class="ti-plus"></i></a>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <section class="blog-section spad">
     <div class="container">
@@ -653,75 +675,193 @@
       <div class="row">
         <div class="col-xl-6">
           <div class="blog-item">
-            <div class="blog-thumb set-bg" data-setbg="https://picsum.photos/280/256"></div>
+            <div class="blog-thumb set-bg" data-setbg="./admin/media/newsSection/SBD_0074.jpg"></div>
             <div class="blog-content">
-              <h4>Parents who try to be their children’s best friends</h4>
+              <h4>Kalam Award</h4>
               <div class="blog-meta">
-                <span><i class="fa fa-calendar-o"></i> 24 Mar 2018</span>
-                <span><i class="fa fa-user"></i> Owen Wilson</span>
+                <span><i class="fa fa-calendar-o"></i> 27 Oct 2023</span>
+                <span><i class="fa fa-user"></i> World Youth Federation</span>
               </div>
               <p>
-                Integer luctus diam ac scerisque consectetur. Vimus dot
-                euismod neganeco lacus sit amet. Aenean interdus mid vitae sed
-                accumsan...
+                
               </p>
             </div>
           </div>
         </div>
         <div class="col-xl-6">
           <div class="blog-item">
-            <div class="blog-thumb set-bg" data-setbg="https://picsum.photos/280/256"></div>
+            <div class="blog-thumb set-bg" data-setbg="./admin/media/newsSection/ModiJi.png"></div>
             <div class="blog-content">
-              <h4>Graduations could be delayed as external examiners</h4>
+              <h4>SIH Finalist Interaction with Prime Minister</h4>
               <div class="blog-meta">
-                <span><i class="fa fa-calendar-o"></i> 23 Mar 2018</span>
-                <span><i class="fa fa-user"></i> Owen Wilson</span>
+                <span><i class="fa fa-calendar-o"></i> 19 Dec 2023</span>
+                <span><i class="fa fa-user"></i> Reshma Masutha - III CSE</span>
               </div>
               <p>
-                Integer luctus diam ac scerisque consectetur. Vimus dot
-                euismod neganeco lacus sit amet. Aenean interdus mid vitae sed
-                accumsan...
+                
               </p>
             </div>
           </div>
         </div>
-        <div class="col-xl-6">
-          <div class="blog-item">
-            <div class="blog-thumb set-bg" data-setbg="https://picsum.photos/280/256"></div>
-            <div class="blog-content">
-              <h4>Private schools adopt a Ucas style application system</h4>
-              <div class="blog-meta">
-                <span><i class="fa fa-calendar-o"></i> 24 Mar 2018</span>
-                <span><i class="fa fa-user"></i> Owen Wilson</span>
+        
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .card {
+      position: relative;
+      margin: 0px 28px;
+      width: 450px;
+      padding: 20px;
+      box-shadow: 3px 10px 20px rgba(0, 0, 0, 0.2);
+      border-radius: 3px;
+      border: 0;
+      text-wrap: wrap;
+    }
+
+    .card .circle {
+      border-radius: 3px;
+      width: 80px;
+      height: 80px;
+      background: black;
+      position: absolute;
+      right: 0px;
+      top: 0;
+      background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+      border-bottom-left-radius: 170px;
+    }
+
+    .card .content {
+      margin-top: 25px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card h1 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+
+    .card h2 {
+      font-size: 18px;
+      letter-spacing: 0.5px;
+      font-weight: 300;
+      margin-bottom: 12px;
+    }
+
+    .card .social {
+      margin-bottom: 5px;
+    }
+
+    .card .social a {
+      text-decoration: none !important;
+      color: black;
+      margin-left: 8px;
+      font-weight: 300;
+    }
+
+    .card .social a i {
+      font-weight: 400;
+    }
+
+    .card .location {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .card .location i {
+      color: red;
+    }
+
+    .card .location p {
+      font-weight: 300;
+    }
+  </style>
+
+  <section class="blog-section">
+    <div class="container">
+      <div class="section-title text-center">
+        <h3>TESTIMONIAL</h3>
+        <!-- <p>Get latest breaking news & top stories today</p> -->
+      </div>
+      <div class="marquee">
+        <h3 class="text-black container"></h3>
+        <div class="marquee-content">
+          <div class="marquee-item" style="display: flex;">
+            <div class="card">
+              <div class="title">
+                <h1>Ms.B.Abarna</h1>
+                <h2>"Junior-Associate"</h2>
               </div>
-              <p>
-                Integer luctus diam ac scerisque consectetur. Vimus dot
-                euismod neganeco lacus sit amet. Aenean interdus mid vitae sed
-                accumsan...
-              </p>
+              <p>`College has provided me such an intense support in dealing with New Technologies`</p>
+              <p>Orion India Private Limited,Madurai</p>
+              <div class="circle"></div>
             </div>
-          </div>
-        </div>
-        <div class="col-xl-6">
-          <div class="blog-item">
-            <div class="blog-thumb set-bg" data-setbg="https://picsum.photos/280/256"></div>
-            <div class="blog-content">
-              <h4>Cambridge digs in at the top of university league table</h4>
-              <div class="blog-meta">
-                <span><i class="fa fa-calendar-o"></i> 23 Mar 2018</span>
-                <span><i class="fa fa-user"></i> Owen Wilson</span>
+
+            <div class="card">
+              <div class="title">
+                <h1>Ms.P.VaitheswariIshwariya</h1>
+                <h2>"Technical Analyst"</h2>
               </div>
-              <p>
-                Integer luctus diam ac scerisque consectetur. Vimus dot
-                euismod neganeco lacus sit amet. Aenean interdus mid vitae sed
-                accumsan...
-              </p>
+              <p>`NSCET created the Base for me. It has provided me the soulful support on who i am now`</p>
+              <p>Molecular Solutions Healthcare</p>
+
+              <div class="circle"></div>
             </div>
+
+            <div class="card">
+              <div class="title">
+                <h1>Ms.B.Abarna</h1>
+                <h2>"Junior-Associate"</h2>
+              </div>
+              <p>`College has provided me such an intense support in dealing with New Technologies`</p>
+              <p>Orion India Private Limited,Madurai</p>
+              <div class="circle"></div>
+            </div>
+
+            <div class="card">
+              <div class="title">
+                <h1>Ms.P.VaitheswariIshwariya</h1>
+                <h2>"Technical Analyst"</h2>
+              </div>
+              <p>`NSCET created the Base for me. It has provided me the soulful support on who i am now`</p>
+              <p>Molecular Solutions Healthcare</p>
+
+              <div class="circle"></div>
+            </div>
+
+            <div class="card">
+              <div class="title">
+                <h1>Ms.B.Abarna</h1>
+                <h2>"Junior-Associate"</h2>
+              </div>
+              <p>`College has provided me such an intense support in dealing with New Technologies`</p>
+              <p>Orion India Private Limited,Madurai</p>
+              <div class="circle"></div>
+            </div>
+
+            <div class="card">
+              <div class="title">
+                <h1>Ms.P.VaitheswariIshwariya</h1>
+                <h2>"Technical Analyst"</h2>
+              </div>
+              <p>`NSCET created the Base for me. It has provided me the soulful support on who i am now`</p>
+              <p>Molecular Solutions Healthcare</p>
+
+              <div class="circle"></div>
+            </div>
+
           </div>
         </div>
       </div>
     </div>
   </section>
+
+
 
   <section class="newsletter-section">
     <div class="container">
@@ -745,7 +885,7 @@
     </div>
   </section>
 
-  <?php require_once("./resources/footer.php")?>
+  <?php require_once("./resources/footer.php") ?>
 
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>

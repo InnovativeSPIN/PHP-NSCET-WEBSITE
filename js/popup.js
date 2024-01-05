@@ -1,6 +1,6 @@
 setTimeout(function () {
   $("#modal-container").addClass("one");
-}, 4000);
+}, 1000);
 
 $("#modal-container").click(function () {
   $(this).addClass("out");
