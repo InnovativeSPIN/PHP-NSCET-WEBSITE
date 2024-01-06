@@ -29,6 +29,9 @@
 
 </head>
     <body>
+    <div class="nav-switch" style="z-index: 100">
+    <i class="fa fa-bars"></i>
+  </div>
     <?php require_once("./resources/header.php") ?>
     <div style=" width: 100%;
       height: 200px; /* Set the height of your div */
@@ -979,7 +982,14 @@
             </div>
             
         </section>
+        
     <?php require_once("./resources/footer.php") ?>
+    <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.countdown.js"></script>
+  <script src="js/masonry.pkgd.min.js"></script>
+  <script src="js/magnific-popup.min.js"></script>
+  <script src="js/main.js"></script>
         
     </body>
 </html>

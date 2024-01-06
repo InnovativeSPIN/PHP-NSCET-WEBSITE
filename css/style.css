@@ -3771,3 +3771,9 @@ body.modal-active {
   display: flex;
   justify-content: center;
 }
+
+.vmv-heading{
+  font-size: 32px;
+  fill: #fff;
+
+}
