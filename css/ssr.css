@@ -1,0 +1,94 @@
+.ssr_btn {
+  margin: 6px;
+  background-color: #f6783a !important;
+  color: #fff !important;
+  border-radius: 25px !important;
+  width: 10vw;
+  height: 7vh;
+  font-weight: bold !important;
+}
+.ssr_btn:hover {
+  background-color: #fff !important;
+  color: #f6783a !important;
+  border-color: #f6783a;
+}
+.criterion-btn {
+  margin: 6px;
+  background-color: #104565 !important;
+  color: #fff !important;
+  border-radius: 25px !important;
+  width: 10vw;
+  height: 7vh;
+  font-weight: bold !important;
+}
+.criterion-btn:hover {
+  background-color: #fff !important;
+  color: #104565 !important;
+  border-color: #104565;
+}
+thead {
+  background-color: #104565;
+  color: #fff;
+}
+
+.blue {
+  color: #104565;
+}
+.orange {
+  color: #f6783a;
+}
+
+@media only screen and (min-width: 120px) and (max-width: 768px) {
+  .criterion-btn {
+    margin-left: 0.8%;
+    margin-right: 0.8%;
+    margin-top: 0.5%;
+    width: 25vw;
+    background-color: #104565 !important;
+    color: #fff !important;
+    border-radius: 25px !important;
+  }
+  .criterion-btn:hover {
+    background-color: #fff !important;
+    color: #104565 !important;
+    border-color: #104565;
+  }
+  .ssr_btn {
+    margin-left: 0.8%;
+    margin-right: 0.8%;
+    margin-top: 0.5%;
+    width: 35vw;
+    background-color: #f6783a !important;
+    color: #fff !important;
+    border-radius: 35px !important;
+  }
+  .ssr_btn:hover {
+    background-color: #fff !important;
+    color: #f6783a !important;
+    border-color: #f6783a;
+  }
+  table {
+    overflow-x: auto;
+  }
+}
+
+table {
+  width: 100%;
+}
+.col1 {
+  width: 20%!important;
+}
+
+.col2 {
+  width: 60%!important;
+}
+
+.col3 {
+    text-align: center;
+  width: 20%!important;
+}
+
+
+.col3-view{
+    text-align: center;
+}

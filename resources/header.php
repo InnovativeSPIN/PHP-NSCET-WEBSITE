@@ -150,7 +150,7 @@
                     <div class="dropdown-menu custome-dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="https://nscet.org/RTI.pdf">RTI</a>
                         <a class="dropdown-item" href="https://nscet.org/cells/index.php#item-1-19">IQAC</a>
-                        <a class="dropdown-item" href="https://nscet.org/ssr">SSR</a>
+                        <a class="dropdown-item" href="./ssr.php">SSR</a>
                         <a class="dropdown-item" href="">SELF DECLARATION</a>
                     </div>
                 </div>
