@@ -2,7 +2,7 @@
     <div class="container">
 
         <ul class="main-menu">
-            <a href="index.html" class="site-logo"><img width="150px" src="./assets/logos/clgLogo.png" alt /></a>
+            <a href="/" class="site-logo"><img width="150px" src="/assets/logos/clgLogo.png" alt /></a>
 
             <li class="active"><a href="https://nscet.org/index.html">Home</a></li>
             <li><a href="https://nscet.org/administration/index.php">Administartion</a></li>
@@ -150,7 +150,7 @@
                     <div class="dropdown-menu custome-dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="https://nscet.org/RTI.pdf">RTI</a>
                         <a class="dropdown-item" href="https://nscet.org/cells/index.php#item-1-19">IQAC</a>
-                        <a class="dropdown-item" href="./ssr.php">SSR</a>
+                        <a class="dropdown-item" href="/ssr/">SSR</a>
                         <a class="dropdown-item" href="">SELF DECLARATION</a>
                     </div>
                 </div>

@@ -26,10 +26,7 @@
   <link rel="stylesheet" href="css/animate.css" />
   <link rel="stylesheet" href="css/owl.carousel.css" />
   <link rel="stylesheet" href="css/style.css" />
-  <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
   <script nonce="defdf876-aff2-4c43-8786-bc6a2f07dfb1">
     (function (w, d) {
       !(function (t, u, v, w) {
@@ -269,7 +266,7 @@
 	overflow: hidden;
   top: 1em;
 	background-color: #FFF;
-	/* box-shadow: 7px 5px 4px rgba(0,0,0,0.5); */
+	box-shadow: 7px 5px 4px #104565;
 	border: 1px solid black;
 	border-radius: 2px;
 }
@@ -283,31 +280,6 @@
 }
   </style>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script>(function(){
-
-function scroller() {
-
-  var scroll = $('div.scroll');// Sets the div with a class of scroll as a variable
-  
-  var height = scroll.height(); // Gets the height of the scroll div
-  
-  var topAdj = -height-30; /* '-height' turns the height                   of the UL into a negative #, 
-               * '- 50' subtracts an extra 50 pixels from the height of 
-        			 * the div so that it moves the trail of the UL higher to 
-							 * the top of the div before the animation                ends
-							 */
-	
-	scroll.animate({
-		'top' : [topAdj, 'linear'] 
-	}, 8000, function(){
-		scroll.css('top', 80); //resets the top position of the Ul for the next cycle
-		scroller(); // Recalls the animation cycle to begin.
-	});}
-	
-scroller();
-
-})();</script>
   <div style="display: flex">
 <svg id="svg4136" xmlns="http://www.w3.org/2000/svg" version="1.1" viewbox="0 0 820 670" width="1000" height="670"  xmlns:xlink="http://www.w3.org/1999/xlink" >
 	<g id="layer1">
@@ -459,17 +431,21 @@ scroller();
 		<image id="image4905" style="image-rendering:crisp-edges" xlink:href="/img/clgLogo.png" height="87.159" width="165.44" y="250.05" x="316.09" preserveAspectRatio="none"/>
 	</g>
 </svg>
-<div class="wrapper" style="width: 25%"><!-- Main Container -->
-  <div class="box"><!-- Div that will hold the UL -->
-  <h3 style="text-align: center;">NSCET - News</h3>
+<div class="wrapper" style="width: 25%;"><!-- Main Container -->
+  <div class="box" style="right:28px;border-radius: 12px;"><!-- Div that will hold the UL -->
+  <h3 style="text-align: center;">NSCET - NEWS</h3>
 
-   <div class="scroll">
-     <ul>
+   <div class="scroll" style="padding:12px">
+   <marquee height="340px" width="100%" behavior="scroll" direction="up" scrollamount="4" onmouseover="this.stop();" onmouseout="this.start();">
+  
+   <ul>
       <li><img width="65px" src="/img/new.gif" alt=""> Celebrating Excellence! 5 Teams from Our College Shortlisted for Smart India Hackathon Finals. </li>
       <li><img width="65px" src="/img/new.gif" alt=""> Celebrating Excellence! 5 Teams from Our College Shortlisted for Smart India Hackathon Finals. </li>
       <li><img width="65px" src="/img/new.gif" alt=""> Celebrating Excellence! 5 Teams from Our College Shortlisted for Smart India Hackathon Finals. </li>
 
      </ul>
+</marquee>
+     
    </div>
   </div><!-- End Box -->
   
@@ -928,81 +904,6 @@ scroller();
       </div>
     </div>
   </section>
-
-  <style>
-    .card {
-      position: relative;
-      margin: 0px 28px;
-      width: 450px;
-      padding: 20px;
-      box-shadow: 3px 10px 20px rgba(0, 0, 0, 0.2);
-      border-radius: 3px;
-      border: 0;
-      text-wrap: wrap;
-    }
-
-    .card .circle {
-      border-radius: 3px;
-      width: 80px;
-      height: 80px;
-      background: black;
-      position: absolute;
-      right: 0px;
-      top: 0;
-      background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
-      border-bottom-left-radius: 170px;
-    }
-
-    .card .content {
-      margin-top: 25px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .card h1 {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 0;
-    }
-
-    .card h2 {
-      font-size: 18px;
-      letter-spacing: 0.5px;
-      font-weight: 300;
-      margin-bottom: 12px;
-    }
-
-    .card .social {
-      margin-bottom: 5px;
-    }
-
-    .card .social a {
-      text-decoration: none !important;
-      color: black;
-      margin-left: 8px;
-      font-weight: 300;
-    }
-
-    .card .social a i {
-      font-weight: 400;
-    }
-
-    .card .location {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-    }
-
-    .card .location i {
-      color: red;
-    }
-
-    .card .location p {
-      font-weight: 300;
-    }
-  </style>
-
   <section class="blog-section">
     <div class="container">
       <div class="section-title text-center">
@@ -1145,8 +1046,8 @@ scroller();
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 
-  <script src="./js/marquee.js"></script>
-  <script src="./js/popup.js"></script>
+  <script src="js/marquee.js"></script>
+  <script src="js/popup.js"></script>
 </body>
 
 </html>

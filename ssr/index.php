@@ -1,5 +1,3 @@
-<?php require_once("./resources/connection.php") ?>
-
 <!doctype html>
 <html lang="english">
     <head>
@@ -19,20 +17,20 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js" integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     
-        <link href="css/ssr.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/font-awesome.min.css" />
-        <link rel="stylesheet" href="css/themify-icons.css" />
-        <link rel="stylesheet" href="css/magnific-popup.css" />
-        <link rel="stylesheet" href="css/animate.css" />
-        <link rel="stylesheet" href="css/owl.carousel.css" />
-        <link rel="stylesheet" href="css/style.css" />
+        <link href="../css/ssr.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/font-awesome.min.css" />
+        <link rel="stylesheet" href="../css/themify-icons.css" />
+        <link rel="stylesheet" href="../css/magnific-popup.css" />
+        <link rel="stylesheet" href="../css/animate.css" />
+        <link rel="stylesheet" href="../css/owl.carousel.css" />
+        <link rel="stylesheet" href="../css/style.css" />
 
 </head>
     <body>
     <div class="nav-switch" style="z-index: 100">
     <i class="fa fa-bars"></i>
   </div>
-    <?php require_once("./resources/header.php") ?>
+    <?php require_once("..//resources/header.php") ?>
     <div style=" width: 100%;
       height: 200px; /* Set the height of your div */
       background-image: url('https://nscet.org/Home_Assets/img/dummy1/image.jpg'); /* Replace 'your-image.jpg' with the path to your image */
@@ -46,7 +44,7 @@
             <!-- Buttons -->
             <div class="container-fluid">
                 <div class="row">
-                  <a href="#criterion1"><button type="button" class="btn criterion-btn btn-sm">Extended Profile</button></a>
+                  <a href="ep.php"><button type="button" class="btn criterion-btn btn-sm">Extended Profile</button></a>
 
                     <a href="#criterion1"><button type="button" class="btn criterion-btn btn-sm">CRITERION 1</button></a>
                     <a href="#criterion2"><button type="button" class="btn criterion-btn btn-sm">CRITERION 2</button></a>
@@ -61,7 +59,7 @@
                     <button type="button" class="btn ssr_btn btn-sm">Institutional Distinctiveness</button>
                     <button type="button" class="btn ssr_btn btn-sm">Code of Conduct</button>
                     <button type="button" class="btn ssr_btn btn-sm">HR Policy</button>
-                    <button type="button" class="btn ssr_btn btn-sm">Capacity Building and Skill Enhancement</button>
+                    <button type="button" class="btn ssr_btn btn-sm" style="width: 20%;"><a href="cbase/cbase.pdf">Capacity Building and Skill Enhancement</a></button>
                     <button type="button" class="btn ssr_btn btn-sm">Stakeholders Feedback</button>
                     <button type="button" class="btn ssr_btn btn-sm">Annual Report</button>
 
@@ -983,13 +981,13 @@
             
         </section>
         
-    <?php require_once("./resources/footer.php") ?>
-    <script src="js/jquery-3.2.1.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.countdown.js"></script>
-  <script src="js/masonry.pkgd.min.js"></script>
-  <script src="js/magnific-popup.min.js"></script>
-  <script src="js/main.js"></script>
+    <?php require_once("../resources/footer.php") ?>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js/jquery.countdown.js"></script>
+  <script src="../js/masonry.pkgd.min.js"></script>
+  <script src="../js/magnific-popup.min.js"></script>
+  <script src="../js/main.js"></script>
         
     </body>
 </html>

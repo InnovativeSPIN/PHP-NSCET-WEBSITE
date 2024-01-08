@@ -15,7 +15,7 @@ $jsonData = json_decode($data['content'], true);
 <div id="modal-container" style="z-index: 2000">
     <div class="modal-background">
         <div class="modal">
-            <div class="marquee" style="background-color: white;">
+            <div class="" style="background-color: white;">
                 <h3 class="text-black container" style="margin-bottom: 32px;">SMART INDIA HACKATHON ' 23 - NSCET Achievements</h3>
 
                 <div class="marquee-content">

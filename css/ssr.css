@@ -92,3 +92,7 @@ table {
 .col3-view{
     text-align: center;
 }
+
+.ssr_btn a{
+  color: white!important;
+}
