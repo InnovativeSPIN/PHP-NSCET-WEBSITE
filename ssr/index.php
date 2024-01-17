@@ -26,11 +26,14 @@
         <link rel="stylesheet" href="../css/style.css" />
 
 </head>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <body>
+      
     <div class="nav-switch" style="z-index: 100">
     <i class="fa fa-bars"></i>
   </div>
-    <?php require_once("..//resources/header.php") ?>
+    <?php require_once("../resources/header.php") ?>
     <div style=" width: 100%;
       height: 200px; /* Set the height of your div */
       background-image: url('https://nscet.org/Home_Assets/img/dummy1/image.jpg'); /* Replace 'your-image.jpg' with the path to your image */
@@ -38,44 +41,339 @@
       background-position: center;
       background-repeat: no-repeat;
       position: relative;">
-      <h2 style="color:white; position: absolute;bottom: 30px;left:50px">NAAC - SSR</h2>
+      <h2 style="color:white; position: absolute;bottom: 30px;left:90px">NAAC - SSR</h2>
     </div>
-        <section class="p-5">
-            <!-- Buttons -->
-            <div class="container-fluid">
-                <div class="row">
-                  <a href="ep.php"><button type="button" class="btn criterion-btn btn-sm">Extended Profile</button></a>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-                    <a href="#criterion1"><button type="button" class="btn criterion-btn btn-sm">CRITERION 1</button></a>
-                    <a href="#criterion2"><button type="button" class="btn criterion-btn btn-sm">CRITERION 2</button></a>
-                    <a href="#criterion3"><button type="button" class="btn criterion-btn btn-sm">CRITERION 3</button></a>
-                    <a href="#criterion4"><button type="button" class="btn criterion-btn btn-sm">CRITERION 4</button></a>
-                    <a href="#criterion5"><button type="button" class="btn criterion-btn btn-sm">CRITERION 5</button></a>
-                    <a href="#criterion6"><button type="button" class="btn criterion-btn btn-sm">CRITERION 6</button></a>
-                    <a href="#criterion7"><button type="button" class="btn criterion-btn btn-sm">CRITERION 7</button></a>
-                    <a href="#"><button type="button" class="btn criterion-btn btn-sm">SSR</button></a>
-                    <button type="button" class="btn ssr_btn btn-sm">DVV Clarifiation</button>
-                    <button type="button" class="btn ssr_btn btn-sm">Best Practices</button>
-                    <button type="button" class="btn ssr_btn btn-sm">Institutional Distinctiveness</button>
-                    <button type="button" class="btn ssr_btn btn-sm">Code of Conduct</button>
-                    <button type="button" class="btn ssr_btn btn-sm">HR Policy</button>
-                    <button type="button" class="btn ssr_btn btn-sm" style="width: 20%;"><a href="cbase/cbase.pdf">Capacity Building and Skill Enhancement</a></button>
-                    <button type="button" class="btn ssr_btn btn-sm">Stakeholders Feedback</button>
-                    <button type="button" class="btn ssr_btn btn-sm">Annual Report</button>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-    
-                </div>
-                <div class="row my-3">
-                    
-    
-                </div>
-                
-            </div>
+::-webkit-scrollbar {
+  width: 2px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f6783a; /* Set the color of the scrollbar thumb */
+  border-radius: 6px; /* Set the border radius of the scrollbar thumb */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #104565; /* Set the color of the scrollbar track */
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.sidebar {
+  width: 5rem;
+  height: 100vh;
+  position: fixed;
+  top: 117px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 100;
+  cursor: pointer;
+  background: #104565;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.sidebar:hover {
+  width: 20rem;
+}
+
+.brand {
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 1rem 0;
+  color: #000;
+}
+
+.brand:hover {
+  background: #f6783a;
+}
+
+.nav-item__icon{
+  color: white;
+}
+.brand span {
+  display: none;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-item {
+  color: white;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-item:hover {
+  background: #f6783a;
+}
+
+.nav-item a {
+  position: relative;
+  white-space: nowrap;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-item__icon {
+  position: relative;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-item__text {
+  position: relative;
+  display: none;
+  font-size: 1em;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.avatar {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
+.logout {
+  margin-left: 0.2rem;
+}
+
+.sidebar:hover .brand span {
+  display: inline;  
+}
+
+.sidebar:hover .nav-item {
+  justify-content: start;
+}
+
+.sidebar:hover .nav-item__text {
+  display: flex;
+  align-items: center;
+}
+.nav-item__text{
+  color: white;
+}
+.brand p{
+  color: white;
+  font-weight: bold;
+}
+h5{
+  margin-bottom: 18px;
+}
+</style>
+
+<div class="sidebar">
+  <ul class="nav-list" style="overflow:scroll">
+  <li class="nav-item">
+      <a href="https://nscet.org/ssr/ep.php">
+        <span class="nav-item__icon">
+        <ion-icon name="arrow-forward"></ion-icon>
+
+        </span>
+        <span class="nav-item__text">
+        Extended Profile
+        </span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#criterion1">
+        <span class="nav-item__icon">
+          C1
+        </span>
+        <span class="nav-item__text">
+           Criteria 1
+        </span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#criterion2">
+        <span class="nav-item__icon">
+          C2
+        </span>
+        <span class="nav-item__text">
+        Criteria 2
+        </span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#criterion3">
+        <span class="nav-item__icon">
+          C3
+        </span>
+        <span class="nav-item__text">
+        Criteria 3
+        </span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#criterion4">
+        <span class="nav-item__icon">
+          C4
+        </span>
+        <span class="nav-item__text">
+        Criteria 4
+        </span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#criterion5">
+        <span class="nav-item__icon">
+          C5
+        </span>
+        <span class="nav-item__text">
+        Criteria 5
+        </span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#criterion6">
+        <span class="nav-item__icon">
+          C6
+        </span>
+        <span class="nav-item__text">
+        Criteria 6
+        </span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#criterion7">
+        <span class="nav-item__icon">
+          C7
+        </span>
+        <span class="nav-item__text">
+        Criteria 7
+        </span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#">
+        <span class="nav-item__icon">
+          <ion-icon name="arrow-forward"></ion-icon>
+        </span>
+        <span class="nav-item__text">
+        SSR
+        </span>
+      </a>
+    </li><li class="nav-item">
+      <a href="#">
+        <span class="nav-item__icon">
+        <ion-icon name="arrow-forward"></ion-icon>
+
+        </span>
+        <span class="nav-item__text">
+        DVV Clarifiation
+        </span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#">
+        <span class="nav-item__icon">
+        <ion-icon name="arrow-forward"></ion-icon>
+
+        </span>
+        <span class="nav-item__text">
+        Best Practices
+        </span>
+      </a>
+    </li><li class="nav-item">
+      <a href="#">
+        <span class="nav-item__icon">
+        <ion-icon name="arrow-forward"></ion-icon>
+
+        </span>
+        <span class="nav-item__text">
+        Institutional Distinctiveness
+        </span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#">
+        <span class="nav-item__icon">
+        <ion-icon name="arrow-forward"></ion-icon>
+
+        </span>
+        <span class="nav-item__text">
+        Code of Conduct
+        </span>
+      </a>
+    </li><li class="nav-item">
+      <a href="#">
+        <span class="nav-item__icon">
+        <ion-icon name="arrow-forward"></ion-icon>
+
+        </span>
+        <span class="nav-item__text">
+        HR Policy
+        </span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#">
+        <span class="nav-item__icon">
+        <ion-icon name="arrow-forward"></ion-icon>
+
+        </span>
+        <span class="nav-item__text">
+        Capacity Building and Skill Enhancement
+        </span>
+      </a>
+    </li><li class="nav-item">
+      <a href="#">
+        <span class="nav-item__icon">
+        <ion-icon name="arrow-forward"></ion-icon>
+
+        </span>
+        <span class="nav-item__text">
+        Stakeholders Feedback
+        </span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#">
+        <span class="nav-item__icon">
+        <ion-icon name="arrow-forward"></ion-icon>
+
+        </span>
+        <span class="nav-item__text">
+        Annual Report
+        </span>
+      </a>
+    </li>
+  </ul>
+  
+</div>
+        <section class="container">
             <!-- CRITERAION 1 -->
             <!-- Table 1 -->
             <div class="container-fluid mt-5" id="criterion1">
                 <div class="row">
-                    <h3 class="blue">CRITERION 1 - <h3 class="orange">Curricular Aspects (100)</h3></h3>
+                    <h3 class="blue">CRITERIA 1 - <h3 class="orange">Curricular Aspects (100)</h3></h3>
                 </div><hr> 
             </div>
             <div class="mx-5">
@@ -93,7 +391,7 @@
                       <tr>
                         <th scope="row">1.1.1 QIM</th>
                         <td>The Institution ensures effective curriculum planning and delivery through a well – planned and documented process including Academic calendar and conduct of continuous internal Assessment. Write description in a maximum of 500 words</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c1/c1.1.1/1.pdf"><u>View</u></a></td>
                       </tr>
                     </tbody>
                   </table>
@@ -187,7 +485,7 @@
             <!-- Table 1 -->
             <div class="container-fluid mt-5" id="criterion2">
                 <div class="row">
-                    <h3 class="blue">CRITERION 2 - <h3 class="orange">Teaching, Learning and Evaluation (350)</h3></h3>
+                    <h3 class="blue">CRITERIA 2 - <h3 class="orange">Teaching, Learning and Evaluation (350)</h3></h3>
                 </div><hr> 
             </div>
             <div class="mx-5">
@@ -204,12 +502,12 @@
                       <tr>
                         <th scope="row">2.1.1 </th>
                         <td>Enrolment Percentage</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c2/2.1.1/2.1.1_HOME_ENTROLLMENT_PERCENTAGE.pdf"><u>View</u></a></td>
                       </tr>
                       <tr>
                         <th scope="row">2.1.2</th>
                         <td>Percentage of seats filled against seats reserved for various categories (SC, ST, OBC, Divyangjan, etc. as per applicable reservation policy during the last five years (Exclusive of supernumerary seats)</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c2/2.1.2/2.1.2MainIndex1.pdf"><u>View</u></a></td>
                       </tr>
                     </tbody>
                   </table>
@@ -230,7 +528,7 @@
                       <tr>
                         <th scope="row">2.2.1</th>
                         <td>Student – Full time Teacher Ratio (Data for the latest completed academic year)</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c2/2.2.1/2.2.1%20front%20page.pdf"><u>View</u></a></td>
                       </tr>
                     </tbody>
                   </table>
@@ -251,7 +549,7 @@
                       <tr>
                         <th scope="row">2.3.1 QIM</th>
                         <td>Student centric methods, such as experiential learning, participative learning and problem solving methodologies are used for enhancing learning experiences and teachers use ICT- enabled tools including online resources for effective teaching and learning process. Write description in a maximum of 500 words</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c2/2.3.1/2.3.1%20Main%20Index1.pdf"><u>View</u></a></td>
                       </tr>
                     </tbody>
                   </table>
@@ -273,13 +571,13 @@
                         <th scope="row">2.4.1 QIM</th>
                         <td>Percentage of full-time teachers against sanctioned posts during the last five years<hr>
                             2.4.1.1 Number of Sanctioned post / required positions for teaching staff/ full time teachers year wise during last five years</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c2/2.4.1/2.4.1%20Main%20Index.pdf"><u>View</u></a></td>
                       </tr>
                       <tr>
                         <th scope="row">2.4.2</th>
                         <td>Percentage of full time teachers with NET/SET/SLET/ Ph. D. / D.M. / M.Ch. / D.N.B Superspeciality / D.Sc. / D.Litt. during the last five years (consider only highest degree for count)<hr>
                             2.4.2.1 Number of full time teachers with NET/SET/SLET/ Ph. D. / D.M. / M.Ch. / D.N.B Superspeciality / D.Sc. / D.Litt. year wise during the last five years</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a target='__blank' href="https://nscet.org/naac/c2/2.4.2/2.4.2%20Main%20Index.pdf"><u>View</u></a></td>
                       </tr>
                     </tbody>
                   </table>
@@ -300,7 +598,7 @@
                       <tr>
                         <th scope="row">2.5.1 QIM</th>
                         <td>Mechanism of Internal / External assessment is transparent and the grievance redressal system is time – bound and efficient. Write description in a maximum of 500 words</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c2/2.5.1/2.5.1_%20Home_Page.pdf"><u>View</u></a></td>
                       </tr>
                     </tbody>
                   </table>
@@ -320,13 +618,13 @@
                     <tbody>
                       <tr>
                         <th scope="row">2.6.1 QIM</th>
-                        <td>rogramme Outcomes(POs) and Course Outcomes(COs) for all programmes offered by the institution are stated and displayed on website and attainment of POs and COs are evaluated Write description in the maximum of 500</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td>Programme Outcomes(POs) and Course Outcomes(COs) for all programmes offered by the institution are stated and displayed on website and attainment of POs and COs are evaluated Write description in the maximum of 500</td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c2/2.6.1/2.6.1%20MAIN%20INDEX%20FINAL.pdf"><u>View</u></a></td>
                       </tr>
                       <tr>
                         <th scope="row">2.6.2</th>
                         <td>Attainment of POs and COs are evaluated. Explain with evidence in a maximum of 500 words</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c2/2.6.2/Main%20Index.pdf"><u>View</u></a></td>
                       </tr>
                       <tr>
                         <th scope="row">2.6.3</th>
@@ -335,7 +633,7 @@
                             2.6.3.1 Number of final year students who passed the university examination year wise during the last five years<hr>
                             
                             2.6.3.2. Number of final year students who appeared for the university examination year wise during the last five years</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c2/2.6.3/2.6.3_1.pdf"><u>View</u></a></td>
                       </tr>
                     </tbody>
                   </table>
@@ -345,7 +643,7 @@
             <!-- Table 1 -->
             <div class="container-fluid mt-5" id="criterion3">
                 <div class="row">
-                    <h3 class="blue">CRITERION 3</h3>
+                    <h3 class="blue">CRITERIA 3</h3>
                 </div><hr> 
             </div>
             <div class="mx-5">
@@ -383,7 +681,7 @@
                       <tr>
                         <th scope="row">3.2.1 QIM</th>
                         <td>Institution has created an Ecosystem for Innovations and has initiatives for creation and transfer of knowledge (patents filed, published, incubation center facilities in HEI to be considered) Write description in a maximum of 500 words</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c3/3.2/3.2.1/3.2.1-MAIN-INDEX (1).pdf"><u>View</u></a></td>
                       </tr>
                       <tr>
                         <th scope="row">3.2.2</th>
@@ -409,12 +707,12 @@
                       <tr>
                         <th scope="row">3.3.1</th>
                         <td>Number of research papers published per teacher in the journals notified on UGC care list during the last five years.</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c3/3.3/3.3.1/3.3.1-1)Main-Index (1).pdf"><u>View</u></a></td>
                       </tr>
                       <tr>
                         <th scope="row">3.3.2</th>
                         <td>Number of books and chapters in edited volumes/ books published and papers published in national and International conference proceedings per teacher during the last five years</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c3/3.3/3.3.2/3.3.2-1-Main-Index.pdf"><u>View</u></a></td>
                       </tr>
                     </tbody>
                   </table>
@@ -435,12 +733,12 @@
                       <tr>
                         <th scope="row">3.4.1 QIM</th>
                         <td>Extension Activities are carried out in the neighbourhood community, sensitizing students to social issues, for their holistic development, and impact thereof during the last five years. Write description in a maximum of 500 words</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c3/3.4.1/3.4.1_home.pdf"><u>View</u></a></td>
                       </tr>
                       <tr>
                         <th scope="row">3.4.2 QIM</th>
                         <td>Awards and recognitions received for extension activities from government/ government recognized bodies Write description in a maximum of 500 words</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c3/3.4.2/3.4.2_home.pdf"><u>View</u></a></td>
                       </tr>
                       <tr>
                         <th scope="row">3.4.3</th>
@@ -476,7 +774,7 @@
             <!-- Table 1 -->
             <div class="container-fluid mt-5" id="criterion4">
                 <div class="row">
-                    <h3 class="blue">CRITERION 4 - <h3 class="orange">Infrastructure and learning Resources (100)</h3></h3>
+                    <h3 class="blue">CRITERIA 4 - <h3 class="orange">Infrastructure and learning Resources (100)</h3></h3>
                 </div><hr> 
             </div>
             <div class="mx-5">
@@ -499,7 +797,7 @@
                             b. ICT – enabled facilities such as smart class, LMS etc.
                             Facilities for Cultural and sports activities, yoga centre, games (indoor and outdoor), Gymnasium, auditorium etc
                             Describe the adequacy of facilities in maximum of 500 words</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c4/4.1.1/4.1.1.%20MAIN%20INDEX.pdf"><u>View</u></a></td>
                       </tr>
                       <tr>
                         <th scope="row">4.1.2 QnM</th>
@@ -528,7 +826,7 @@
                       <tr>
                         <th scope="row">4.2.1 QIM</th>
                         <td>Library is automated with digital facilities using Integrated Library Management System (ILMS), adequate subscriptions to e-resources and journals are made. The library is optimally used by the faculty and students. Write description in a maximum of 500 words</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c4/4.2.1/4.2.1-index.pdf"><u>View</u></a></td>
                       </tr>
                     </tbody>
                   </table>
@@ -550,14 +848,14 @@
                         <th scope="row">4.3.1 QIM</th>
                         <td>Institution frequently updates its IT facilities and provides sufficient bandwidth for internet connection
                             Describe IT facilities including Wi-Fi with date and nature of updation, available internet bandwidth within a maximum of 500 words</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c4/4.3.1/4.3.1-front.pdf"><u>View</u></a></td>
                       </tr>
                       <tr>
                         <th scope="row">4.3.2</th>
                         <td>Student – Computer Ratio ( Data for the latest completed academic year)<hr>
                             4.3.2.1 Number of Computers available for students usage during the latest completed academic year
                         </td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c4/4.3.2/4.3.2-front.pdf"><u>View</u></a></td>
                       </tr>
                     </tbody>
                   </table>
@@ -595,7 +893,7 @@
             <!-- Table 1 -->
             <div class="container-fluid mt-5" id="criterion5">
                 <div class="row">
-                    <h3 class="blue">CRITERION 5 - <h3 class="orange">Student Support and Progression (140)</h3></h3>
+                    <h3 class="blue">CRITERIA 5 - <h3 class="orange">Student Support and Progression (140)</h3></h3>
                 </div><hr> 
             </div>
             <div class="mx-5">
@@ -625,7 +923,7 @@
                             2. Language and communication skills<br>
                             3. Life skills (Yoga, physical fitness, health and hygiene)<br>
                             4. ICT / Computing Skills<br></td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c5/5.1.2/MainIndex.pdf"><u>View</u></a></td>
                       </tr>
                       <tr>
                         <th scope="row">5.1.3 QnM</th>
@@ -635,13 +933,13 @@
                         <td class="col3-view"><a href=""><u>View</u></a></td>
                       </tr>
                       <tr>
-                        <th scope="row">5.1.2 QnM</th>
+                        <th scope="row">5.1.4 QnM</th>
                         <td>The institution adopts the following for redressal of student grievances including sexual harassment and ragging cases<br>
                             1. Implementation of guidelines of statutory/regulatory bodies<br>
                             2. Organisation wide awareness and undertakings on policies with zero tolerance<br>
                             3. Mechanisms for submission of online/offline students’ grievances<br>
                             4. Timely redressal of the grievances through appropriate committees></td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c5/5.1.4/5.1.4.HOME PAGE.pdf"><u>View</u></a></td>
                       </tr>
                     </tbody>
                   </table>
@@ -726,7 +1024,7 @@
                         <td>
                             There is a registered Alumni Association that contributes significantly to the development of the institution through financial and / or other support services
                         </td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c5/5.4.1/5.4.1.pdf"><u>View</u></a></td>
                       </tr>
                       <!-- <tr>
                         <th scope="row">1.2.2</th>
@@ -741,7 +1039,7 @@
             <!-- Table 1 -->
             <div class="container-fluid mt-5" id="criterion6">
                 <div class="row">
-                    <h3 class="blue">CRITERION 6 - <h3 class="orange">Governance, Leadership and Management (100)</h3></h3>
+                    <h3 class="blue">CRITERIA 6 - <h3 class="orange">Governance, Leadership and Management (100)</h3></h3>
                 </div><hr> 
             </div>
             <div class="mx-5">
@@ -758,7 +1056,7 @@
                       <tr>
                         <th scope="row">6.1.1 </th>
                         <td>The governance and leadership is in accordance with vision and mission of the institution and it is visible in various institutional practices such as decentralization and participation in the institutional governance</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c6/6.1/6.1.pdf"><u>View</u></a></td>
                       </tr>
                       <!-- <tr>
                         <th scope="row">2.1.2</th>
@@ -784,12 +1082,12 @@
                       <tr>
                         <th scope="row">6.2.1 QIM</th>
                         <td>The functioning of the institutional bodies is effective and efficient as visible from policies, administrative setup, appointment and service rules, procedures, deployment of institutional Strategic/ perspective/development plan etc</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c6/6.2.1/6.2.1.pdf"><u>View</u></a></td>
                       </tr>
                       <tr>
                         <th scope="row">6.2.2</th>
                         <td>	Implementation of e-governance in areas of operation 1. Administration 2. Finance and Accounts 3. Student Admission and Support 4. Examination</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c6/6.2.2/6.2.2 main.pdf"><u>View</u></a></td>
                       </tr>
                     </tbody>
                   </table>
@@ -810,7 +1108,7 @@
                       <tr>
                         <th scope="row">6.3.1 QIM</th>
                         <td>The institution has effective welfare measures and Performance Appraisal System for teaching and non-teaching staff</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c6/6.3.1/Index.pdf"><u>View</u></a></td>
                       </tr>
                       <tr>
                         <th scope="row">6.3.2</th>
@@ -887,7 +1185,7 @@
             <!-- Table 1 -->
             <div class="container-fluid mt-5" id="criterion7">
                 <div class="row">
-                    <h3 class="blue">CRITERION 7 - <h3 class="orange">Institutional Values and Best Practices (100)
+                    <h3 class="blue">CRITERIA 7 - <h3 class="orange">Institutional Values and Best Practices (100)
                     </h3></h3>
                 </div><hr> 
             </div>
@@ -906,7 +1204,7 @@
                         <th scope="row">7.1.1 QIM</th>
                         <td>Institution has initiated the Gender Audit and measures for the promotion of gender equity during the last five years.
                             Describe the gender equity & sensitization in curricular and co-curricular activities, facilities for women on campus etc.,</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c7/7.1.1/7.1.1-Main-Index.pdf"><u>View</u></a></td>
                       </tr>
                       <tr>
                         <th scope="row">7.1.2 QnM</th>
@@ -916,7 +1214,7 @@
                             3. Water Conservation<br>
                             4. Green campus initiatives<br>
                             5. Disabled – friendly, barrier free environment</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c7/7.1.2/"><u>View</u></a></td>
                       </tr>
                       <tr>
                         <th scope="row">7.1.3 QnM</th>
@@ -926,12 +1224,12 @@
                             2. Energy audit<br>
                             3. Clean and green campus initiatives<br>
                             4. Beyond the campus environmental promotion sustainability activities</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c7/7.1.3/7.1.3 Quality Audits/7.1.3-Main-Index.pdf"><u>View</u></a></td>
                       </tr>
                       <tr>
                         <th scope="row">7.1.4 QIM</th>
                         <td>Describe the Institutional efforts/initiatives in providing an inclusive environment i.e., tolerance and harmony towards cultural, regional, linguistic, communal socioeconomic diversity and Sensitization of students and employees to the constitutional obligations: values, rights, duties and responsibilities of citizens.</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c7/7.1.4/7.1.4-Main-Index.pdf"><u>View</u></a></td>
                       </tr>
                     </tbody>
                   </table>
@@ -952,7 +1250,7 @@
                       <tr>
                         <th scope="row">7.2.1 QIM</th>
                         <td>Describe two best practices successfully implemented by the Institution as per NAAC format provided in the Manual</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c7/7.2.1/7.2.1-Main-Index.pdf"><u>View</u></a></td>
                       </tr>
                     </tbody>
                   </table>
@@ -973,7 +1271,7 @@
                       <tr>
                         <th scope="row">7.3.1 QIM</th>
                         <td>Portray the performance of the Institution in one area distinctive to its priority and thrust within 1000 words</td>
-                        <td class="col3-view"><a href=""><u>View</u></a></td>
+                        <td class="col3-view"><a href="https://nscet.org/naac/c7/7.3.1/7.3.1 Institutional Distinctiveness/7.3.1-Main-Index.pdf"><u>View</u></a></td>
                       </tr>
                     </tbody>
             </table>
