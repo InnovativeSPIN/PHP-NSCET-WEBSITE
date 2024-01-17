@@ -53,17 +53,17 @@
                         Department
                     </button>
                     <div class="dropdown-menu custome-dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="https://nscet.org/department/cse.php">Computer Science &amp;
+                        <a class="dropdown-item" href="https://nscet.org/department/cse">Computer Science &amp;
                             Engineering</a>
-                        <a class="dropdown-item" href="https://nscet.org/department/civil.php">Civil Engineering</a>
-                        <a class="dropdown-item" href="https://nscet.org/department/ece.php">Electronics &amp;
+                        <a class="dropdown-item" href="https://nscet.org/department/civil">Civil Engineering</a>
+                        <a class="dropdown-item" href="https://nscet.org/department/ece">Electronics &amp;
                             Communication Engineering</a>
-                        <a class="dropdown-item" href="https://nscet.org/department/eee.php">Electrical and Electronics
+                        <a class="dropdown-item" href="https://nscet.org/department/eee">Electrical and Electronics
                             Engineering</a>
-                        <a class="dropdown-item" href="https://nscet.org/department/mech.php">Mechanical Engineering</a>
-                        <a class="dropdown-item" href="https://nscet.org/department/AI.php">Artificial Intelligence
+                        <a class="dropdown-item" href="https://nscet.org/department/mech">Mechanical Engineering</a>
+                        <a class="dropdown-item" href="https://nscet.org/department/AI">Artificial Intelligence
                             &amp; Data Science </a>
-                        <a class="dropdown-item" href="https://nscet.org/department/IT.php">Information Technology</a>
+                        <a class="dropdown-item" href="https://nscet.org/department/IT">Information Technology</a>
                     </div>
                 </div>
             </li>
