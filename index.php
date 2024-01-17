@@ -102,7 +102,7 @@
       <a href="#" class="fixed-facebook" target="_blank"><i class="fa fa-facebook"></i> <span>Facebook</span></a>
     </div>
     <div>
-      <a href="#" class="fixed-linkedin" target="_blank"><i class="fa fa-linkedin"></i> <span>Linkedin</span></a>
+      <a href="https://www.linkedin.com/company/nscet/" class="fixed-linkedin" target="_blank"><i class="fa fa-linkedin"></i> <span>Linkedin</span></a>
     </div>
     <div>
       <a href="https://www.youtube.com/@NSCETeConnect" class="fixed-instagrem" target="_blank"><i class="fa fa-youtube"></i> <span>Youtube</span></a>
