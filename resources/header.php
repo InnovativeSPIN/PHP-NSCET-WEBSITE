@@ -1,6 +1,4 @@
-<nav class="nav-section" style="    position: fixed!important;
-    z-index: 100;
-    width: 100%;">
+<nav class="nav-section" >
     <div class="container">
 
         <ul class="main-menu">

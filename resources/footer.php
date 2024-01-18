@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-sm-6 col-lg-3 footer-widget">
                 <div class="about-widget">
-                    <img src="img/logo-light.png" alt />
+                    <!-- <img src="img/logo-light.png" alt /> -->
                     <p>
                     NSCET is a vibrant institution located in Theni, known for its commitment to academic excellence, diverse student body, and a thriving campus culture. With state-of-the-art facilities and a dedicated faculty, it provides a conducive environment for holistic learning and personal growth.
                     </p>
@@ -82,8 +82,8 @@
         <div class="container">
             <p>
                 Copyright &copy;
-                <script data-cfasync="false"
-                    src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                <!-- <script data-cfasync="false"
+                    src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
                 <script>
                     document.write(new Date().getFullYear());
                 </script>

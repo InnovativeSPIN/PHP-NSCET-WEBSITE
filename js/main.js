@@ -1,12 +1,3 @@
-/* =================================
-------------------------------------
-	Unica - University Template
-	Version: 1.0
- ------------------------------------ 
- ====================================*/
-
-
-
 'use strict';
 
 // document.addEventListener('contextmenu', event => event.preventDefault());
