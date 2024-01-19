@@ -147,6 +147,7 @@ require_once("../../resources/connection.php") ?>
       </nav>
     </section>
 
+    <!-- our dept section -->
     <section class="our-dept" id="about">
       <div class="text-sec">
         <h1 class="dept-title">OUR DEPARTMENT</h1>
@@ -165,16 +166,16 @@ require_once("../../resources/connection.php") ?>
         <div class="custom-card-wrapper" style="background-image: url('../../img/department/cse/vision.png');">
           <div class="custom-card-overlay"></div>
           <div class="custom-card-content">
-            <h4 data-aos="fade" data-aos-duration="750" data-aos-delay="200" class="custom-card-title"><strong>VISION</strong></h4>
-            <p data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200" class="custom-card-text">To become a leading hub in the field of Computer Engineering.</p>
+            <h4 class="custom-card-title"><strong>VISION</strong></h4>
+            <p class="custom-card-text">To become a leading hub in the field of Computer Engineering.</p>
           </div>
         </div>
 
         <div class="custom-card-wrapper" style="background-image: url('../../img/department/cse/our-mission.png');">
           <div class="custom-card-overlay"></div>
           <div class="custom-card-content">
-            <h4 data-aos="fade" data-aos-duration="750" data-aos-delay="200" class="custom-card-title"><strong>MISSION</strong></h4>
-            <p data-aos="flip-right" data-aos-duration="1000" data-aos-delay="200" style="text-align: left;" class="custom-card-text">
+            <h4 class="custom-card-title"><strong>MISSION</strong></h4>
+            <p style="text-align: left;" class="custom-card-text">
               • To provide a strong theoretical and practical knowledge emphasizing on software developments. </br>
               • To encourage autonomous learning, foster interactions and establish partnership with renowned software industries.</br>
               • To inculcate soft skills, leadership qualities and innovative research skills with ethical values.
@@ -182,62 +183,169 @@ require_once("../../resources/connection.php") ?>
           </div>
         </div>
       </div>
-
     </section>
+
+    <!-- hod section -->
+
+    <div id="hod_desk">
+      <div class="container">
+        <div class="hod-section">
+          <h1 class="section-title text-center mb-4">HEAD OF DEPARTMENT</h1>
+          <div class="border-line" style="margin-bottom:5%;"></div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="hod-image text-center">
+                <img src="../../img/department/cse/Mathalairaj.jpg" alt="Mr. J. Mathalai Raj" class="img-fluid rounded-circle">
+                <h5 class="text-uppercase mt-3">Mr. J. Mathalai Raj</h5>
+              </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+              <div class="hod-description">
+                <p class="text-justify">The Computer Science and Engineering department aims at nurturing a conducive upbringing for erudition and research by using appropriate computing technologies in its everyday activities. The department equips its students with technological expertise and skills in the field of computer science. Students at CSE are nurtured to become the best software professionals or entrepreneurs in their own innovative way. The prime objective of the department endeavors is to produce confident professionals tuned to real-time working environments. The department offers an excellent academic environment with a team of highly qualified faculty members to inspire the students to develop their technical skills and inculcate the spirit of teamwork in them.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PURSUITS section -->
+
+    <div class="pursuits-sec">
+      <h1 class="section-title text-center mb-4">PURSUITS</h1>
+      <div class="border-line" style="margin-bottom:5%;"></div>
+      <div id="pursuits" class="carousel slide  vertical" data-ride="carousel" style="padding:20px;">
+        <ol class="carousel-indicators">
+          <li data-target="#pursuits" data-slide-to="0" class="active"></li>
+          <li data-target="#pursuits" data-slide-to="1"></li>
+          <li data-target="#pursuits" data-slide-to="2"></li>
+          <li data-target="#pursuits" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active" style="background-image: url('../../img/department/cse/carousel-sec-1.png');">
+            <div class="carousel-caption d-none d-md-block">
+              <h2 class="display-4">OBJECTIVES & OUTCOMES</h2>
+              <h4>PEO's, PO's & PSO's</h4>
+              <p class="lead">These are the Program Education Objectives(PEO) and Program Outcomes in the Department of Computer Science & Engineering.</p>
+              <a role="button" target="_blank" href="../../docs/department/cse/CSE(peo).pdf">Click Here</a>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-image: url('../../img/department/cse/carousel-sec-2.png')">
+            <div class="carousel-caption d-none d-md-block">
+              <h2 class="display-4">RESEARCH WING</h2>
+              <h4>Research Activities</h4>
+              <p class="lead">NSCET is focussed on Research & Development (R&D) in Engineering, Technology and Sciences. The various programmes are nurtured through academic research and sponsored research funded by National organizations and Industry.</p>
+              <p><a target="_blank" href="../../docs/department/cse/Ph.D.pdf">Ph.D completed/In progess</a></p>
+              <p><a target="_blank" href="../../docs/department/cse/STAFF JOURNAL.pdf">Journals</a></p>
+              <p><a target="_blank" href="../../docs/department/cse/STAFF CONFERENCE.pdf">Conference</a></p>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-image: url('../../img/department/cse/carousel-sec-3.png')">
+            <div class="carousel-caption d-none d-md-block">
+              <h2 class="display-4">OUR ACCOLADES</h2>
+              <h4>Department Activities</h4>
+              <p class="lead">The Department of Computer Science & Engineering had organized various Conferences , Symposiums and FDP's most of them volunteered to render services for the benefit of the current students.</p>
+              <p><a target="_blank" href="../../docs/department/cse/Department conference orgaised.pdf">Conference organized</a></p>
+              <p><a target="_blank" href="../../docs/department/cse/Department Events organisied.pdf">Events organized</a></p>
+              <p><a target="_blank" href="https://forms.gle/6mdL6j3yHiAXf5618">iSPIN Assessment - Second</a></p>
+              <p><a target="_blank" href="https://forms.gle/M7BuhKgY3onQyeSb6">iSPIN Assessment - Third</a></p>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-image: url('../../img/department/cse/carousel-sec-4.png')">
+            <div class="carousel-caption d-none d-md-block">
+              <h2 class="display-4">Our Archives</h2>
+              <h4>NewsLetter & Magazines</h4>
+              <div class="blog-slider__text"><a target="_blank" href="http://nscet.org/newspage/CSE.html">NEWSLETTER</a></br>
+                <a target="_blank" href="http://nscet.org/newspage/CSE.html"> MAGAZINES </a></br>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev up" href="#pursuits" role="button" data-slide="prev">
+            <i class="fas fa-chevron-up fa-2x up-icon" aria-hidden="true"></i>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next down" href="#pursuits" role="button" data-slide="next">
+            <i class="fas fa-chevron-down fa-2x down-icon" aria-hidden="true"></i>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <?php require_once("../../resources/footer.php") ?>
+    <?php require_once("../../resources/footer.php") ?>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+            e.preventDefault();
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-          e.preventDefault();
-
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+            });
           });
         });
-      });
-    });
-  </script>
 
-  <script src="../../js/jquery-3.2.1.min.js"></script>
-  <script src="../../js/owl.carousel.min.js"></script>
-  <script src="../../js/jquery.countdown.js"></script>
-  <script src="../../js/masonry.pkgd.min.js"></script>
-  <script src="../../js/magnific-popup.min.js"></script>
-  <script src="../../js/main.js"></script>
+        const hodDesk = document.getElementById('hod_desk');
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              hodDesk.style.opacity = 1;
+              hodDesk.style.transform = 'translateY(0)';
+            } else {
+              hodDesk.style.opacity = 0;
+              hodDesk.style.transform = 'translateY(20px)';
+            }
+          })
+        }, {
+          threshold: 0.5
+        })
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
+        observer.observe(hodDesk)
 
-    gtag("config", "UA-23581568-13");
-  </script>
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"8182dcf408402e11","version":"2023.10.0","token":"cd0b4b3a733644fc843ef0b185f98241"}' crossorigin="anonymous"></script>
+        function handleMouseMove(event) {
+          var carousel = document.getElementById("pursuits");
+          var mouseYPercent = (event.clientY / window.innerHeight) * 100;
+          var scrollAmount = (mouseYPercent - 50) * 0.2;
+          carousel.style.transform = "translateY(" + scrollAmount + "vh)";
+        }
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      })
+    </script>
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/owl.carousel.min.js"></script>
+    <script src="../../js/jquery.countdown.js"></script>
+    <script src="../../js/masonry.pkgd.min.js"></script>
+    <script src="../../js/magnific-popup.min.js"></script>
+    <script src="../../js/main.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
-  <script src="../../js/marquee.js"></script>
-  <script src="../../js/popup.js"></script>
-  <script src="../../js/departmentPage.js"></script>
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+      gtag("config", "UA-23581568-13");
+    </script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"8182dcf408402e11","version":"2023.10.0","token":"cd0b4b3a733644fc843ef0b185f98241"}' crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="../../js/marquee.js"></script>
+    <script src="../../js/popup.js"></script>
+    <script src="../../js/departmentPage.js"></script>
+
 </body>
 
 </html>

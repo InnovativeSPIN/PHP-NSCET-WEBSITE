@@ -98,3 +98,5 @@
         </div>
     </div>
 </footer>
+
+<script src="https://kit.fontawesome.com/5fe2f4c2ef.js" crossorigin="anonymous"></script>
