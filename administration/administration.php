@@ -26,6 +26,11 @@
   <link rel="stylesheet" href="../css/animate.css" />
   <link rel="stylesheet" href="../css/owl.carousel.css" />
   <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    h4{
+    color:#104565 !important;
+  }
+  </style>
   <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -106,15 +111,13 @@
     </div>
 
     <?php require_once("../resources/header.php") ?>
-
-    <div class="row heading" style="justify-content: center; background-color: #104565;"><h2 style="color:#fff;">NSCET ADMINISTRATION</h2></div>
-        
     <!-- MISSION & VISION -->
-    <div class="container">
+    <div class="container-fluid">
+    <div class="row heading" style="justify-content: center; background-color: #104565;"><h2 style="color:#fff;">NSCET ADMINISTRATION</h2></div>
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 noleftpadding">
           <div class="mission-vision-section">
-            <div class="mission-container justify-content-center">
+            <div class="col-sm-12 mission-container justify-content-center">
               <h2 class="display-4">Our Mission</h2>
               <ul>
                   <li><p class="fs-5 lead">To provide professional, constructive and learner centered education.</p></li>
@@ -124,7 +127,7 @@
                   <li><p class="fs-5 lead">To encourage learners involve in innovative researches with ethics.</p></li> 
               </ul>
             </div>
-            <div class="vision-container justify-content-center">
+            <div class="col-sm-12 vision-container justify-content-center">
               <h2 class="display-4">Our Vision</h2>
             <ul>
                 <li>
@@ -135,18 +138,19 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>   
+ 
 
     <!-- ABOUT SECTION -->
     <section>
         <div class="container-fluid">
             
-            <div class="row mt-5">
+            <div class="row mt-5" >
                 
                     <div class="col-12 justify-content-center d-flex">
                         <h4><strong>ABOUT TMHNU</strong></h4>
-                    </div><hr>
-                    <div class="col-12"><p>
+                    </div><hr width="75%" color=" #104565"/>
+                    <div class="col-12" style="background-color:#F0F0F0;"><p>
                         "Genesis of Theni Melapettai Hindu Nadargal Uravinmurai Since 1898" Theni Melapettai Hindu Nadargal Uravinmurai (TMHNU) proclaims to the society loudly out its Himalayan task not by words but by its tremendous service rendering to the people by means of providing quality education. The pioneers of TMHNU(1898) started the Primary school in 1919, named Nadar Saraswathi Vidhyasala with 38 students and 2 teachers.Thus the tiny seed for the huge task was laid then in a small way. Now the small sapling has flourished into a very big tree with strong branches to support it. By the blessings of Annai Sri Bathrakaliamman, at present 17 educational Institutions function under this beneficial bower giving quality education. Above 22,000 students are studying and more than 1000 teaching and 1000 supportive staff members are working in our institutions.
                     </p>
                     </div>
@@ -156,8 +160,8 @@
                 
                     <div class="col-12 justify-content-center d-flex">
                         <h4><strong>ABOUT OUR JOURNEY</strong></h4>
-                    </div><hr>
-                    <div class="col-12">
+                    </div><hr width="75%" color=" #104565"/>
+                    <div class="col-12" style="background-color:#F0F0F0;"><p>
                         Nadar Saraswathi College of Engineering and Technology was established 
                         in the year 2010 with the motto of uplifting rural students cadre and to
                         nurture them with excellence. It is exclusively constructed for moulding
@@ -179,44 +183,43 @@
                         At the same time, the ability to do research, to engage in continuous scholarly and creative work,
                         and to provide service, primarily to the region and the state, will be important additional qualifications.
                         The college will provide a comprehensive range of support services for students.</div>
-                
+                  </p>
             </div>
         </div>
     </section>
 
     <!-- INFO -->
-    <section>
         <div class="container-fluid">
             <!-- GOVERNING CELL --> 
                 <div class="row mt-5">
                     <div class="col-12 justify-content-center d-flex">
                         <h4><strong>GOVERNING CELL</strong></h4>
-                    </div><hr>
-                </div><hr>
+                    </div>
+                </div><hr width="75%" color=" #104565"/>
                 <div class="card-deck">
                   <div class="card">
-                    <img class="img-container" src="./mission.jpg" alt="Card image cap">
+                    <img class="img-container" style="background-color:rgb(163,163,163);" src="./members/President.png" alt="Card image cap">
                     <div class="card-details">
                       <h5 class="card-title">Mr.T.Rajamohan B.Sc.,</h5>
                       <p class="card-text">President</p>
                     </div>
                   </div>
                   <div class="card">
-                    <img class="img-container" src="./mission.jpg" alt="Card image cap">
+                    <img class="img-container" style="background-color:rgb(163,163,163);"  src="./members/vice president.png" alt="Card image cap">
                     <div class="card-details">
                       <h5 class="card-title">Mr.P.P.Ganesh, B.Sc.,</h5>
                       <p class="card-text">Vice President</p>
                     </div>
                   </div>
                   <div class="card">
-                    <img class="img-container" src="./mission.jpg" alt="Card image cap">
+                    <img class="img-container" style="background-color:rgb(163,163,163);" src="./members/General Secretary1.png" alt="Card image cap">
                     <div class="card-details">
                       <h5 class="card-title">Mr.M.M.Anandhavel</h5>
                       <p class="card-text">General Secretary</p>
                     </div>
                   </div>
                   <div class="card">
-                      <img class="img-container" src="./mission.jpg" alt="Card image cap">
+                      <img class="img-container" style="background-color:rgb(163,163,163);" src="./members/Treasurer.png" alt="Card image cap">
                       <div class="card-details">
                         <h5 class="card-title">Mr.Palaniappan</h5>
                         <p class="card-text">Treasurer</p>
@@ -228,7 +231,8 @@
                     <div class="col-12 justify-content-center d-flex">
                         <h4><strong>EXECUTIVE COMMITTEE MEMBERS OF TMHNU</strong></h4>
                     </div>
-            </div><hr>
+            </div><hr width="75%" color=" #104565"/>
+            <div class="table-responsive-md">
             <table class="table table-bordered table-hover table-striped"> 
                 <tbody>
                     <tr>
@@ -257,13 +261,15 @@
                     </tr>
                 </tbody>
             </table>
+            </div>
             
             <!-- COLLEGE COMMITTEE MEMBERS OF NSCET -->
             <div class="row mt-5">
                 <div class="col-12 justify-content-center d-flex">
                     <h4><strong>COLLEGE COMMITTEE MEMBERS OF NSCET</strong></h4>
                 </div>
-            </div><hr>
+            </div><hr width="75%" color=" #104565"/>
+            <div class="table-responsive-md">
             <table class="table table-bordered table-hover table-striped"> 
                 <tbody>
                     <tr>
@@ -312,36 +318,37 @@
                     </tr>
                 </tbody>
             </table>
+            </div>
             <!--PROMINENT PERSONALITIES OF NSCET  -->
             <div class="row mt-5">
                     <div class="col-12 justify-content-center d-flex">
                         <h4><strong>PROMINENT PERSONALITIES OF NSCET</strong></h4>
                     </div>
-            </div><hr>
+            </div><hr width="75%" color=" #104565"/>
             <div class="card-deck">
                 <div class="card">
-                  <img class="img-container" src="./mission.jpg" alt="Card image cap">
+                  <img class="img-container" style="background-color:rgb(163,163,163);" src="./members/Secretary.jpg" alt="Card image cap">
                   <div class="card-details">
                     <h5 class="card-title">Mr.A.S.R. Maheswaran, B.Sc.,</h5>
                     <p class="card-text">Secretary</p>
                   </div>
                 </div>
                 <div class="card">
-                  <img class="img-container" src="./mission.jpg" alt="Card image cap">
+                  <img class="img-container" style="background-color:rgb(163,163,163);" src="./members/Secretary1.jpg" alt="Card image cap">
                   <div class="card-details">
                     <h5 class="card-title">Mr.A.Rajkumar,B.B.A.</h5>
                     <p class="card-text">Secretary</p>
                   </div>
                 </div>
                 <div class="card">
-                  <img class="img-container" src="./mission.jpg" alt="Card image cap">
+                  <img class="img-container" style="background-color:rgb(163,163,163);" src="./members/joint Secretary.jpg" alt="Card image cap">
                   <div class="card-details">
                     <h5 class="card-title">Er.S.Naveen Ram, B.E., MBA.,</h5>
                     <p class="card-text">Joint Secretary</p>
                   </div>
                 </div>
                 <div class="card">
-                    <img class="img-container" src="./mission.jpg" alt="Card image cap">
+                    <img class="img-container" style="background-color:rgb(163,163,163);" src="./members/principal.jpg" alt="Card image cap">
                     <div class="card-details">
                       <h5 class="card-title">Dr.C.Mathalai Sundaram,<br>
                         M.E.,MBA.,Ph.D.,</h5>
@@ -350,7 +357,15 @@
                   </div>
             </div>
         </div>
-    </section>
+        <div class="container-fluid">
+        <div class="row mt-5">
+                    <div class="col-12 justify-content-center d-flex">
+                        <h4><strong>ORGANOGRAM</strong></h4>
+                    </div>
+        </div>
+        <div class="container-fluid mt-2"><img src="./nscet_chart.jpg" alt="chart" /> </div>
+        </div>
+        </div>
 
   <?php require_once("../resources/footer.php") ?>
 
