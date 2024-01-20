@@ -16,7 +16,7 @@ require_once("../../resources/connection.php") ?>
   <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i" rel="stylesheet" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -150,7 +150,7 @@ require_once("../../resources/connection.php") ?>
     <!-- our dept section -->
     <section class="our-dept" id="about">
       <div class="text-sec">
-        <h1 class="dept-title">OUR DEPARTMENT</h1>
+        <h1 class="dept-title text-center mb-4">OUR DEPARTMENT</h1>
         <div class="border-line"></div>
         <h4 class="dept-sub-title"> The Department of Computer Science and Engineering aims to produce the engineers with the abilities:</h4>
         <ul class="dept-sub-con">
@@ -205,6 +205,102 @@ require_once("../../resources/connection.php") ?>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FACILITIES section -->
+
+    <div id="facilities" style="margin-bottom: 3%;">
+
+      <h1 class="section-title text-center mb-4">FACILITIES</h1>
+      <div class="border-line" style="margin-bottom:5%;"></div>
+
+      <div class="container">
+        <main class="grid">
+          <article>
+            <img src="../../img/department/cse/facilities_section/1.jpg" alt="Dennis lab">
+            <i class="fa-solid fa-computer"></i>
+            <div class="text">
+              <h3 class="facility-heading"><strong>Dennis Laboratory</strong></h3>
+              <p>Programming Lab which uses C and C++ Languages for Basic Programming.</p>
+            </div>
+          </article>
+          <article>
+            <img src="../../img/department/cse/facilities_section/2.jpg" alt="Bachman lab">
+            <i class="fa-solid fa-computer-mouse"></i>
+            <div class="text">
+              <h3 class="facility-heading"><strong>Bachman Laboratory</strong></h3>
+              <p>Data Design Lab which uses C,C++,Visual Studio,JAVA,Oracle ,SQL ,Rational Suite for developing and implementing projects..</p>
+            </div>
+          </article>
+          <article>
+            <img src="../../img/department/cse/facilities_section/3.jpg" alt="Linus lab">
+            <i class="fa-solid fa-network-wired"></i>
+            <div class="text">
+              <h3 class="facility-heading"><strong>Linus Torvalds Laboratory</strong></h3>
+              <p>Open Source Lab which uses C,C++,Android Studio,Eclipse,Maya,OPENGL MC for developing and implementing projects.</p>
+            </div>
+          </article>
+          <article>
+            <img src="../../img/department/cse/facilities_section/4.jpg" alt="Computer centre">
+            <i class="fa-solid fa-server"></i>
+            <div class="text">
+              <h3 class="facility-heading"><strong>Computer Centre</strong></h3>
+              <p>A Programming Centre which uses C,C++,VB,VC++,Java Languages for Basic Programming.</p>
+            </div>
+          </article>
+          <article>
+            <img src="../../img/department/cse/facilities_section/5.jpg" alt="Project lab">
+            <i class="fa-solid fa-robot"></i>
+            <div class="text">
+              <h3 class="facility-heading"><strong>Project Laboratory</strong></h3>
+              <p>An Exclusive Project Lab for developing Innovative Projects using Java,SQL,VB,VC++,Net Beans,.NET.</p>
+            </div>
+          </article>
+        </main>
+      </div>
+    </div>
+
+    <!-- ORGANIZATION section -->
+    <div id="organization">
+      <h1 class="section-title text-center mb-4">ORGANIZATION</h1>
+      <div class="border-line" style="margin-bottom:5%;"></div>
+
+      <div class="container org-container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="dept-org-link floating-image">
+              <a href="https://nscet.org/ispin">
+                <img src="../../img/department/cse/ispin_log.png" alt="iSPIN">
+                <h1>iSPIN</h1>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="dept-org-link floating-image">
+              <a href="https://nscet.org/associations/fist.html">
+                <img src="../../img/department/cse/fist.jpg" alt="FIST">
+                <h1>FIST</h1>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="org-content">
+        <div class="org-con-section">
+          <h1 class="org-con-side-head">&nbsp;Innovative Software Product Industry of NSCET&nbsp;</h1>
+          <p class="org-con-paragraph">iSPIN is a pure IT sector of NSCET with Resourceful students under the guidance of Faculties, Industry Specialists, and the Alumni of NSCET. It will be the First of its kind idea for the incubation cell of NSCET. iSPIN will be responsible for developing the products for NSCET and its clients. The essence of iSPIN is the strategy of Unlearn & Learn based on Self-Learning Strategy.</p>
+          <a data-toggle="modal" data-target="#modal-team" type="button" class="org-con-btn">
+            <span>Meet Our Team</span>
+          </a>
+        </div>
+
+        <div class="org-con-section">
+          <h1 class="org-con-side-head">&nbsp;Fraternity of Immortal Software Technocrats</h1>
+          <p class="org-con-paragraph">Never doubt that a group of talented engineers and developers, who love to involve both themselves and others in every technical and non-technical event led to the growth of our proud “COMPUTER SCIENCE ENGINEERING ASSOCIATION”. Our FIST Association has been successfully running over six years. Every year we conduct events that invoke the technical and creative skills of every single individual and with the constant support of all the students, our association has stepped into the 7th year of excellence. Strengthen our association with your pillars of support and we hope for the best of our association in the future.</p>
         </div>
       </div>
     </div>
@@ -271,80 +367,283 @@ require_once("../../resources/connection.php") ?>
         </div>
       </div>
     </div>
+
+    <!-- OFFICE BEARERS section   -->
+
+    <div id="office_bearers">
+      <h1 class="section-title text-center mb-4" style="margin-top:5%;">OFFICE BEARERS</h1>
+      <div class="border-line" style="margin-bottom:5%;"></div>
+
+      <div class="container office-bearers-container">
+        <section class="d-flex justify-content-center flex-wrap">
+
+          <main class="office_bearers_details">
+            <ol class="card__list">
+              <li class="card__item">
+                <button aria-label="hover image for details" class="card__button">
+                  <div class="card__front">
+                    <img alt="Jenifer Fathima" class="card__image" src="../../img/department/cse/office_bearers/jenifer fathima.jpg">
+                    <h2 class="card__name"><strong>Jenifer Fathima</strong></h2>
+                  </div>
+                  <div class="card__back">
+                    <dl class="card__description">
+                      <dt class="card__term">Name</dt>
+                      <dd class="card__detail">Jenifer Fathima</dd>
+                      <dt class="card__term">Role</dt>
+                      <dd class="card__detail">President</dd>
+                      <dt class="card__term">Year</dt>
+                      <dd class="card__detail">Final Year</dd>
+                    </dl>
+                  </div>
+                </button>
+              </li>
+
+              <li class="card__item">
+                <button aria-label="hover image for details" class="card__button">
+                  <div class="card__front">
+                    <img alt="Mukilan" class="card__image" src="../../img/department/cse/office_bearers/MUKILAN S.jpg">
+                    <h2 class="card__name"><strong>Mukilan</strong></h2>
+                  </div>
+                  <div class="card__back">
+                    <dl class="card__description">
+                      <dt class="card__term">Name</dt>
+                      <dd class="card__detail">Mukilan</dd>
+                      <dt class="card__term">Role</dt>
+                      <dd class="card__detail">Vice president</dd>
+                      <dt class="card__term">Year</dt>
+                      <dd class="card__detail">Third Year</dd>
+                    </dl>
+                  </div>
+                </button>
+              </li>
+
+              <li class="card__item">
+                <button aria-label="hover image for details" class="card__button">
+                  <div class="card__front">
+                    <img alt="Soundharyalakshmi" class="card__image" src="../../img/department/cse/office_bearers/Sowndaryalakshmi.jpg">
+                    <h2 class="card__name"><strong>Soundharyalakshmi</strong></h2>
+                  </div>
+                  <div class="card__back">
+                    <dl class="card__description">
+                      <dt class="card__term">Name</dt>
+                      <dd class="card__detail">Soundharyalakshmi</dd>
+                      <dt class="card__term">Role</dt>
+                      <dd class="card__detail">Secretary</dd>
+                      <dt class="card__term">Year</dt>
+                      <dd class="card__detail">Final Year</dd>
+                    </dl>
+                  </div>
+                </button>
+              </li>
+
+            </ol>
+
+          </main>
+
+        </section>
+      </div>
+
+      <div class="container office-bearers-container second-row-container">
+        <section class="d-flex justify-content-center flex-wrap">
+
+          <main class="office_bearers_details">
+            <ol class="card__list">
+              <li class="card__item">
+                <button aria-label="hover image for details" class="card__button">
+                  <div class="card__front">
+                    <img alt="Gowsalya" class="card__image" src="../../img/department/cse/office_bearers/GOWSALYA N.jpg">
+                    <h2 class="card__name"><strong>Gowsalya</strong></h2>
+                  </div>
+                  <div class="card__back">
+                    <dl class="card__description">
+                      <dt class="card__term">Name</dt>
+                      <dd class="card__detail">Gowsalya</dd>
+                      <dt class="card__term">Role</dt>
+                      <dd class="card__detail">Join Secretary</dd>
+                      <dt class="card__term">Year</dt>
+                      <dd class="card__detail">Third Year</dd>
+                    </dl>
+                  </div>
+                </button>
+              </li>
+
+              <li class="card__item">
+                <button aria-label="hover image for details" class="card__button">
+                  <div class="card__front">
+                    <img alt="Sachidhanandhan" class="card__image" src="../../img/department/cse/office_bearers/SACHITHANANDAN S.jpg">
+                    <h2 class="card__name"><strong>Sachidhanandhan</strong></h2>
+                  </div>
+                  <div class="card__back">
+                    <dl class="card__description">
+                      <dt class="card__term">Name</dt>
+                      <dd class="card__detail">Sachidhanandhan</dd>
+                      <dt class="card__term">Role</dt>
+                      <dd class="card__detail">Join Secretary</dd>
+                      <dt class="card__term">Year</dt>
+                      <dd class="card__detail">Second Year</dd>
+                    </dl>
+                  </div>
+                </button>
+              </li>
+            </ol>
+          </main>
+        </section>
+      </div>
+    </div>
+
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal-team">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">MEMBERS OF iSPIN</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          </div>
+          <div class="modal-body">
+            <table class="table" style="border-collapse: collapse;">
+              <thead>
+                <tr>
+                  <th scope="col">S.No</th>
+                  <th scope="col">NAME</th>
+                  <th scope="col">YEAR</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>K.MADHAVAN</td>
+                  <td>Final yr</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>S.REVENTH RAMESH</td>
+                  <td>Final yr</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>K.PRIYANKA</td>
+                  <td>Final yr</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>H.JENIFAR FATHIMA</td>
+                  <td>Final yr</td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>S.DHARSHINI</td>
+                  <td>Final yr</td>
+                </tr>
+                <tr>
+                  <th scope="row">6</th>
+                  <td>C.KABITHA</td>
+                  <td>Final yr</td>
+                </tr>
+                <tr>
+                  <th scope="row">7</th>
+                  <td>S.MUKILAN</td>
+                  <td>Third</td>
+                </tr>
+                <tr>
+                  <th scope="row">9</th>
+                  <td>BHUVANALAKSHMI</td>
+                  <td>Third</td>
+                </tr>
+                <tr>
+                  <th scope="row">9</th>
+                  <td>MAMITHA</td>
+                  <td>Third</td>
+                </tr>
+                <tr>
+                  <th scope="row">8</th>
+                  <td>TENSHKUMAR K</td>
+                  <td>Third</td>
+                </tr>
+                <tr>
+                  <th scope="row">9</th>
+                  <td>REESHMA MASUTHA</td>
+                  <td>Third</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button></div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
-    <?php require_once("../../resources/footer.php") ?>
+  <?php require_once("../../resources/footer.php") ?>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-          anchor.addEventListener('click', function(e) {
-            e.preventDefault();
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
 
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-              behavior: 'smooth'
-            });
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
           });
         });
+      });
 
-        const hodDesk = document.getElementById('hod_desk');
+      const hodDesk = document.getElementById('hod_desk');
 
-        const observer = new IntersectionObserver(entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              hodDesk.style.opacity = 1;
-              hodDesk.style.transform = 'translateY(0)';
-            } else {
-              hodDesk.style.opacity = 0;
-              hodDesk.style.transform = 'translateY(20px)';
-            }
-          })
-        }, {
-          threshold: 0.5
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            hodDesk.style.opacity = 1;
+            hodDesk.style.transform = 'translateY(0)';
+          } else {
+            hodDesk.style.opacity = 0;
+            hodDesk.style.transform = 'translateY(20px)';
+          }
         })
-
-        observer.observe(hodDesk)
-
-        function handleMouseMove(event) {
-          var carousel = document.getElementById("pursuits");
-          var mouseYPercent = (event.clientY / window.innerHeight) * 100;
-          var scrollAmount = (mouseYPercent - 50) * 0.2;
-          carousel.style.transform = "translateY(" + scrollAmount + "vh)";
-        }
-
+      }, {
+        threshold: 0.5
       })
-    </script>
 
-    <script src="../../js/jquery-3.2.1.min.js"></script>
-    <script src="../../js/owl.carousel.min.js"></script>
-    <script src="../../js/jquery.countdown.js"></script>
-    <script src="../../js/masonry.pkgd.min.js"></script>
-    <script src="../../js/magnific-popup.min.js"></script>
-    <script src="../../js/main.js"></script>
+      observer.observe(hodDesk)
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag() {
-        dataLayer.push(arguments);
+      function handleMouseMove(event) {
+        var carousel = document.getElementById("pursuits");
+        var mouseYPercent = (event.clientY / window.innerHeight) * 100;
+        var scrollAmount = (mouseYPercent - 50) * 0.2;
+        carousel.style.transform = "translateY(" + scrollAmount + "vh)";
       }
-      gtag("js", new Date());
+    })
+  </script>
 
-      gtag("config", "UA-23581568-13");
-    </script>
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"8182dcf408402e11","version":"2023.10.0","token":"cd0b4b3a733644fc843ef0b185f98241"}' crossorigin="anonymous"></script>
+  <script src="../../js/jquery-3.2.1.min.js"></script>
+  <script src="../../js/owl.carousel.min.js"></script>
+  <script src="../../js/jquery.countdown.js"></script>
+  <script src="../../js/masonry.pkgd.min.js"></script>
+  <script src="../../js/magnific-popup.min.js"></script>
+  <script src="../../js/main.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    gtag("config", "UA-23581568-13");
+  </script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"8182dcf408402e11","version":"2023.10.0","token":"cd0b4b3a733644fc843ef0b185f98241"}' crossorigin="anonymous"></script>
 
-    <script src="../../js/marquee.js"></script>
-    <script src="../../js/popup.js"></script>
-    <script src="../../js/departmentPage.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <script src="../../js/marquee.js"></script>
+  <script src="../../js/popup.js"></script>
+  <script src="../../js/departmentPage.js"></script>
 
 </body>
 
