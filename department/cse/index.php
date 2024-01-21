@@ -128,10 +128,9 @@ require_once("../../resources/connection.php") ?>
 
   <?php require_once("../../resources/header.php") ?>
 
-  <!-- heading -->
-  <div class="dept-page-content">
     <section class="hero-section">
       <h1 class="dept-heading"><strong>Department of Computer Science Engineering</strong></h1>
+      
     </section>
 
     <section class="navigation-bar">
@@ -147,10 +146,11 @@ require_once("../../resources/connection.php") ?>
       </nav>
     </section>
 
+    <div class="dept-page-content">
     <!-- our dept section -->
     <section class="our-dept" id="about">
       <div class="text-sec">
-        <h1 class="dept-title text-center mb-4">OUR DEPARTMENT</h1>
+        <h1 class="dept-title text-center mb-4" style="margin-top:3% ;">OUR DEPARTMENT</h1>
         <div class="border-line"></div>
         <h4 class="dept-sub-title"> The Department of Computer Science and Engineering aims to produce the engineers with the abilities:</h4>
         <ul class="dept-sub-con">
@@ -310,7 +310,7 @@ require_once("../../resources/connection.php") ?>
     <div class="pursuits-sec">
       <h1 class="section-title text-center mb-4">PURSUITS</h1>
       <div class="border-line" style="margin-bottom:5%;"></div>
-      <div id="pursuits" class="carousel slide  vertical" data-ride="carousel" style="padding:20px;">
+      <div id="pursuits" class="carousel slide  vertical" data-ride="carousel" style="padding:20px;margin-left:20px;margin-right:20px;">
         <ol class="carousel-indicators">
           <li data-target="#pursuits" data-slide-to="0" class="active"></li>
           <li data-target="#pursuits" data-slide-to="1"></li>

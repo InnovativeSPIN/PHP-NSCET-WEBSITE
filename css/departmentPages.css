@@ -15,13 +15,24 @@ body {
   font-size: 3.7rem;
 }
 
+.hero-section {
+  background: rgba(0, 0, 0, 0.5) url('https://wphix.com/template/sikkha-prv/sikkha/img/slider/slider_bg_1.jpg') center bottom;
+  background-size: cover;
+  width: 100%;
+  background-position: center;
+  text-align: center;
+  padding: 100px 0;
+  margin: 0;
+  margin-bottom: 3%;
+}
+
 /* navigation bar */
 
 .navigation-bar {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding-bottom: 3%;
+  /* padding-bottom: 3%; */
   position: sticky !important;
   top: 20%;
   z-index: 99;
@@ -68,7 +79,7 @@ body {
 .menu__link:focus {
   outline: var(--menuLinkOutlineWidth, 2px) solid
     var(--menuLinkOutlineColor, currentColor);
-  background-color: #104565;
+  background-color: #f6783a;
   color: #212529;
   outline-offset: var(--menuLinkOutlineOffset);
 }
@@ -193,8 +204,6 @@ body {
   text-align: center;
   background-color: #ffffff;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .dept-title {
@@ -677,7 +686,7 @@ body {
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-@keyframes floatAnimation1 {
+/* @keyframes floatAnimation1 {
   0%,
   100% {
     transform: translate(0, 0);
@@ -695,7 +704,7 @@ body {
   50% {
     transform: translate(-20px, 20px);
   }
-}
+} */
 
 .floating-image:nth-child(1) {
   animation: floatAnimation1 8s infinite;
@@ -723,8 +732,6 @@ body {
   margin: 20px auto;
   padding: 20px;
   background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .org-con-section {
