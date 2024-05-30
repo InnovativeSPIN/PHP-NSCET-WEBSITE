@@ -68,7 +68,7 @@
                 </div>
             </li>
             <li><a href="https://nscet.org/Hostels/hostels.php">Hostel</a></li>
-            <li><a href="https://nscet.org/facilites/lib.php#item1-5">Library</a></li>
+            <li><a href="https://nscet.org/facilites/library/index.php">Library</a></li>
             <li><a href="https://nscet.org/facilites/espace.php">MOOC</a></li>
             <li><a href="https://nscet.org/plc/index.php">Placeent</a></li>
             <!-- <li class="active">
