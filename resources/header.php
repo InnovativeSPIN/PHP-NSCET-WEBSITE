@@ -92,7 +92,7 @@
             </li>
             <li><a href="https://nscet.org/facilites/facilites.php#item-1-1">Infrastructure</a></li>
             <li><a href="https://nscet.org/department/gallery.php">Galary</a></li>
-            <li><a href="https://nscet.org/career%202021/index.php">Career</a></li>
+            <li><a href="https://nscet.org/new carrer/index.php">Career</a></li>
             <li><a href="https://nscet.org/Alumnireg/index.php">Alumini</a></li>
             <li>
                 <div class="dropdown custome-dropdowm">
