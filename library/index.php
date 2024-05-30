@@ -28,20 +28,6 @@
   <style>
 
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f4f4f4;
-    height: 100vh;
-    overflow-y: scroll; 
-}
-
 .header_lib {
     text-align: center;
     margin-top: 50px;
@@ -60,24 +46,6 @@ body {
     margin-top: 40px;
     flex-wrap: wrap;
 }
-
-.container, .image-container {
-    background-color: white;
-    width: 420px;
-    height: 500px; 
-    border-radius: 2px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    padding: 20px;
-    margin: 10px;
-    box-sizing: border-box; 
-}
-
-.container .h3 {
-    font-size: 22px;
-    text-align: center;
-    margin-top: 0;
-}
-
 .content {
     margin-top: 20px;
     font-size: 18px;
@@ -165,13 +133,10 @@ body {
     margin-bottom: 40px;
     padding: 20px;
     background-color: white;
-    border-radius: 2px;
-    
-    
+    border-radius: 2px;    
 }
 
 .objectives h2, .facilities h2 {
-    
     color: #00008B;
     margin-bottom: 20px;
     margin-left: 200;
