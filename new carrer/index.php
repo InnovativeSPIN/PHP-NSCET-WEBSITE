@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+<<<<<<< HEAD
     <link rel="stylesheet" href="/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/css/themify-icons.css" />
     <link rel="stylesheet" href="/css/magnific-popup.css" />
@@ -27,6 +28,16 @@
     <link rel="stylesheet" href="/new carrer/css/style.css">
     <link rel="stylesheet" href="/new carrer/css/style2.css">
 
+=======
+  <link rel="stylesheet" href="/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="/css/themify-icons.css" />
+  <link rel="stylesheet" href="/css/magnific-popup.css" />
+  <link rel="stylesheet" href="/css/animate.css" />
+  <link rel="stylesheet" href="/css/owl.carousel.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="style.css">
+  
+>>>>>>> 310cbb0fa41779450ccf1b8ea6aadae846526859
 </head>
 
 <body>
