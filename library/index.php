@@ -34,6 +34,7 @@
 
   
   <style>
+<<<<<<< HEAD
   body {
     margin: 0;
     padding: 0;
@@ -51,6 +52,9 @@
 .container {
   padding: 30px;
 }
+=======
+
+>>>>>>> 8ebd55c43e91e3b177796df96e2ad724ddcace45
 
 .header_lib {
   margin-top: 0px;
@@ -90,10 +94,28 @@
               -0.5px -0.5px 0 #000;
 }
 
+<<<<<<< HEAD
 
+=======
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+.content {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    font-weight: 300;
+}
+>>>>>>> 8ebd55c43e91e3b177796df96e2ad724ddcace45
 
 .content-container,
 .image-container {
+<<<<<<< HEAD
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -103,6 +125,171 @@
   margin-top: -30px;
   color:#134569;
   margin-top: -90px;
+=======
+    position: relative;
+    overflow: hidden;
+    padding: 0; 
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; 
+    height: 100%; 
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    box-sizing: border-box; 
+    padding: 0; 
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.collections {
+    text-align: center;
+    font-size: 44px;
+    margin-top: 40px;
+    color: #00008B;
+}
+
+.collections:hover {
+    color: orange; 
+}
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.box {
+    background-color: white;
+    width: 250px;
+    height: 100px;
+    border-radius: 2px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius:2px;
+}
+
+.big-number {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.small-text {
+    font-size: 14px;
+}
+
+.objectives, .facilities-container {
+    
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 2px;    
+}
+
+.objectives h2, .facilities h2 {
+    color: #00008B;
+    margin-bottom: 20px;
+    margin-left: 200;
+}
+
+
+
+
+.objectives ul, .facilities ul {
+    list-style: none;
+    padding: 0;
+}
+
+.objectives ul li, .facilities ul li {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+    margin-left: 120px;
+}
+
+.objectives ul li::before {
+    content: "✔️";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 18px;
+    color: green;
+}
+
+
+
+
+
+  </style>
+
+</head>
+<body>
+</div>
+    <?php require_once("../resources/header.php") ?>
+    
+    <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NSCET Library</title>
+    <link rel="stylesheet" type="text/css" href="library.css">
+
+</head>
+<body>
+    <div class="header_lib">
+        <h1 class="h1">Welcome to Nadar Saraswathi College of Engineering & Technology - Library</h1>
+    </div>
+
+    <div class="content-container">
+        <div class="container">
+            <h3 class="h3">About NSCET Library</h3>
+            <div class="content">
+                The Library, in today’s context is a modern Learning Resource Centre with a dynamic learning space where students undertake a journey of knowledge acquisition and intellectual enrichment. Our Library is a well-equipped Learning Resource Centre. We have a strong collection of about 20433 books and 120 Indian and foreign journals. The NSCET library is a store house of knowledge and it comprises books, journals, e-resources, other learning materials and technology-aided learning mechanisms which enable students to acquire information, knowledge and skills required for their study programmes.
+            </div>
+        </div>
+
+        <div class="image-container">
+            <div class="slides">
+                <div class="slide"><img src="1.jpg" alt="Library Image 1"></div>
+                <div class="slide"><img src="2.jpg" alt="Library Image 2"></div>
+                <div class="slide"><img src="3.jpg" alt="Library Image 3"></div>
+                <div class="slide"><img src="4.jpg" alt="Library Image 4"></div>
+                <div class="slide"><img src="5.jpg" alt="Library Image 5"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div style="text-align: center; margin-top: 100px;">
+    <img src="sinthan.jpg" alt="Dr. Sinthan" style="width: 400px; height: 400px; border-radius: 30px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); margin-bottom: 40px; margin-left:-470px;">
+    <p style="margin-left: -470px; font-size: 24px; font-weight: bold;">Dr. Sinthan <br>Librarian<br></p>
+
+>>>>>>> 8ebd55c43e91e3b177796df96e2ad724ddcace45
   
 
 
