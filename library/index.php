@@ -267,7 +267,8 @@
   padding: 0;
   overflow: hidden;
   position: relative;
-  margin-top: -90px;
+  
+
 }
 
 .slides {
