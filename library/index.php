@@ -34,27 +34,6 @@
 
   
   <style>
-<<<<<<< HEAD
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-     
-  }
-  body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f9;
-  color: #134569;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  padding: 30px;
-}
-=======
-
->>>>>>> 8ebd55c43e91e3b177796df96e2ad724ddcace45
 
 .header_lib {
   margin-top: 0px;
@@ -94,9 +73,6 @@
               -0.5px -0.5px 0 #000;
 }
 
-<<<<<<< HEAD
-
-=======
 .content-container {
     display: flex;
     justify-content: space-between;
@@ -111,21 +87,9 @@
     text-align: justify;
     font-weight: 300;
 }
->>>>>>> 8ebd55c43e91e3b177796df96e2ad724ddcace45
 
 .content-container,
 .image-container {
-<<<<<<< HEAD
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: 10px;
-  box-sizing: border-box;
-  margin-top: -30px;
-  color:#134569;
-  margin-top: -90px;
-=======
     position: relative;
     overflow: hidden;
     padding: 0; 
@@ -260,40 +224,12 @@
 
 </head>
 <body>
-    <div class="header_lib">
-        <h1 class="h1">Welcome to Nadar Saraswathi College of Engineering & Technology - Library</h1>
-    </div>
+   
 
-    <div class="content-container">
-        <div class="container">
-            <h3 class="h3">About NSCET Library</h3>
-            <div class="content">
-                The Library, in today’s context is a modern Learning Resource Centre with a dynamic learning space where students undertake a journey of knowledge acquisition and intellectual enrichment. Our Library is a well-equipped Learning Resource Centre. We have a strong collection of about 20433 books and 120 Indian and foreign journals. The NSCET library is a store house of knowledge and it comprises books, journals, e-resources, other learning materials and technology-aided learning mechanisms which enable students to acquire information, knowledge and skills required for their study programmes.
-            </div>
-        </div>
-
-        <div class="image-container">
-            <div class="slides">
-                <div class="slide"><img src="1.jpg" alt="Library Image 1"></div>
-                <div class="slide"><img src="2.jpg" alt="Library Image 2"></div>
-                <div class="slide"><img src="3.jpg" alt="Library Image 3"></div>
-                <div class="slide"><img src="4.jpg" alt="Library Image 4"></div>
-                <div class="slide"><img src="5.jpg" alt="Library Image 5"></div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div style="text-align: center; margin-top: 100px;">
-    <img src="sinthan.jpg" alt="Dr. Sinthan" style="width: 400px; height: 400px; border-radius: 30px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); margin-bottom: 40px; margin-left:-470px;">
-    <p style="margin-left: -470px; font-size: 24px; font-weight: bold;">Dr. Sinthan <br>Librarian<br></p>
-
->>>>>>> 8ebd55c43e91e3b177796df96e2ad724ddcace45
   
 
+<style>
 
-}
 
 .para{
 
