@@ -17,13 +17,13 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js" integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     
-        <link href="../../css/ssr.css" rel="stylesheet">
-        <link rel="stylesheet" href="../../css/font-awesome.min.css" />
-        <link rel="stylesheet" href="../css/themify-icons.css" />
-        <link rel="stylesheet" href="../css/magnific-popup.css" />
-        <link rel="stylesheet" href="../css/animate.css" />
-        <link rel="stylesheet" href="../css/owl.carousel.css" />
-        <link rel="stylesheet" href="../../css/style.css" />
+        <link href="../../assets/css/ssr.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../assets/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="../assets/css/themify-icons.css" />
+        <link rel="stylesheet" href="../assets/css/magnific-popup.css" />
+        <link rel="stylesheet" href="../assets/css/animate.css" />
+        <link rel="stylesheet" href="../assets/css/owl.carousel.css" />
+        <link rel="stylesheet" href="../../assets/css/style.css" />
 </head>
 
 <style>
@@ -597,11 +597,11 @@ h5{
                     <h3>Seminar on Group Discussion</h3>
                     <div class="row">
                         <div class="col-sm">
-                            <img src="./img/1.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/1.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                             
                         </div>
                         <div class="col-sm">
-                            <img src="./img/2.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/2.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                         </div>
                         <p>27-04-2023 Dr.R.Athilingam, Associate Professor, Nadar Saraswathi College of Engineering and Technology, Theni. <br>60 Students benefited</p>
                     </div>
@@ -609,11 +609,11 @@ h5{
                     <h3>Building Trust and Respect - Leadership Skills</h3>
                     <div class="row">
                         <div class="col-sm">
-                            <img src="./img/3.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/3.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                             
                         </div>
                         <div class="col-sm">
-                            <img src="./img/4.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/4.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                         </div>
                         <p>02-02-2023 Dr.C.Chitra, Professor, Nadar Saraswathi College of Engineering and Technology, Theni. <br>25 Students benefited</p>
                     </div>
@@ -623,11 +623,11 @@ h5{
                     <h3>Training on Confidence Building</h3>
                     <div class="row">
                         <div class="col-sm">
-                            <img src="./img/5.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/5.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                             
                         </div>
                         <div class="col-sm">
-                            <img src="./img/6.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/6.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                         </div>
                         <p>02-09-2022 Mr.J.Chakravarthy Samydurai, Assistant Professor,Nadar Saraswathi College of Engineering and Technology, Theni.<br>29 Students benefited</p>
                     </div>
@@ -637,11 +637,11 @@ h5{
                     <h3>Time Management for Personal and Professional Life</h3>
                     <div class="row">
                         <div class="col-sm">
-                            <img src="./img/7.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/7.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                             
                         </div>
                         <div class="col-sm">
-                            <img src="./img/8.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/8.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                         </div>
                         <p>11-08-2022 Mrs.M.Mahalakshmi, Assistant Professor, Nadar Saraswathi College of Engineering and Technology, Theni.<br>59 Students benefited</p>
                     </div>
@@ -649,11 +649,11 @@ h5{
                     <h3>Problem-Solving and Decision-Making in a Complex World</h3>
                     <div class="row">
                         <div class="col-sm">
-                            <img src="./img/7.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/7.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                             
                         </div>
                         <div class="col-sm">
-                            <img src="./img/8.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/8.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                         </div>
                         <p>19-07-2022 Mr.R.Rajakarthick, Assistant Professor, Nadar Saraswathi College of Engineering and Technology, Theni.<br>31 Students benefited</p>
                     </div>
@@ -722,11 +722,11 @@ h5{
                     <h3>Seminar on Group Discussion</h3>
                     <div class="row">
                         <div class="col-sm">
-                            <img src="./img/11.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/11.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                             
                         </div>
                         <div class="col-sm">
-                            <img src="./img/12.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/12.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                         </div>
                         <p>16-03- 2023 Mrs.B.Sowmiya, Assistant Professor, Nadar Saraswathi College of Engineering and Technology, Theni.<br>51 Students benefited</p>
                     </div>
@@ -734,11 +734,11 @@ h5{
                     <h3>Motivational Program on Learning Skills</h3>
                     <div class="row">
                         <div class="col-sm">
-                            <img src="./img/13.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/13.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                             
                         </div>
                         <div class="col-sm">
-                            <img src="./img/14.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/14.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                         </div>
                         <p>17-02-2023 Dr.C.Mathalai Sundaram, Principal, Nadar Saraswathi College of Engineering and Technology, Theni.<br>25 Students benefited</p>
                     </div>
@@ -746,11 +746,11 @@ h5{
                     <h3>Training on Face to Face Interview</h3>
                     <div class="row">
                         <div class="col-sm">
-                            <img src="./img/15.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/15.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                             
                         </div>
                         <div class="col-sm">
-                            <img src="./img/16.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/16.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                         </div>
                         <p>11-01-2023 Dr.C.Karthikeyan, Placement and Training Officer, Nadar Saraswathi College of Engineering and Technology, Theni.<br>20 Students benefited</p>
                     </div>
@@ -758,11 +758,11 @@ h5{
                     <h3>Workshop on Leadership Skills</h3>
                     <div class="row">
                         <div class="col-sm">
-                            <img src="./img/17.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/17.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                             
                         </div>
                         <div class="col-sm">
-                            <img src="./img/18.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/18.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                         </div>
                         <p>19-10- 2022 Mrs.T.Tamil Selvi, Assistant Professor, Nadar Saraswathi College of Engineering and Technology, Theni.<br>60 Students benefited</p>
                     </div>
@@ -770,11 +770,11 @@ h5{
                     <h3>Training on Resume Writing / Cover Letter</h3>
                     <div class="row">
                         <div class="col-sm">
-                            <img src="./img/19.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/19.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                             
                         </div>
                         <div class="col-sm">
-                            <img src="./img/20.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/20.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                         </div>
                         <p>26-09-2022 Mr.R.C. Richard Britto, Assistant Professor, Nadar Saraswathi College of Engineering and Technology, Theni.<br>31 Students benefited</p>
                     </div>
@@ -797,11 +797,11 @@ h5{
                     <h3>Awareness Program on Importance of Mental Health</h3>
                     <div class="row">
                         <div class="col-sm">
-                            <img src="./img/21.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/21.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                             
                         </div>
                         <div class="col-sm">
-                            <img src="./img/22.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/22.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                         </div>
                         <p>06-05-2023 Mr.P.Rajan, Applied Psychology, PGDGC., Theni.<br>23 Students benefited</p>
                     </div>
@@ -809,11 +809,11 @@ h5{
                     <h3>Workshop on Self Respect</h3>
                     <div class="row">
                         <div class="col-sm">
-                            <img src="./img/23.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/23.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                             
                         </div>
                         <div class="col-sm">
-                            <img src="./img/24.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/24.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                         </div>
                         <p>23-02- 2023 RTN.Hermon Carduz, Director of Leaders Choice Art Gallery, Trichy<br>25 Students benefited</p>
                     </div>
@@ -821,19 +821,19 @@ h5{
                     <h3>Awareness program on Prevention of Sexual Harassment at Workplace</h3>
                     <div class="row">
                         <div class="col-sm">
-                            <img src="./img/25.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/25.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                             
                         </div>
                         <div class="col-sm">
-                            <img src="./img/26.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/26.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm">
-                            <img src="./img/27.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/27.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                         </div>
                         <div class="col-sm">
-                            <img src="./img/28.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/28.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                         </div>
                         <p>15- 12-2022 Mrs.Sasikala, Group Advocate, DLSA  & Mrs.B.Nagashanthi Sub Inspector, IPEC  & Ms.Shiyamala Devi, District Social Welfare.<br>60 Students benefited</p>
                     </div>
@@ -841,11 +841,11 @@ h5{
                     <h3>Heartfulness Training Program (Meditation)</h3>
                     <div class="row">
                         <div class="col-sm">
-                            <img src="./img/29.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/29.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                             
                         </div>
                         <div class="col-sm">
-                            <img src="./img/30.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/30.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                         </div>
                         <p>05-11-2022 Mr.S.Jagadeesh, Heartfulness Education Trust, Zonal Co-ordinator, Theni.<br>31 Students benefited</p>
                     </div>
@@ -853,19 +853,19 @@ h5{
                     <h3>Awareness Program on Cyber Crimes and its Prevention</h3>
                     <div class="row">
                         <div class="col-sm">
-                            <img src="./img/31.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/31.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                             
                         </div>
                         <div class="col-sm">
-                            <img src="./img/32.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/32.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm">
-                            <img src="./img/33.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/33.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                         </div>
                         <div class="col-sm">
-                            <img src="./img/34.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/34.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                         </div>
                         <p>05-07-2022 Mr. Alagupandi, Inspector of Police, Cyber Crime Police, Theni.<br>60 Students benefited</p>
                     </div>
@@ -894,11 +894,11 @@ h5{
                     <h3>Workshop on Primavera Software and its Career Opportunities in Abroad</h3>
                     <div class="row">
                         <div class="col-sm">
-                            <img src="./img/35.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/35.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                             
                         </div>
                         <div class="col-sm">
-                            <img src="./img/36.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/36.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                         </div>
                         <p>21-04- 2023 Mr.G.Rajakumar, Planning Manager, Qatar.<br>46 Students benefited</p>
                     </div>
@@ -906,11 +906,11 @@ h5{
                     <h3>Workshop on Cyber Security</h3>
                     <div class="row">
                         <div class="col-sm">
-                            <img src="./img/38.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/38.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                             
                         </div>
                         <div class="col-sm">
-                            <img src="./img/39.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/39.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                         </div>
                         <p>Mr.S.Harisuthan, Information Security Analyst, FIS, Pune.<br>20 Students benefited</p>
                     </div>
@@ -918,11 +918,11 @@ h5{
                     <h3>Powerful Role of Semiconductor Product Development in AI</h3>
                     <div class="row">
                         <div class="col-sm">
-                            <img src="./img/40.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/40.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                             
                         </div>
                         <div class="col-sm">
-                            <img src="./img/41.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/41.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                         </div>
                         <p>Mr.Kannan Srinivasagam, MD, UAW Technologies India Private Limited, Bengaluru<br>29 Students benefited</p>
                     </div>
@@ -930,11 +930,11 @@ h5{
                     <h3>Exploration on Information Technology Requirement for Posterity</h3>
                     <div class="row">
                         <div class="col-sm">
-                            <img src="./img/42.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/42.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                             
                         </div>
                         <div class="col-sm">
-                            <img src="./img/43.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/43.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                         </div>
                         <p>Mr.Pradeep Sivakaminathan, Associate Vice President, Infosys, Mysore<br>58 Students benefited</p>
                     </div>
@@ -942,11 +942,11 @@ h5{
                     <h3>Interactive Session on Artificial Intelligence in Renewable Energy</h3>
                     <div class="row">
                         <div class="col-sm">
-                            <img src="./img/44.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/44.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                             
                         </div>
                         <div class="col-sm">
-                            <img src="./img/45.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
+                            <img src="../../assets/img/ssr/cbase/45.JPG" class="" width='380px' height='320px' alt="Responsive image"/>
                         </div>
                         <p>Dr.D.Prince Winston, Dean Research & Professor, Kamaraj College of Engineering & Technology, Virudhunagar.<br>61 Students benefited</p>
                     </div>

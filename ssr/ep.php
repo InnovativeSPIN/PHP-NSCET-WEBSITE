@@ -17,13 +17,13 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js" integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     
-        <link href="../css/ssr.css" rel="stylesheet">
-        <link rel="stylesheet" href="../css/font-awesome.min.css" />
-        <link rel="stylesheet" href="../css/themify-icons.css" />
-        <link rel="stylesheet" href="../css/magnific-popup.css" />
-        <link rel="stylesheet" href="../css/animate.css" />
-        <link rel="stylesheet" href="../css/owl.carousel.css" />
-        <link rel="stylesheet" href="../css/style.css" />
+        <link href="../assets/css/ssr.css" rel="stylesheet">
+        <link rel="stylesheet" href="../assets/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="../assets/css/themify-icons.css" />
+        <link rel="stylesheet" href="../assets/css/magnific-popup.css" />
+        <link rel="stylesheet" href="../assets/css/animate.css" />
+        <link rel="stylesheet" href="../assets/css/owl.carousel.css" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
 
 </head>
 
