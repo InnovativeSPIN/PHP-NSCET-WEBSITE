@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-require_once("../../resources/connection.php") ?>
+require_once("../../../resources/connection.php") ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +11,7 @@ require_once("../../resources/connection.php") ?>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link href="../../img/favicon.ico" rel="shortcut icon" />
+  <link href="../../../assets/img/favicon.ico" rel="shortcut icon" />
 
   <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i" rel="stylesheet" />
 
@@ -20,13 +20,13 @@ require_once("../../resources/connection.php") ?>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="../../css/font-awesome.min.css" />
-  <link rel="stylesheet" href="../../css/themify-icons.css" />
-  <link rel="stylesheet" href="../../css/magnific-popup.css" />
-  <link rel="stylesheet" href="../../css/animate.css" />
-  <link rel="stylesheet" href="../../css/owl.carousel.css" />
-  <link rel="stylesheet" href="../../css/style.css" />
-  <link rel="stylesheet" href="../../css/departmentPages.css" />
+  <link rel="stylesheet" href="../../../assets/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../../assets/css/themify-icons.css" />
+  <link rel="stylesheet" href="../../../assets/css/magnific-popup.css" />
+  <link rel="stylesheet" href="../../../assets/css/animate.css" />
+  <link rel="stylesheet" href="../../../assets/css/owl.carousel.css" />
+  <link rel="stylesheet" href="../../../assets/css/style.css" />
+  <link rel="stylesheet" href="../../../assets/css/departmentPages.css" />
 
   <script nonce="defdf876-aff2-4c43-8786-bc6a2f07dfb1">
 
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
   </div>
 
-  <?php require_once("../../resources/header.php") ?>
+  <?php require_once("../../../resources/header.php") ?>
 
     <section class="hero-section">
     <h1 class="dept-heading"><strong>Department of Computer Science Engineering</strong></h1>
@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </ul>
       </div>
       <div class="container custom-card-container">
-        <div class="custom-card-wrapper" style="background-image: url('../../img/department/cse/vision.png');">
+        <div class="custom-card-wrapper" style="background-image: url('../../../assets/img/department/cse/vision.png');">
           <div class="custom-card-overlay"></div>
           <div class="custom-card-content " style="height: 40vh;">
             <h4 class="custom-card-title"><strong>VISION</strong></h4>
@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
           </div>
         </div>
 <br><br>
-        <div class="custom-card-wrapper" style="background-image: url('../../img/department/cse/our-mission.png');">
+        <div class="custom-card-wrapper" style="background-image: url('../../../assets/img/department/cse/our-mission.png');">
           <div class="custom-card-overlay"></div>
           <div class=" custom-card-content custom-card-content2 " style="height: 230px;">
             <h4 class="custom-card-title"><strong>MISSION</strong></h4>
@@ -223,36 +223,36 @@ document.addEventListener('DOMContentLoaded', function() {
           <li data-target="#pursuits" data-slide-to="3"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
-          <div class="carousel-item active" style="background-image: url('../../img/department/cse/carousel-sec-1.png');">
+          <div class="carousel-item active" style="background-image: url('../../../assets/img/department/cse/carousel-sec-1.png');">
             <div class="carousel-caption d-none d-md-block">
               <h2 class="display-4">OBJECTIVES & OUTCOMES</h2>
               <h4>PEO's, PO's & PSO's</h4>
               <p class="lead">These are the Program Education Objectives(PEO) and Program Outcomes in the Department of Computer Science & Engineering.</p>
-              <a role="button" target="_blank" href="../../docs/department/cse/CSE(peo).pdf">Click Here</a>
+              <a role="button" target="_blank" href="../../../assets/docs/department/cse/CSE(peo).pdf">Click Here</a>
             </div>
           </div>
-          <div class="carousel-item" style="background-image: url('../../img/department/cse/carousel-sec-2.png')">
+          <div class="carousel-item" style="background-image: url('../../../assets/img/department/cse/carousel-sec-2.png')">
             <div class="carousel-caption d-none d-md-block">
               <h2 class="display-4">RESEARCH WING</h2>
               <h4>Research Activities</h4>
               <p class="lead">NSCET is focussed on Research & Development (R&D) in Engineering, Technology and Sciences. The various programmes are nurtured through academic research and sponsored research funded by National organizations and Industry.</p>
-              <p><a target="_blank" href="../../docs/department/cse/Ph.D.pdf">Ph.D completed/In progess</a></p>
-              <p><a target="_blank" href="../../docs/department/cse/STAFF JOURNAL.pdf">Journals</a></p>
-              <p><a target="_blank" href="../../docs/department/cse/STAFF CONFERENCE.pdf">Conference</a></p>
+              <p><a target="_blank" href="../../../assets/docs/department/cse/Ph.D.pdf">Ph.D completed/In progess</a></p>
+              <p><a target="_blank" href="../../../assets/docs/department/cse/STAFF JOURNAL.pdf">Journals</a></p>
+              <p><a target="_blank" href="../../../assets/docs/department/cse/STAFF CONFERENCE.pdf">Conference</a></p>
             </div>
           </div>
-          <div class="carousel-item" style="background-image: url('../../img/department/cse/carousel-sec-3.png')">
+          <div class="carousel-item" style="background-image: url('../../../assets/img/department/cse/carousel-sec-3.png')">
             <div class="carousel-caption d-none d-md-block">
               <h2 class="display-4">OUR ACCOLADES</h2>
               <h4>Department Activities</h4>
               <p class="lead">The Department of Computer Science & Engineering had organized various Conferences , Symposiums and FDP's most of them volunteered to render services for the benefit of the current students.</p>
-              <p><a target="_blank" href="../../docs/department/cse/Department conference orgaised.pdf">Conference organized</a></p>
-              <p><a target="_blank" href="../../docs/department/cse/Department Events organisied.pdf">Events organized</a></p>
+              <p><a target="_blank" href="../../../assets/docs/department/cse/Department conference orgaised.pdf">Conference organized</a></p>
+              <p><a target="_blank" href="../../../assets/docs/department/cse/Department Events organisied.pdf">Events organized</a></p>
               <p><a target="_blank" href="https://forms.gle/6mdL6j3yHiAXf5618">iSPIN Assessment - Second</a></p>
               <p><a target="_blank" href="https://forms.gle/M7BuhKgY3onQyeSb6">iSPIN Assessment - Third</a></p>
             </div>
           </div>
-          <div class="carousel-item" style="background-image: url('../../img/department/cse/carousel-sec-4.png')">
+          <div class="carousel-item" style="background-image: url('../../../assets/img/department/cse/carousel-sec-4.png')">
             <div class="carousel-caption d-none d-md-block">
               <h2 class="display-4">Our Archives</h2>
               <h4>NewsLetter & Magazines</h4>
@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="row">
             <div class="col-md-6">
               <div class="hod-image text-center">
-                <img src="../../img/department/cse/Mathalairaj.jpg" alt="Mr. J. Mathalai Raj" class="">
+                <img src="../../../assets/img/department/cse/Mathalairaj.jpg" alt="Mr. J. Mathalai Raj" class="">
                 <h5 class="text-uppercase mt-3">Mr. J. Mathalai Raj</h5>
               </div>
             </div>
@@ -306,7 +306,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="container">
         <main class="grid">
           <article>
-            <img src="../../img/department/cse/facilities_section/1.jpg" alt="Dennis lab">
+            <img src="../../../assets/img/department/cse/facilities_section/1.jpg" alt="Dennis lab">
             <i class="fa-solid fa-computer"></i>
             <div class="text">
               <h3 class="facility-heading"><strong>Dennis Laboratory</strong></h3>
@@ -314,7 +314,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
           </article>
           <article>
-            <img src="../../img/department/cse/facilities_section/2.jpg" alt="Bachman lab">
+            <img src="../../../assets/img/department/cse/facilities_section/2.jpg" alt="Bachman lab">
             <i class="fa-solid fa-computer-mouse"></i>
             <div class="text">
               <h3 class="facility-heading"><strong>Bachman Laboratory</strong></h3>
@@ -322,7 +322,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
           </article>
           <article>
-            <img src="../../img/department/cse/facilities_section/3.jpg" alt="Linus lab">
+            <img src="../../../assets/img/department/cse/facilities_section/3.jpg" alt="Linus lab">
             <i class="fa-solid fa-network-wired"></i>
             <div class="text">
               <h3 class="facility-heading"><strong>Linus Torvalds Laboratory</strong></h3>
@@ -330,7 +330,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
           </article>
           <article>
-            <img src="../../img/department/cse/facilities_section/4.jpg" alt="Computer centre">
+            <img src="../../../assets/img/department/cse/facilities_section/4.jpg" alt="Computer centre">
             <i class="fa-solid fa-server"></i>
             <div class="text">
               <h3 class="facility-heading"><strong>Computer Centre</strong></h3>
@@ -338,7 +338,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
           </article>
           <article>
-            <img src="../../img/department/cse/facilities_section/5.jpg" alt="Project lab">
+            <img src="../../../assets/img/department/cse/facilities_section/5.jpg" alt="Project lab">
             <i class="fa-solid fa-robot"></i>
             <div class="text">
               <h3 class="facility-heading"><strong>Project Laboratory</strong></h3>
@@ -373,7 +373,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <p class="org-con-paragraph ">iSPIN is a pure IT sector of NSCET with Resourceful students under the guidance of Faculties, Industry Specialists, and the Alumni of NSCET. It will be the First of its kind idea for the incubation cell of NSCET. iSPIN will be responsible for developing the products for NSCET and its clients. The essence of iSPIN is the strategy of Unlearn & Learn based on Self-Learning Strategy.</p>
           <div class="dept-org-link floating-image">
               <a href="https://nscet.org/ispin">
-                <img src="../../img/department/cse/ispin_log.png" alt="iSPIN">
+                <img src="../../../assets/img/department/cse/ispin_log.png" alt="iSPIN">
                 <h1>iSPIN</h1>
               </a>
             </div>
@@ -387,7 +387,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="org-con-section1">
           <div class="dept-org-link floating-image">
               <a href="https://nscet.org/associations/fist.html">
-                <img src="../../img/department/cse/fist.jpg" alt="FIST">
+                <img src="../../../assets/img/department/cse/fist.jpg" alt="FIST">
                 <h1>FIST</h1>
               </a>
             </div>
@@ -413,7 +413,7 @@ document.addEventListener('DOMContentLoaded', function() {
               <li class="card__item">
                 <button aria-label="hover image for details" class="card__button">
                   <div class="card__front">
-                    <img alt="Jenifer Fathima" class="card__image" src="../../img/department/cse/office_bearers/jenifer fathima.jpg">
+                    <img alt="Jenifer Fathima" class="card__image" src="../../../assets/img/department/cse/office_bearers/jenifer fathima.jpg">
                     <h2 class="card__name"><strong>Jenifer Fathima</strong></h2>
                   </div>
                   <div class="card__back">
@@ -432,7 +432,7 @@ document.addEventListener('DOMContentLoaded', function() {
               <li class="card__item">
                 <button aria-label="hover image for details" class="card__button">
                   <div class="card__front">
-                    <img alt="Mukilan" class="card__image" src="../../img/department/cse/office_bearers/MUKILAN S.jpg">
+                    <img alt="Mukilan" class="card__image" src="../../../assets/img/department/cse/office_bearers/MUKILAN S.jpg">
                     <h2 class="card__name"><strong>Mukilan</strong></h2>
                   </div>
                   <div class="card__back">
@@ -451,7 +451,7 @@ document.addEventListener('DOMContentLoaded', function() {
               <li class="card__item">
                 <button aria-label="hover image for details" class="card__button">
                   <div class="card__front">
-                    <img alt="Soundharyalakshmi" class="card__image" src="../../img/department/cse/office_bearers/Sowndaryalakshmi.jpg">
+                    <img alt="Soundharyalakshmi" class="card__image" src="../../../assets/img/department/cse/office_bearers/Sowndaryalakshmi.jpg">
                     <h2 class="card__name"><strong>Soundharyalakshmi</strong></h2>
                   </div>
                   <div class="card__back">
@@ -482,7 +482,7 @@ document.addEventListener('DOMContentLoaded', function() {
               <li class="card__item">
                 <button aria-label="hover image for details" class="card__button">
                   <div class="card__front">
-                    <img alt="Gowsalya" class="card__image" src="../../img/department/cse/office_bearers/GOWSALYA N.jpg">
+                    <img alt="Gowsalya" class="card__image" src="../../../assets/img/department/cse/office_bearers/GOWSALYA N.jpg">
                     <h2 class="card__name"><strong>Gowsalya</strong></h2>
                   </div>
                   <div class="card__back">
@@ -501,7 +501,7 @@ document.addEventListener('DOMContentLoaded', function() {
               <li class="card__item">
                 <button aria-label="hover image for details" class="card__button">
                   <div class="card__front">
-                    <img alt="Sachidhanandhan" class="card__image" src="../../img/department/cse/office_bearers/SACHITHANANDAN S.jpg">
+                    <img alt="Sachidhanandhan" class="card__image" src="../../../assets/img/department/cse/office_bearers/SACHITHANANDAN S.jpg">
                     <h2 class="card__name"><strong>Sachidhanandhan</strong></h2>
                   </div>
                   <div class="card__back">
@@ -604,7 +604,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   </div>
 
-  <?php require_once("../../resources/footer.php") ?>
+  <?php require_once("../../../resources/footer.php") ?>
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -645,12 +645,12 @@ document.addEventListener('DOMContentLoaded', function() {
     })
   </script>
 
-  <script src="../../js/jquery-3.2.1.min.js"></script>
-  <script src="../../js/owl.carousel.min.js"></script>
-  <script src="../../js/jquery.countdown.js"></script>
-  <script src="../../js/masonry.pkgd.min.js"></script>
-  <script src="../../js/magnific-popup.min.js"></script>
-  <script src="../../js/main.js"></script>
+  <script src="../../../assets/js/jquery-3.2.1.min.js"></script>
+  <script src="../../../assets/js/owl.carousel.min.js"></script>
+  <script src="../../../assets/js/jquery.countdown.js"></script>
+  <script src="../../../assets/js/masonry.pkgd.min.js"></script>
+  <script src="../../../assets/js/magnific-popup.min.js"></script>
+  <script src="../../../assets/js/main.js"></script>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
   <script>
@@ -672,9 +672,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-  <script src="../../js/marquee.js"></script>
-  <script src="../../js/popup.js"></script>
-  <script src="../../js/departmentPage.js"></script>
+  <script src="../../../assets/js/marquee.js"></script>
+  <script src="../../../assets/js/popup.js"></script>
+  <script src="../../../assets/js/departmentPage.js"></script>
 
 </body>
 
