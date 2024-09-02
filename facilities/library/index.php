@@ -172,13 +172,13 @@ document.addEventListener('DOMContentLoaded', function() {
 <?php require_once("../../resources/header.php") ?>
 
 <div class="header_lib">
-  <h1 class="h1"> Nadar Saraswathi College of Engineering & Technology - Library</h1>
+  <h1 class="h1"> NSCET - LIBRARY</h1>
 </div>
 <div class="container mt-5">
 
 </div>
 
-<div class="row justify-content-center mt-4">
+<div  class="row justify-content-center">
     <div class="col-md-5 content-container">
       <h2 class="h2">About NSCET Library</h2>
       <p class="para">The Library, in today’s context, is a modern Learning Resource Centre with a dynamic learning space where students undertake a journey of knowledge acquisition and intellectual enrichment. Our Library is a well-equipped Learning Resource Centre. We have a strong collection of about 20433 books and 120 Indian and foreign journals. The NSCET library is a storehouse of knowledge and it comprises books, journals, e-resources, other learning materials, and technology-aided learning mechanisms which enable students to acquire information, knowledge, and skills required for their study programmes.</p>
@@ -211,6 +211,41 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
+ 
+<div style="padding-top: 70px;" class="row justify-content-center mt-4">
+    <div class="col-md-5 content-container">
+
+    <div id="libraryCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner slides">
+          <div class="carousel-item active slide">
+            <img src="../../assets/img/library-img/1.jpeg" alt="Library Image 1">
+          </div>
+          <div class="carousel-item slide">
+            <img src="../../assets/img/library-img/2.jpeg" alt="Library Image 2">
+          </div>
+          <div class="carousel-item slide">
+            <img src="../../assets/img/library-img/3.jpeg" alt="Library Image 3">
+          </div>
+          <div class="carousel-item slide">
+            <img src="../../assets/img/library-img/4.jpeg" alt="Library Image 5">
+          </div>
+
+          <div class="carousel-item slide">
+            <img src="../../assets/img/library-img/5.jpeg" alt="Library Image 5">
+          </div>
+
+        </div>
+     
+      </div>
+  </div>
+
+    <div class="col-md-5 image-container">
+    <h2 class="h2">About NSCET  E-Library</h2>
+      <p class="para">The Library, in today’s context, is a modern Learning Resource Centre with a dynamic learning space where students undertake a journey of knowledge acquisition and intellectual enrichment. Our Library is a well-equipped Learning Resource Centre. We have a strong collection of about 20433 books and 120 Indian and foreign journals. The NSCET library is a storehouse of knowledge and it comprises books, journals, e-resources, other learning materials, and technology-aided learning mechanisms which enable students to acquire information, knowledge, and skills required for their study programmes.</p>
+  
+    </div>
+  </div>
+</div>
 
 
 
@@ -282,6 +317,8 @@ document.addEventListener('DOMContentLoaded', function() {
       </ul>
     </div>
 
+    
+
     <div class="facilities">
       <h2>FACILITIES</h2>
       <ul>
@@ -297,6 +334,17 @@ document.addEventListener('DOMContentLoaded', function() {
         <li>Reprographic Services</li>
       </ul>
     </div>
+
+    <div class="ndli">
+      <h2>NATIONAL DIGITAL LIBRARY OF INDIA CLUB ACTIVITIES</h2>
+      <ul>
+        <li>Awareness Programme on National Digital Library of India was held on 30.09.2021</li>
+        <li>Film Screening Competition was held on 17.02.2022.</li>
+        <li>Book Review Competition was held on 29.11.2021</li>
+        <li>Quiz competition was held on 16.12.2021</li>
+      </ul>
+    </div>
+
 
     <div class="rules_and_regulation">
       <h2>RULES AND REGULATIONS</h2>
@@ -314,25 +362,16 @@ document.addEventListener('DOMContentLoaded', function() {
       </ul>
     </div>
 
-    <div class="ndli">
-      <h2>NATIONAL DIGITAL LIBRARY OF INDIA CLUB ACTIVITIES</h2>
-      <ul>
-        <li>Awareness Programme on National Digital Library of India was held on 30.09.2021</li>
-        <li>Film Screening Competition was held on 17.02.2022.</li>
-        <li>Book Review Competition was held on 29.11.2021</li>
-        <li>Quiz competition was held on 16.12.2021</li>
-      </ul>
-    </div>
+   
 
-    <div class="working-hours">
-      <h2>WORKING HOURS</h2>
-      <ul>
-        <li>Monday to Friday: 8.30 AM to 5.30 PM</li>
-        <li>Saturday: 9.00 AM to 4.00 PM</li>
-        <li>Sunday: Holiday</li>
-      </ul>
-    </div>
   </div>
+
+
+
+ 
+
+
+
 
 <div class="container mt-5">
     <div class="row align-items-center">

@@ -39,7 +39,7 @@ body{
   text-align: center;
   position: relative;
   margin: 0;
-  text-shadow: -0.5px 0.5px 0 #070f0f,
+  text-shadow: -0.5px 0.5px 0 #34b97b,
               0.5px 0.5px 0 #000,
               0.5px -0.5px 0 #000,
               -0.5px -0.5px 0 #000;
@@ -63,6 +63,9 @@ body{
 .para{
   color: black;
   text-align: left;
+  font-size: 17px;
+  line-height: 1.9;
+  margin-top: 15px;
   
 }
 .content-container .h2 {
@@ -72,7 +75,36 @@ body{
 .content-container .h2::after {
   content: '';
   display: block;
-  width: 0; /* Start with 0 width */
+  width: 0; 
+  height: 4px; 
+  background-color: #f6783a;
+  margin: 15px auto 0; /* Adjust the top margin to create a gap */
+  border-radius: 2px;
+  position: absolute;
+  bottom: -10px; /* Position it a bit lower to create a gap */
+  left: 0;
+  transition: background-color 0.3s ease-in-out; /* Optional: transition for color */
+  animation: slideIn 0.5s ease-in-out forwards; /* Apply the animation */
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 52%;
+  }
+}
+
+
+.image-container .h2 {
+  position: relative; 
+}
+
+.image-container .h2::after {
+  content: '';
+  display: block;
+  width: 0; 
   height: 4px; 
   background-color: #f6783a;
   margin: 15px auto 0; /* Adjust the top margin to create a gap */
@@ -316,7 +348,7 @@ object-fit:cover;
 -o-transition: all .3s ease-in-out;
 -ms-transition: all .3s ease-in-out;
 }
-    
+
 
 .transition {
 -webkit-transform: scale(1.2); 
@@ -334,6 +366,8 @@ transform: scale(1.2);
 .modal-footer{
   display:none;  
 }
+
+
 .row h3 {
 
 color: #134569;
@@ -355,6 +389,7 @@ padding-bottom: 20px;
     .facilities{
 
       padding-bottom: 40px;
+      
     }
 
     .rules_and_regulation{
