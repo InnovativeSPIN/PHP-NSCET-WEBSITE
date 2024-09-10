@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <img src="../../assets/img/library-img/4.jpeg" alt="Library Image 5">
           </div>
 
-          <div class="carousel-item slide">
+          <div class="carousel-item slide"> 
             <img src="../../assets/img/library-img/5.jpeg" alt="Library Image 5">
           </div>
 
@@ -362,40 +362,32 @@ document.addEventListener('DOMContentLoaded', function() {
       </ul>
     </div>
 
-   
 
   </div>
 
 
-
- 
-
-
-
-
-<div class="container mt-5">
+  <div class="container mt-5 librarian-section">
     <div class="row align-items-center">
-      <div class="col-md-5">
-        <div class="librarian-container">
-          <img src="../../assets/img/library-img/Sinthan.jpg" alt="Dr. Sinthan">
-          <div class="name">
-            Dr. Sinthan<br>Librarian<br>
-          </div>
+        <div class="col-md-5 text-center">
+            <div class="librarian-container">
+                <img src="../../assets/img/library-img/Sinthan.jpg" alt="Dr. Sinthan" class="librarian-img">
+                <div class="name mt-3">
+                    Dr. Sinthan<br>
+                    <span class="librarian-title">Librarian</span>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-md-7">
-        <div class="librarian-description">
-          "OUR LIBRARY VOWS TO SHAPE YOU<br>
-          FOR AN ENLIVENED PRESENT<br>
-          AND ENLIGHTENED FUTURE TOO"
+        <div class="col-md-7">
+            <div class="librarian-description text-center text-md-left">
+                <blockquote class="quote">
+                    "OUR LIBRARY VOWS TO SHAPE YOU<br>
+                    FOR AN ENLIVENED PRESENT<br>
+                    AND ENLIGHTENED FUTURE TOO"
+                </blockquote>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-<!-- Carousel wrapper -->
- <!-- Page Content -->
- <div class="container page-top">
-
+</div>
 
 
 <div class="row">
